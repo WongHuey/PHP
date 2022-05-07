@@ -1,0 +1,2 @@
+.glyphicon-cloud:before
+.tooltip.top-right .tooltip-arrow

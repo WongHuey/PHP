@@ -1,0 +1,20 @@
+<div id="append_parent"></div>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{if $user_info}
+  <li>
+{$lang.hello},<font class="f4_b">{$user_info.username}</font>, {$lang.welcome_return}！
+<a href="user.php"><font style="color:#FF8000; font-size:14px"><b>{$lang.user_center}</b></font></a> |
+ <a href="user.php?act=logout">{$lang.user_logout}</a>
+</li>
+{else}
+   <li>
+ <table width="100%" border="0" cellspacing="0" cellpadding="0" align="right">
+  <tr>
+    <td align="right"><a  href="user.php">Login</a><em>|</em><a href="user.php?act=register">Register</a></td>
+<!--
+    <td><a href="#"><img src="images/qq_login.gif"></a><a href=""><img src="images/sina_login_logo.gif"></a><a href=""><img src="images/taobao_login_logo.gif"></a></td>
+  </tr>
+  -->
+</table>  
+ </li> 
+{/if}

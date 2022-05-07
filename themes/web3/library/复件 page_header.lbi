@@ -1,0 +1,136 @@
+<header id="header">
+				<div class="header-top">
+					<div class="container">
+  					<ul class="nav nav-pills nav-top navbar-right">
+  						<li class="yctitle dropdown currency" id="ycdiv">
+  							<a data-toggle="dropdown" class="dropdown-toggle" href="article_cat-4-Blog++News.html" title="About Hair Extensions">Blog / News <i class="fa fa-angle-down"></i></a>
+  							<ul role="menu" class="dropdown-menu">
+  								<li><a href="article_cat-14-KBL+News.html" title="KaBeiLu News">KaBeiLu News / Blog</a></li>
+  								<li><a href="article_cat-15-Human+Hair+News.html" title="Human Hair News">Human Hair News</a></li>
+  							</ul>
+  						</li>
+  						<li class="dropdown currency">
+  							<a data-toggle="dropdown" class="dropdown-toggle" href="sitemap.xml" title="sitemap" target="_blank"><i class="fa fa-sitemap"></i>  Sitemap</a>
+  						</li>
+                        {insert name='member_info'}
+                         <li class="dropdown my-cart">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="flow.php"><i class="fa fa-shopping-cart"></i></a>
+                <ul role="menu" class="dropdown-menu header-cart_product_list">
+                    <li class="added-items">
+            
+                       <a href="flow.php" style="background:none; margin-left:0px; ">{insert name='cart_info2'}</a>
+                
+                    </li>
+                  
+                  </ul>
+              </li>
+  					</ul>            
+					</div> 
+          <div class="container-fluid trigger-container">
+            <div class="row text-center">
+              <button class="menu-trigger"><i class="fa fa-bars"></i></button>
+            </div>
+          </div>         
+				</div>
+				<div class="header-middle">
+					<div class="container relative">
+						<a href="/" class="logo pull-left"></a>
+						<div class="header-search pull-right">
+							<div class="header-search_filter">
+								<select class="formDropdown font-weight-normal" name="filterby" id="filterby">
+									<option value="0">Filter By</option>
+									<option value="title">Title</option>
+			
+								</select>
+								<i class="fa fa-angle-down customColor"></i>
+							</div>
+							<div class="header-search_form">
+								<form class="product-search form-inline"  method="get" action="search.php" onSubmit="return checkSearchForm()">
+									<div class="form-group">
+										<label class="sr-only" for="searchQuery">Product Name ...</label>
+										<input type="search" class="product-search_field font-main font-weight-normal" id="searchQuery" name="keywords" placeholder="Product Name ...">
+									</div>
+									<button type="submit" class="product-search_btn hvr-bounce-to-right">
+										<i class="fa fa-search"></i>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header> 
+            <nav id="icon-menu" class="main-menu"> 
+        <div class="scrollbar" id="style-1">
+          <ul>
+            <li class="lightli">                                   
+              <a href="/">
+                <i class="fa fa-home fa-lg"></i>
+                <span class="nav-text">Home</span>
+              </a>
+            </li> 
+            <li class="lightli">                                 
+              <a href="article-8-About+KBL.html">
+                <i class="fa fa-user fa-lg"></i>
+                <span class="nav-text">About KBL</span>
+              </a>
+            </li>
+            <li class="lightli">                                 
+              <a href="article-13-Contact+Us.html">
+                <i class="fa fa-envelope-o fa-lg"></i>
+                <span class="nav-text">Contact Us</span>
+              </a>
+            </li>
+              <li class="darkerli">
+                <a href="brazilian-hair">
+                  <i class="fa menu003"></i>
+                   <span class="nav-text">Brazilian Hair</span>
+                </a>
+              </li>  
+              <li class="darkerli">
+                <a href="Indian-Hair">
+                  <i class="fa menu005"></i>
+                  <span class="nav-text">Indian Hair</span>
+                </a>
+              </li>
+              <li class="darkerli">
+                <a href="Peruvian-Hair">
+                  <i class="fa menu006"></i>
+                  <span class="nav-text">Peruvian Hair</span>
+                </a>
+              </li>
+              <li class="darkerli">
+                <a href="Malaysian-Hair">
+                  <i class="fa menu007"></i>
+                  <span class="nav-text">Malaysian Hair</span>
+                </a>
+              </li> 
+              <li class="darkerli">
+                <a href="Closure-Hair">
+                  <i class="fa menu008"></i>
+                  <span class="nav-text">Closure Hair</span>
+                </a>
+              </li>
+              <li class="darkerli">
+                <a href="7A-Hair">
+                  <i class="fa menu009"></i>
+                  <span class="nav-text">7A Hair</span>
+                </a>
+              </li>
+
+              <li class="darkerli">
+                <a href="Bundles-Closure">
+                  <i class="fa menu0010"></i>
+                  <span class="nav-text">Bundles + Closure</span>
+                </a>
+              </li>       
+              
+              <li class="darkerli">
+                <a href="European-Hair">
+                  <i class="fa menu0011"></i>
+                  <span class="nav-text">European Hair</span>
+                </a>
+              </li>            
+          </ul>
+        </div>
+      </nav>
+     

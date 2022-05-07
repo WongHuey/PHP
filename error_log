@@ -1,0 +1,126 @@
+[22-Oct-2014 04:01:12 UTC] PHP Strict Standards:  Non-static method cls_image::gd_version() should not be called statically in /home4/kabeiluc/public_html/web2/includes/lib_base.php on line 346
+[22-Oct-2014 04:01:12 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home4/kabeiluc/public_html/web2/includes/cls_template.php on line 406
+[22-Oct-2014 04:01:12 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home4/kabeiluc/public_html/web2/includes/cls_template.php on line 406
+[22-Oct-2014 04:01:12 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home4/kabeiluc/public_html/web2/includes/cls_template.php on line 406
+[22-Oct-2014 04:01:14 UTC] PHP Strict Standards:  Redefining already defined constructor for class captcha in /home4/kabeiluc/public_html/web2/includes/cls_captcha.php on line 119
+[22-Oct-2014 04:58:17] PHP Fatal error:  Call to undefined function  is_spider() in /home4/kabeiluc/public_html/includes/init.php on line 130
+[22-Oct-2014 04:58:17] PHP Parse error:  syntax error, unexpected $end in /home4/kabeiluc/public_html/includes/lib_main.php on line 1347
+[27-Oct-2014 02:57:01] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:01] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:01] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:57:02] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:03] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:03] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:57:04] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:04] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:04] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:57:05] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:05] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:05] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:57:06] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:06] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:06] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:57:22] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:22] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:22] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:57:23] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:23] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:23] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:57:24] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:24] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:24] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:57:38] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:38] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:38] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:57:39] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:39] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:57:39] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:58:55] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:58:55] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:58:55] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:59:16] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:59:16] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:59:16] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:59:18] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:59:18] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:59:18] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:59:47] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:59:47] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:59:47] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 02:59:48] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:59:48] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 02:59:48] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 03:00:14] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:14] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:14] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 03:00:15] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:15] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:15] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 03:00:16] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:16] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:16] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 03:00:18] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:18] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:18] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 03:00:25] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:25] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:25] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[27-Oct-2014 03:00:26] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:26] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[27-Oct-2014 03:00:26] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[28-Oct-2014 09:39:24] PHP Warning:  include_once(/home4/kabeiluc/public_html/includes/modules/integrates/XXX.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/includes/lib_common.php on line 223
+[28-Oct-2014 09:39:24] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home4/kabeiluc/public_html/includes/modules/integrates/XXX.php' for inclusion (include_path='.:/home4/kabeiluc/public_html/') in /home4/kabeiluc/public_html/includes/lib_common.php on line 223
+[28-Oct-2014 09:39:24] PHP Fatal error:  Class 'XXX' not found in /home4/kabeiluc/public_html/includes/lib_common.php on line 225
+[28-Oct-2014 09:39:25] PHP Warning:  include_once(/home4/kabeiluc/public_html/includes/modules/integrates/XXX.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/includes/lib_common.php on line 223
+[28-Oct-2014 09:39:25] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home4/kabeiluc/public_html/includes/modules/integrates/XXX.php' for inclusion (include_path='.:/home4/kabeiluc/public_html/') in /home4/kabeiluc/public_html/includes/lib_common.php on line 223
+[28-Oct-2014 09:39:25] PHP Fatal error:  Class 'XXX' not found in /home4/kabeiluc/public_html/includes/lib_common.php on line 225
+[28-Oct-2014 09:39:27] PHP Warning:  include_once(/home4/kabeiluc/public_html/includes/modules/integrates/XXX.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/includes/lib_common.php on line 223
+[28-Oct-2014 09:39:27] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home4/kabeiluc/public_html/includes/modules/integrates/XXX.php' for inclusion (include_path='.:/home4/kabeiluc/public_html/') in /home4/kabeiluc/public_html/includes/lib_common.php on line 223
+[28-Oct-2014 09:39:27] PHP Fatal error:  Class 'XXX' not found in /home4/kabeiluc/public_html/includes/lib_common.php on line 225
+[28-Oct-2014 09:39:27] PHP Warning:  include_once(/home4/kabeiluc/public_html/includes/modules/integrates/XXX.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/includes/lib_common.php on line 223
+[28-Oct-2014 09:39:27] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home4/kabeiluc/public_html/includes/modules/integrates/XXX.php' for inclusion (include_path='.:/home4/kabeiluc/public_html/') in /home4/kabeiluc/public_html/includes/lib_common.php on line 223
+[28-Oct-2014 09:39:27] PHP Fatal error:  Class 'XXX' not found in /home4/kabeiluc/public_html/includes/lib_common.php on line 225
+[29-Oct-2014 03:40:03] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[29-Oct-2014 03:40:03] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[29-Oct-2014 03:40:03] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[31-Oct-2014 13:32:07] PHP Fatal error:  Class name must be a valid object or a string in /home4/kabeiluc/public_html/flow.php on line 1773
+[31-Oct-2014 13:49:23] PHP Fatal error:  Class name must be a valid object or a string in /home4/kabeiluc/public_html/flow.php on line 1773
+[05-Nov-2014 02:40:24] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[05-Nov-2014 02:40:24] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[05-Nov-2014 02:40:24] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[05-Nov-2014 02:40:28] PHP Warning:  include_once(/lib/iplimit.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home4/kabeiluc/public_html/checkip.php on line 4
+[05-Nov-2014 02:40:28] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/lib/iplimit.class.php' for inclusion (include_path='.:/usr/lib64/php:/usr/share/pear') in /home4/kabeiluc/public_html/checkip.php on line 4
+[05-Nov-2014 02:40:28] PHP Fatal error:  Class 'iplimit' not found in /home4/kabeiluc/public_html/checkip.php on line 5
+[20-Nov-2014 23:46:42] PHP Fatal error:  Class name must be a valid object or a string in /home4/kabeiluc/public_html/flow.php on line 1773
+[20-Nov-2014 23:48:39] PHP Fatal error:  Class name must be a valid object or a string in /home4/kabeiluc/public_html/flow.php on line 1773
+[20-Nov-2014 23:51:21] PHP Fatal error:  Class name must be a valid object or a string in /home4/kabeiluc/public_html/flow.php on line 1773
+[21-Nov-2014 03:06:10] PHP Fatal error:  Class name must be a valid object or a string in /home4/kabeiluc/public_html/flow.php on line 1773
+[24-Nov-2014 06:10:58] PHP Fatal error:  Class name must be a valid object or a string in /home4/kabeiluc/public_html/flow.php on line 1773
+[24-Nov-2014 06:12:03] PHP Fatal error:  Class name must be a valid object or a string in /home4/kabeiluc/public_html/flow.php on line 1773
+[30-Nov-2014 22:15:31] PHP Fatal error:  Class name must be a valid object or a string in /home4/kabeiluc/public_html/flow.php on line 1773
+[01-Dec-2014 21:02:06] PHP Fatal error:  Class name must be a valid object or a string in /home4/kabeiluc/public_html/flow.php on line 1773
+[24-Jan-2015 01:24:19] PHP Parse error:  syntax error, unexpected T_ELSE in /home4/kabeiluc/public_html/includes/lib_main.php on line 269
+[24-Jan-2015 01:24:22] PHP Parse error:  syntax error, unexpected T_ELSE in /home4/kabeiluc/public_html/includes/lib_main.php on line 269
+[24-Jan-2015 01:24:28] PHP Parse error:  syntax error, unexpected $end in /home4/kabeiluc/public_html/includes/lib_main.php on line 504
+[27-Jan-2015 08:12:14] PHP Fatal error:  Call to undefined function  is_spider() in /home4/kabeiluc/public_html/includes/init.php on line 130
+[05-Feb-2015 19:55:11] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 37
+[05-Feb-2015 19:55:11] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 37
+[05-Feb-2015 20:21:30] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 37
+[05-Feb-2015 20:21:31] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 37
+[05-Feb-2015 20:21:32] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 37
+[05-Feb-2015 20:21:39] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 37
+[05-Feb-2015 20:36:21] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 37
+[05-Feb-2015 20:36:22] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 37
+[05-Feb-2015 20:37:25] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 35
+[05-Feb-2015 20:37:26] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 35
+[05-Feb-2015 20:37:28] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 35
+[05-Feb-2015 20:37:53] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 35
+[05-Feb-2015 20:37:54] PHP Parse error:  syntax error, unexpected '}' in /home4/kabeiluc/public_html/sendmail.php on line 35
+[05-Feb-2015 23:54:33] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home4/kabeiluc/public_html/sendmail.php on line 6
+[05-Feb-2015 23:54:34] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home4/kabeiluc/public_html/sendmail.php on line 6
+[05-Feb-2015 23:54:34] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home4/kabeiluc/public_html/sendmail.php on line 6
+[06-Feb-2015 09:47:19] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/kabeiluc/public_html/s-mail.php:7) in /home4/kabeiluc/public_html/includes/init.php on line 165
+[06-Feb-2015 09:48:23] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/kabeiluc/public_html/s-mail.php:7) in /home4/kabeiluc/public_html/includes/init.php on line 165
+[06-Feb-2015 19:30:33] PHP Parse error:  syntax error, unexpected T_STRING in /home4/kabeiluc/public_html/s-mail.php on line 84
+[06-Feb-2015 19:30:35] PHP Parse error:  syntax error, unexpected T_STRING in /home4/kabeiluc/public_html/s-mail.php on line 84
+[06-Feb-2015 19:30:46] PHP Parse error:  syntax error, unexpected T_STRING in /home4/kabeiluc/public_html/s-mail.php on line 84

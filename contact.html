@@ -1,0 +1,82 @@
+﻿<p style="line-height:26px"><strong>Website:</strong> <a target="blank" href="http://www.kabeilu.com"><u>www.kabeilu.com</u></a><br />
+<strong>Company Name: Guangzhou Kabeilu Trading Co., Ltd. </strong><br />
+<strong>Operational Address:</strong> Room 1422A, Floor 14, Mingshang Tiandi Leather Plaza, No. 222, Guangyuan West Rd., Yuexiu Dist., Guangzhou, Guangdong, China (Mainland)<br />
+<strong>Customer Hotline: </strong>86-13544332082<br />
+<strong>Email:</strong> <a href="mailto:webmaster@kabeilu.com"><u>webmaster@kabeilu.com</u></a></p><br>
+<font style="font-size:28px;"><i class="fa fa-user"></i> Ivy</font><br>
+　　<i class="fa fa-mobile"></i> 86-13822134401 　<i class="icon_mail"></i> <a href="mailto:kblsales05@kabeilu.com">kblsales05@kabeilu.com</a><br><br>
+
+<font style="font-size:28px;"><i class="fa fa-user"></i> Candice</font><br>
+　　<i class="fa fa-mobile"></i> 86-13822131794 　<i class="icon_mail"></i> <a href="mailto:kblsales06@kabeilu.com">kblsales06@kabeilu.com</a><br><br>
+<font style="font-size:28px;"><i class="fa fa-user"></i> Ally</font><br>
+　　<i class="fa fa-mobile"></i> 86-13822134304 　<i class="icon_mail"></i> <a href="mailto:kblsales07@kabeilu.com">kblsales07@kabeilu.com</a><br><br>
+<font style="font-size:28px;"><i class="fa fa-user"></i> Joy</font><br>
+　　<i class="fa fa-mobile"></i> 86-13822131764 　<i class="icon_mail"></i> <a href="mailto:kblsales10@kabeilu.com">kblsales10@kabeilu.com</a>
+<p>&nbsp;</p>
+<form action="message-all.php" method="post" name="formMsg" onSubmit="return submitMsgBoard(this)">
+    <div id="contact1" class="page-content page-contact" style="margin-top:0; padding-top:0;">
+    <div class="row">
+    <div class="col-sm-6">
+    <div class="page-subheading">Welcome to contact us</div>
+    <div class="contact-form-box">
+    <div class="form-selector"><label>Username</label>       <input type="text" class="form-control input-sm" id="msg_title" name="msg_title" required="" /></div>
+    <div class="form-selector"><label>Email</label>       <input type="email" class="form-control input-sm" id="user_email" name="user_email" required="" /></div>
+    <div class="form-selector"><label>Message</label>       <textarea class="form-control input-sm" name="msg_content" rows="3" id="msg_content" required=""></textarea>       <input type="hidden" name="act" value="act_add_message" /></div>
+    <div class="form-selector"><input type="text" size="8" style="width:100px; float:left" class="form-control input-sm" id="captcha" name="captcha" placeholder="" />       <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" /></div>
+    <div class="form-selector"><input name="msg_type" type="hidden" class="inputBg" size="30" value="5" />       <button type="submit" name="login" class="btn send-button btn-block hvr-bounce-to-right hover-focus-border before-bg meback">Send To Me</button></div>
+    </div>
+    </div>
+    </div>
+    </div>
+</form>
+<script type="text/javascript">
+        function submitMsgBoard(frm)
+        {
+            var msg = new Object;
+
+             msg.user_email  = frm.elements['user_email'].value;
+             msg.msg_title   = frm.elements['msg_title'].value;
+             msg.msg_content = frm.elements['msg_content'].value;
+             msg.captcha     = frm.elements['captcha'] ? frm.elements['captcha'].value : '';
+
+            var msg_err = '';
+
+            if (msg.user_email.length > 0)
+            {
+               if (!(Utils.isEmail(msg.user_email)))
+               {
+                  msg_err += msg_error_email + '\n';
+                }
+             }
+             else
+             {
+                  msg_err += msg_empty_email + '\n';
+             }
+            if (msg.msg_title.length == 0)
+            {
+                msg_err += msg_title_empty + '\n';
+            }
+            if (frm.elements['captcha'] && msg.captcha.length==0)
+            {
+                msg_err += msg_captcha_empty + '\n'
+            }
+            if (msg.msg_content.length == 0)
+            {
+                msg_err += msg_content_empty + '\n'
+            }
+            if (msg.msg_title.length > 200)
+            {
+                msg_err += msg_title_limit + '\n';
+            }
+
+            if (msg_err.length > 0)
+            {
+                alert(msg_err);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        </script>

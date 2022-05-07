@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kabeilu Hair Reviews</title>
+<meta name="Keywords" content="kabeilu hair reviews" />
+<meta name="Description" content="We love beauty, and beauty from KBL." />
+<meta name="googlebot" content="NOODP" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/css/master-art.css" rel="stylesheet">
+<link rel="canonical" href="/{$get_url}" />
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+{insert_scripts files='common.js'}
+</head>
+<body class="animated-css" data-scrolling-animations="false">
+<div class="sp-body">
+ <!-- Loader Landing Page -->
+ <div id="loader">
+  <div class="loader"></div>
+ </div>
+ <!-- Loader end -->
+ <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+ <section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('images/contact-heading-bg.jpg');">
+  <!-- <div class="overlay"></div> -->
+  <div class="container relative">
+   <h2 class="title color-main text-capitalize zoomIn" style="color:#333333">KABEILU HAIR REVIEWS</h2>
+  </div>
+ </section>
+
+ <section id="contact-us">
+  <div class="container">
+   <div class="row" style="line-height:22px">
+   
+    <div class="col-xs-12">
+
+  <div style="width:100%; margin-top:-10px; margin-bottom:10px;"><a href="#" onClick="javascript:history.back(-1);"><i class="fa fa-long-arrow-left" aria-hidden="true" style="font-size:30px"></i></a></div>
+    
+ <link rel="stylesheet" type="text/css" href="/images/reviews-v/css/reset.css"/>
+
+<link rel="stylesheet" type="text/css" href="/images/reviews-v/css/willesPlay.css"/>
+<script src="/images/reviews-v/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/images/reviews-v/js/willesPlay.js" type="text/javascript" charset="utf-8"></script>
+<style>
+.float01{ position:fixed;top:0px; padding-top:10px;}
+.float02{ position:relative;top:0px;padding:10px;}
+@media screen and (min-width:1200px){
+#willesPlay{width:500px; margin:0 auto;}
+}
+.bgimg{
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background: url(/images/video-js/kblhair/back.jpg) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+}
+</style>
+<div class="container" style="margin-bottom:50px;  padding:0px">
+	<div class="row">
+		<div class="col-md-12"> 
+       <div class="bgimg" style="min-height:200px; width:100%; background-color:#F9F9F9; ">
+       <div id="willesPlay">
+			  <div class="playContent"  >
+	  <video width="100%" height="100%" id="playVideo" x5-playsinline="" playsinline="" webkit-playsinline="" style="margin-bottom:-6px">
+			<source src="https://www.kabeilu.com/images/video-js/{$vdurl}" type="video/mp4"></source>
+		</video>
+		<div class="playTip glyphicon glyphicon-play"></div>
+	</div>
+	<div class="playControll">
+		<div class="playPause playIcon"></div>
+		<div class="timebar">
+			<span class="currentTime">0:00:00</span>
+			<div class="progress">
+				<div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+				</div>
+			
+		</div>
+		<div class="otherControl">
+			<span class="volume glyphicon glyphicon-volume-down"></span>
+			<span class="fullScreen glyphicon glyphicon-fullscreen"></span>
+			<div class="volumeBar">
+					<div class="volumewrap">
+						<div class="progress">
+						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 8px;height: 40%;"></div>
+					</div>
+						</div>
+				</div>
+		</div>
+	</div>
+</div>
+       </div>
+
+		</div>
+	</div>
+</div>
+
+
+<div style="text-align:center;clear:both;">
+	<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+	<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+
+
+    </div>
+   </div>
+  </div>
+
+ </section>
+ <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
+</body>
+</html>

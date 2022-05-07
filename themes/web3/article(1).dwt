@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="googlebot" content="NOODP" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel='canonical' href='{$get_url}' />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{$page_title}" />
+<meta property="og:description" content="{$description}" />
+<meta property="og:site_name" content="KaBeiLu Hair" />
+<meta property="og:url" content="{$get_url}" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="css/master.css" rel="stylesheet">
+		<link href="css/header.css" rel="stylesheet">
+    <link href="css/icon-menu.css" rel="stylesheet">
+
+		<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="plugins/switcher/css/switcher.css" media="all" />
+
+
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+        {insert_scripts files='common.js'}
+	</head>
+	<body class="animated-css" data-scrolling-animations="false">
+		<div class="sp-body">
+
+      <!-- Loader Landing Page -->
+       <div id="loader">
+        <div class="loader"></div>  
+      </div>
+      <!-- Loader end -->
+
+		<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+			<section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('images/contact-heading-bg.jpg');">
+				<!-- <div class="overlay"></div> -->
+				<div class="container relative">
+					<h1 class="title font-additional font-weight-normal color-main text-uppercase wow zoomIn" data-wow-delay="0.3s">KBL Article</h1>
+
+				</div>
+			</section>
+
+      <!-- Map -->
+      <!-- Map -->
+<section id="contact-us">
+
+
+        <div class="container">
+        
+          <div class="row" style="line-height:22px">
+          <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+          
+          
+          
+          {$article.content}
+          
+            <p>
+            <!-- #BeginLibraryItem "/library/goods_related2.lbi" --><!-- #EndLibraryItem -->
+            </p>
+          
+          </div>
+          
+          
+        </div>
+      </section>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+		</div>
+
+
+
+	</body>
+</html>

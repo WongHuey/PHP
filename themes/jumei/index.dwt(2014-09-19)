@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js'}
+<script type="text/javascript" src="themes/jumei/images/js/pic.js"></script>
+<script type="text/javascript" src="themes/jumei/images/js/left_goodslist.js"></script>
+<script type="text/javascript" src="themes/jumei/images/js/jquery.js"></script>
+<script type="text/javascript" src="themes/jumei/images/js/scrollpic.js"></script>
+<script type="text/javascript" src="themes/jumei/images/js/productlist_roll.js"></script>
+<script type="text/javascript" src="themes/jumei/images/js/common1.js"></script>
+<script type="text/javascript" src="themes/jumei/images/js/MSClass.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+function $id(element) {
+  return document.getElementById(element);
+}
+//切屏--是按钮，_v是内容平台，_h是内容库
+function reg(str){
+  var bt=$id(str+"_b").getElementsByTagName("h2");
+  for(var i=0;i<bt.length;i++){
+    bt[i].subj=str;
+    bt[i].pai=i;
+    bt[i].style.cursor="pointer";
+    bt[i].onmouseover=function(){
+      $id(this.subj+"_v").innerHTML=$id(this.subj+"_h").getElementsByTagName("blockquote")[this.pai].innerHTML;
+      for(var j=0;j<$id(this.subj+"_b").getElementsByTagName("h2").length;j++){
+        var _bt=$id(this.subj+"_b").getElementsByTagName("h2")[j];
+        var ison=j==this.pai;
+        _bt.className=(ison?"":"h2bg");
+      }
+    }
+  }
+  $id(str+"_h").className="none";
+  $id(str+"_v").innerHTML=$id(str+"_h").getElementsByTagName("blockquote")[0].innerHTML;
+}
+function salelog()
+{
+	str = "com";
+	var bt=$$(str+"_b").getElementsByTagName("h2")[1];
+	bt.subj = str;
+	bt.pai  = 1;
+	bt.style.cursor = "pointer";
+	$$(bt.subj + "_v").innerHTML = $$(bt.subj + "_h").getElementsByTagName("blockquote")[bt.pai].innerHTML;
+	for(var j=0;j<$$(bt.subj+"_b").getElementsByTagName("h2").length;j++)
+	{
+		var _bt = $$(bt.subj+"_b").getElementsByTagName("h2")[j];
+		var ison = (j == bt.pai);
+		_bt.className = (ison ? "" : "h2bg");
+	}
+	$$(str+"_h").className = "none";
+	$$(str+"_v").innerHTML = $$(str+"_h").getElementsByTagName("blockquote")[1].innerHTML;
+}
+//]]>
+</script>
+<script type="text/javascript" src="themes/jumei/images/js/cctv.js"></script>   
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTabCatGoods(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+con.style.display=i==cursel?"block":"none";
+menu.className=i==cursel?"hover":"";
+}
+}
+//-->
+</script> 
+
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<style>
+#kbaidddddd{ display:none;}
+</style>
+
+
+
+
+
+
+
+<img src="images/ban.jpg" />
+
+<div id="container" >
+    <div id="body">
+<div class="mallTopScreen">
+<div class="fl" style="width:190px;">
+<div class="mtsCategory">
+<div class="mtsCategory-con">
+<div class="mallCategory" id="mallCategory">
+<h2 class="mc_head">全部分类</h2>
+<div class="mc_content">
+<ul class="mc_items">
+    <!--{foreach from=$categories item=cat name=top_goods}-->
+	<li onMouseOver="this.className='hover item'" onMouseOut="this.className='item'" class="item" {if $smarty.foreach.top_goods.iteration==1}style="border-top:none;" {/if} >
+    <span class="icon i{$smarty.foreach.top_goods.iteration}"></span>
+    <h3>
+     <a href="{$cat.url}" target="_blank">{$cat.name|escape:html}</a>
+    </h3>
+    <p>
+ <!--{foreach from=$cat.cat_id item=child}-->
+  <a href="{$child.url}"  target="_blank">{$child.name|escape:html}</a>
+     
+     <!--{/foreach}-->
+       </p>
+   
+</li>
+    <!--{/foreach}-->   
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="left_shadow" style="margin-bottom: 7px;"></div></div>
+<div class="fr" style="width:760px;">
+  <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+
+
+<!--品牌官方旗舰店-->
+    <div class="right_shadow" style="margin-bottom: 4px;"></div>
+  <div class="Brand_Flagship_Store">
+        <div class="bfs_head">品牌官方旗舰店</div>
+        <div class="bfs_content clearfix" >
+        <DIV class="bfs_marquee" id="MarqueeDiv1">
+<UL onmouseout="hiddenallimgbox(this,event)">
+<!-- TemplateBeginEditable name="品牌官方旗舰店（宽：190 253px）" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</UL>
+<SCRIPT type=text/javascript>
+new Marquee("MarqueeDiv1",2,20,760,253,20,4000,5000,190)	
+</SCRIPT>
+</DIV>
+  </div>
+    </div>
+<div class="right_shadow"></div>
+</div>
+
+<!--品牌官方旗舰店end-->
+
+<div class="clear"></div>
+</div>
+<!--品牌切换开始-->
+
+  <div class="brands_container">
+        <div class="bc_cate fl" id="bc_cate">
+            <a href="javascript:;" class=" hover"  id="goods1" onmouseover="setTabCatGoods('goods',1,3)">
+                推荐品牌
+            </a>
+            <a href="javascript:;"  id="goods2" onmouseover="setTabCatGoods('goods',2,3)">
+                欧美品牌
+            </a>
+            <a href="javascript:;"  id="goods3" onmouseover="setTabCatGoods('goods',3,3)">
+                亚洲品牌
+            </a>        </div>
+        <div class="bc_con fr">
+          <div style="display: block;" id="con_goods_1">
+		    <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
+	 <!-- {if $brand.sort_order <= 20} -->
+      <!-- {if $brand.brand_logo} -->
+        <a href="{$brand.url}"><img src="data/brandlogo/{$brand.brand_logo}" alt="{$brand.brand_name|escape:html} ({$brand.goods_num})" class="lazy_img" width="120" height="49" /></a>
+      <!-- {/if} -->
+      <!-- {/if} -->
+  <!-- {/foreach} -->                                     
+        </div>
+          <div style="display: none;" id="con_goods_2">
+      		    <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
+	 <!-- {if $brand.sort_order >20} -->
+	 <!-- {if $brand.sort_order <50} -->
+      <!-- {if $brand.brand_logo} -->
+        <a href="{$brand.url}"><img src="data/brandlogo/{$brand.brand_logo}" alt="{$brand.brand_name|escape:html} ({$brand.goods_num})" class="lazy_img" width="120" height="49" /></a>
+      <!-- {/if} -->
+      <!-- {/if} -->
+	  <!-- {/if} -->
+  <!-- {/foreach} --> 
+                                      
+        </div>          <div style="display: none;" id="con_goods_3">
+     		    <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
+	 <!-- {if $brand.sort_order >= 50} -->
+      <!-- {if $brand.brand_logo} -->
+        <a href="{$brand.url}"><img src="data/brandlogo/{$brand.brand_logo}" alt="{$brand.brand_name|escape:html} ({$brand.goods_num})" class="lazy_img" width="120" height="49" /></a>
+      <!-- {/if} -->
+      <!-- {/if} -->
+  <!-- {/foreach} -->   
+        </div>
+        
+      </div>
+    <div class="clear"></div>
+</div>   
+  <div class="floor_shadow"></div> 
+
+    
+<div class="brands_container" id="pro1">
+<div class="bfs_head">商品推荐</div>
+
+
+
+</div>
+
+
+<div class="floor_shadow"></div> 
+                       
+</div></div>
+    <div class="clear"></div>    
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<SCRIPT type=text/javascript>
+$(document).ready(function () {
+            Jumei.Core.init();
+            Jumei.Account.init();
+            Jumei.Mall.init();
+        for(var i in Jumei.Core.afterInitFunctions)
+        Jumei.Core.afterInitFunctions[i].call();
+ 
+});
+</SCRIPT>
+</body>
+</html>
+          

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>KaBeiLu</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="stylesheet" href="themes/jumei/aboutkbl/css/img_baguettebox.min.css">
+<link rel="stylesheet" href="themes/jumei/aboutkbl/css/img_lrtk.css">
+</head>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="block clearfix">
+
+<div style="width:100%; height:50px; text-align:left">　　<font class="xgfont2" style="font-size:36px"><b>Kabielu Attention</b></font></div>
+
+
+<div class="xgfont2" style="width:1000px; height:880px; font-size:20px">
+Your order has been generated, due to the order had exceed $500,pls use western union,money gram or T/T to finish your payment,only need to pay us the shippment fee and product moeny,when we received the money,we will ship the hair for you at once.any question,pls send E-mail to:<a href="mailto:webmaster@kabeilu.com"><u><font color="#FF0000">webmaster@kabeilu.com</font></u></a> or click <a onclick="openchat()" style="cursor:pointer" title="Chat Online"><u><font color="#FF0000">Chat online</font></u></a> to contact us. Thank you for your support.
+
+<br>
+<br>
+<strong>Bank Account:</strong><br><br>
+<strong>Western union</strong><br>
+First name: Yingzhu<br>
+Last  name: Chen<br />
+Location:China<br>
+Address:  Room 303, Bai Yun Hua Yuan, Xin Shi Xu, Bai Yun, Guangzhou, Guangdong, <br>
+China<br>
+code : 510000<br>
+<br>
+<strong>Money gram</strong> <br>
+First name: Yingzhu<br>
+Last  name: Chen<br />
+Location:China<br>
+Address: Room 303, Bai Yun Hua Yuan, Xin Shi Xu, Bai Yun, Guangzhou, Guangdong, <br>
+China<br>
+code : 510000<br>
+<br>
+<strong>T/T  (Bank Transfer /bank wire) please pay to us dollars  </strong><br>
+Bank wire：Company Account <br>
+Beneficiary Bank: HSBC Hong Kong  <br>
+Beneficiary Bank Code:  004 <br>
+SWIFT Address: HSBCHKHHHKH <br>
+Receiver's Company Name: BEAUTIFUL FASHION TRADING LIMITED<br>
+Account No: 614043230838<br>
+Beneficiary Bank Address: Head Office 1 Queen's Road Central Hong Kon
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+ <div class="clear"></div>   
+
+<div class="clear"></div> 
+    
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+    <script src="themes/jumei/aboutkbl/js/img_baguettebox.min.js"></script>
+<script>
+baguetteBox.run('.baguetteBoxOne', {
+    animation: 'fadeIn',
+});
+</script>
+
+</body>
+</html>

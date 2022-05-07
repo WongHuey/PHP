@@ -1,0 +1,129 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0137)http://www.9416.cn/preview/4185/2013-07-11/kinMaxShow%E7%84%A6%E7%82%B9%E5%9B%BE%E4%BB%A3%E7%A0%81%EF%BC%88jQuery%EF%BC%89/index.html -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=7.0000" 
+http-equiv="X-UA-Compatible">
+<TITLE>jquery仿支付宝首页焦点图片切换_简单大气的宽屏焦点图</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<STYLE type=text/css>* {
+	LIST-STYLE-TYPE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+A {
+	BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px
+}
+IMG {
+	BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px
+}
+BODY {
+	FONT: 12px/180% Arial, Helvetica, sans-serif, "新宋体"
+}
+#kinMaxShow {
+	DISPLAY: none
+}
+#kinMaxShow .sub_1_1 {
+	POSITION: absolute; LEFT: 110px; DISPLAY: block; TOP: 136px
+}
+#kinMaxShow .sub_1_2 {
+	POSITION: absolute; LEFT: 110px; DISPLAY: block; TOP: 120px
+}
+#kinMaxShow .sub_2_1 {
+	POSITION: absolute; LEFT: -160px; DISPLAY: block; BOTTOM: 0px
+}
+#kinMaxShow .sub_2_2 {
+	POSITION: absolute; LEFT: 110px; DISPLAY: block; TOP: 20px
+}
+#kinMaxShow .sub_3_1 {
+	RIGHT: 180px; POSITION: absolute; DISPLAY: block; BOTTOM: 0px
+}
+#kinMaxShow .sub_3_2 {
+	POSITION: absolute; LEFT: 30px; DISPLAY: block; TOP: 40px
+}
+</STYLE>
+
+<SCRIPT type=text/javascript 
+src="images3/jquery-1.10.2.min.js"></SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="images3/jquery.kinMaxShow-1.0.min.js"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+$(function(){
+	
+	$("#kinMaxShow").kinMaxShow({
+	
+		height:400,
+		button:{
+			showIndex:false,
+			normal:{background:'url(images3/button.png) no-repeat -14px 0',marginRight:'8px',border:'0',right:'44%',bottom:'20px'},
+			focus:{background:'url(images3/button.png) no-repeat 0 0',border:'0'}
+		},
+	
+		callback:function(index,action){
+			switch(index){
+				case 0 :
+				if(action=='fadeIn'){
+					$(this).find('.sub_1_1').animate({left:'70px'},600)
+					$(this).find('.sub_1_2').animate({top:'60px'},600)
+					
+				}else{
+					$(this).find('.sub_1_1').animate({left:'110px'},600)
+					$(this).find('.sub_1_2').animate({top:'120px'},600)
+					
+				};
+				break;
+						
+				case 1 :
+				if(action=='fadeIn'){
+					$(this).find('.sub_2_1').animate({left:'-100px'},600)
+					$(this).find('.sub_2_2').animate({top:'60px'},600)
+				}else{
+					$(this).find('.sub_2_1').animate({left:'-160px'},600)	
+					$(this).find('.sub_2_2').animate({top:'20px'},600)
+				};
+				break;
+						
+				case 2 :
+				if(action=='fadeIn'){
+					$(this).find('.sub_3_1').animate({right:'350px'},600)
+					$(this).find('.sub_3_2').animate({left:'180px'},600)
+				}else{
+					$(this).find('.sub_3_1').animate({right:'180px'},600)	
+					$(this).find('.sub_3_2').animate({left:'30px'},600)
+				};
+				break;											
+			}
+		}
+	
+	});
+
+
+});
+
+</SCRIPT>
+
+<META name=GENERATOR content="MSHTML 10.00.9200.16750"></HEAD>
+<BODY>
+<DIV id=kinMaxShow>
+<DIV><IMG src="images3/1.jpg"> 
+<DIV><IMG class=sub_1_1 
+src="images3/sub_1_1.png"> <IMG 
+class=sub_1_2 border=0 
+src="images3/sub_1_2.png" 
+useMap=#Map_1_2> <MAP id=Map_1_2 name=Map_1_2><AREA 
+  href="http://www.9416.cn/" shape=rect target=_blank 
+coords=2,96,106,123></MAP></DIV></DIV>
+<DIV><IMG src="images3/2.jpg"> 
+<DIV><IMG class=sub_2_1 
+src="images3/sub_2_1.png"> <IMG 
+class=sub_2_2 border=0 
+src="images3/sub_2_2.png" 
+useMap=#Map_2_2> <MAP id=Map_2_2 name=Map_2_2><AREA 
+  href="http://www.9416.cn/" shape=rect target=_blank 
+coords=3,97,104,124></MAP></DIV></DIV>
+<DIV><IMG src="images3/3.jpg"> 
+<DIV><IMG class=sub_3_1 
+src="images3/sub_3_1.png"> <IMG 
+class=sub_3_2 border=0 
+src="images3/sub_3_2.png" 
+useMap=#Map_3_2> <MAP id=Map_3_2 name=Map_3_2><AREA 
+  href="http://www.9416.cn/" shape=rect target=_blank 
+coords=1,98,106,124></MAP></DIV></DIV></DIV><!--kinMaxShow end--></BODY></HTML>

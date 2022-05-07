@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+        <!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="googlebot" content="NOODP" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel='canonical' href='{$get_url}' />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{$page_title}" />
+<meta property="og:description" content="{$description}" />
+<meta property="og:url" content="{$get_url}" />
+<meta property="og:site_name" content="KaBeiLu Hair" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+		
+ 
+        
+		<link href="css/master.css" rel="stylesheet">
+		<link href="css/header.css" rel="stylesheet">
+    <link href="css/icon-menu.css" rel="stylesheet">
+
+		<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="plugins/switcher/css/switcher.css" media="all" />
+
+
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+{insert_scripts files='compare.js,common.js'}
+	</head>
+	<body class="animated-css" data-scrolling-animations="false">
+    
+    
+
+    
+    
+		<div class="sp-body">
+
+      <!-- Loader Landing Page -->
+       <div id="loader">
+        <div class="loader"></div>  
+      </div>
+      <!-- Loader end -->
+    
+    
+    <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+    
+		
+        
+			<section id="pageTitleBox" class="paralax breadcrumb-container2"  style="background-image: url('images/detail-heading-bg.jpg');">
+            
+           
+            
+            
+				<div class="overlay"></div>
+				<div class="container relative">
+                					<h1 class="zoomIn" style="font-size:12px" data-wow-delay="0.3s">
+                    
+ <!-- #BeginLibraryItem "/library/ban2.lbi" --><!-- #EndLibraryItem -->
+   
+                    
+                    </h1>
+
+				</div>
+			</section>
+
+			<section id="pageContent" class="page-content">
+      
+				<div class="container">
+                      <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+					<div class="row">
+                    
+						<div class="sidebar col-lg-3 col-md-3 col-sm-3 col-xs-12 clearfix">
+                 
+                 <!-- #BeginLibraryItem "/library/category_tree8.lbi" -->
+
+
+ <!-- #EndLibraryItem -->
+                  
+ 
+						</div>
+               
+						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 clearfix">
+                        
+                        Order By:
+                         <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/goods_id_<!-- {if $pager.sort == 'goods_id'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.goods_id}"  class="bianjikddyi"></a>
+  <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list"><img src="images/shop_price_<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.shop_price}"  class="bianjikddyi"></a>
+  <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=<!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/last_update_<!-- {if $pager.sort == 'last_update'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.last_update}"  class="bianjikddyi"></a>
+                        
+							<div class="content-box">
+							  <div class="products-cat clearfix">
+                  <div class="category-pagination col-sm-12">
+       
+                    </div>
+                  <ul class="products-grid">
+                                    
+                            
+<!--{foreach from=$goods_list item=goods name=goods_list}-->
+                                     <!-- {if $goods.goods_id} -->
+
+
+<li class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+			
+											<div class="product-item hvr-underline-from-center">
+                                           
+														
+													
+												<div class="product-item_body"><img class="product-item_image" src="{$goods.goods_img}" alt="{$goods.goods_name}">
+									
+                                    
+                           					  <a class="product-item_link" href="{$goods.url}">												</a></div>
+												<a href="{$goods.url}" class="product-item_footer">
+													<div class="product-item_title font-additional font-weight-bold text-center text-uppercase">{$goods.goods_name}</div>
+												
+												</a>      
+                                                
+                                                              
+                                                
+				  </div>
+                  <div class="cat032">
+                                                
+                                                   <div class="left089"><font class="fontred">{$goods.shop_price}</font></div>
+                                                   
+                                                   
+                                             <div class="left090">       
+                                                   <font class="delxian">{$goods.market_price}</font> <font class="fontred2">{$goods.zhekou_price2}%OFF</font><span class="fontred3">Orders({$goods.buy_num})</span></div>
+                  </div>
+                  
+                  
+                                                                  
+                  
+									</li>
+                                        
+                                        
+                                               <!--{/if}-->
+    <!--{/foreach}-->    
+                                        
+                                        
+									
+								  </ul>
+                                    
+                                    
+                                    
+                                  <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->  
+                                    
+                                    
+<div class="category-pagination col-sm-12">
+                   
+                    <nav>
+                      <ul class="pagination pagination-small pull-right">
+                        <li>
+                     
+                           
+                         
+                        </li>
+                      
+                      </ul>
+                    </nav>
+                  </div> 
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+      <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+		</div>
+
+
+	</body>
+</html>

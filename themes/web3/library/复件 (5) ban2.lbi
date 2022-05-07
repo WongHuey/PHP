@@ -1,0 +1,269 @@
+﻿<?php
+if($_REQUEST['id'])
+{
+	$id = $_REQUEST['id'];
+    
+}
+else
+{
+	$id = $_REQUEST['category'];
+    
+    
+        function get_parent3($value2)
+{
+
+			$sql = 'SELECT cat_id FROM ' . $GLOBALS['ecs']->table('category') . " WHERE define_url = '$value2'";
+			$res = $GLOBALS['db']->getOne($sql);
+            $cat_id = $GLOBALS['db']->getOne($sql);
+		return $cat_id;
+}
+
+
+    
+    $id = get_parent3($_REQUEST['defurl']);
+    
+    
+}
+
+
+function get_categories($cat_id = 0)
+{
+    if ($cat_id > 0)
+    {
+			  $parent_id = $cat_id;
+    }
+    else
+    {
+        $parent_id = 0;
+    }
+
+    /*
+     判断当前分类中全是是否是底级分类，
+     如果是取出底级分类上级分类，
+     如果不是取当前分类及其下的子分类
+    */
+    $sql = 'SELECT count(*) FROM ' . $GLOBALS['ecs']->table('category') . " WHERE parent_id = '$cat_id' AND is_show = 1 ";
+    if ($GLOBALS['db']->getOne($sql) || $parent_id == 0)
+    {
+        /* 获取当前分类及其子分类 */
+        $sql = 'SELECT a.cat_id, a.cat_name, a.sort_order AS parent_order, a.cat_id, a.is_show,' .
+                    'b.cat_id AS child_id, b.cat_name AS child_name, b.sort_order AS child_order ' .
+                'FROM ' . $GLOBALS['ecs']->table('category') . ' AS a ' .
+                'LEFT JOIN ' . $GLOBALS['ecs']->table('category') . ' AS b ON b.parent_id = a.cat_id AND b.is_show = 1 ' .
+                "WHERE a.parent_id = '$parent_id' ORDER BY parent_order ASC, a.cat_id ASC, child_order ASC";
+    }
+    else
+    {
+        /* 获取当前分类及其父分类 */
+        $sql = 'SELECT a.cat_id, a.cat_name, b.cat_id AS child_id, b.cat_name AS child_name, b.sort_order, b.is_show ' .
+                'FROM ' . $GLOBALS['ecs']->table('category') . ' AS a ' .
+                'LEFT JOIN ' . $GLOBALS['ecs']->table('category') . ' AS b ON b.parent_id = a.cat_id AND b.is_show = 1 ' .
+                "WHERE b.parent_id = '$parent_id' ORDER BY sort_order ASC";
+    }
+    $res = $GLOBALS['db']->getAll($sql);
+
+    $cat_arr = array();
+    foreach ($res AS $row)
+    {
+        if ($row['is_show'])
+        {
+            $cat_arr[$row['cat_id']]['id']   = $row['cat_id'];
+            $cat_arr[$row['cat_id']]['name'] = $row['cat_name'];
+            $cat_arr[$row['cat_id']]['url']  = build_uri('category', array('cid' => $row['cat_id']), $row['cat_name']);
+
+            if ($row['child_id'] != NULL)
+            {
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['id']   = $row['child_id'];
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['name'] = $row['child_name'];
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['url']  = build_uri('category', array('cid' => $row['child_id']), $row['child_name']);
+            }
+        }
+    }
+
+    return $cat_arr;
+}
+function get_cat_name_add($id)
+{
+    $sql = 'SELECT cat_name ' . 'FROM ' . $GLOBALS['ecs']->table('category')  . "WHERE cat_id =$id " ;
+		$cat_name = $GLOBALS['db']->getOne($sql);
+		return $cat_name;
+}
+function get_parent($value,$id='')
+{
+
+    if($value!=0)
+    {
+			$sql = 'SELECT parent_id FROM ' . $GLOBALS['ecs']->table('category') . " WHERE cat_id = '$value'";
+			$res = $GLOBALS['db']->getOne($sql);
+			return get_parent($res,$value);
+    }
+		else
+		{
+			return $id;
+		}
+}
+include_once("includes/lib_goods.php");
+$this->assign('categories1'     ,    get_categories(get_parent($id)));
+
+if($id==500)
+{
+$this->assign('cat_name'     ,       "Body Wave");
+}
+else if($id==600)
+{
+$this->assign('cat_name'     ,       "Deep Wave");
+}
+else if($id==700)
+{
+$this->assign('cat_name'     ,       "Loose Wave");
+}
+
+else if($id==800)
+{
+$this->assign('cat_name'     ,       "Straight");
+}
+
+else if($id==900)
+{
+$this->assign('cat_name'     ,       "Curly");
+}
+
+
+
+else
+{
+$this->assign('cat_name'     ,       get_cat_name_add(get_parent($id)));
+}
+
+
+
+?>
+
+
+<?php
+$cname=get_cat_name_add($id);
+$cnames=get_cat_name_add(get_parent($id));
+if($cname==$cnames)
+{
+$cnames="";
+}
+else
+{
+$cnames=$cnames." ";
+}
+if($cname=="Malaysian Hair")
+{
+echo "<font class='leftimg80'><img class='leftimg800' src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Malaysian Hair' /><h1>$cnames$cname</h1>Virgin Malaysian Hair Is Obtained From Malaysian Women Who Sell Their To Make Some Extra Money. Malaysian Hair Weave Is Heavier, Thicker And More Dense Than Indian Hair, And Also Not As Shiny And Has A Fuller Body. It Has Very Soft And Smooth Texture, It Waves Slightly When Wet. As Usual, We Only Offer 100% Virgin Malaysian Hair, Therefore Our Malaysian Hair Is Obtained From A Single Donor And Has Not Been Chemically Altered Or Processed. It Is Shed-Free And Tangle-Free</font>";
+}
+else if($cname=="Brazilian Hair")
+{
+echo "<font class='leftimg80'><h1>$cnames$cname</h1>KBL Brazilian hair is very high in quality and overall appearance. They are made of all natural, human hair that adds to the appeal factor. As we alluded to earlier, it has surged in popularity over the years due to the fact that it can be cut to desired lengths or textured on human hair extensions.KaBeiLu.com promise that we only sell 100% real Brazilian hair.It doesn't matter what your ethnicity is, Brazilian hair is ideal for Caucasian textures to African American and everything in between. You are going to be amazed at how wonderful you are going to look.</font>";
+}
+else if($cname=="Indian Hair")
+{
+echo "<font class='leftimg80'><img class='leftimg800' src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Indian Hair' /><h1>$cnames$cname</h1>Virgin Indian Hair Is Obtained From Indian Women Who Sell Their To Make Some Extra Money. Indian Hair Is Thinner And Silkier Compared To Brazilian Hair. As Usual We Only Offer 100% Virgin Indian Hair, Therefore Our Indian Hair Is Obtained From A Single Donor And Has Not Been Chemically Altered Or Processed. It Is Shed-Free And Tangle-Free, So You Can Rest Assured That You Are Purchasing Top Notch Hair. We Guarantee That You Will Love Our Long Lasting And Beautiful Hair.</font>";
+}
+else if($cname=="Peruvian Hair")
+{
+echo "<font class='leftimg80'><img class='leftimg800' src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Peruvian Hair' /><h1>$cnames$cname</h1>Virgin Peruvian Hair Has Many Purpose, It Is Lightweight But Still Carries Lots Of Volume. Peruvian Hair Has Soft And Silky Texture, Available In Natural Black And Natural Brown Shades. As Usual, We Only Offer 100% Virgin Peruvian Hair, Therefore Our Peruvian Hair Is Obtained From A Single Donor And Has Not Been Chemically Altered Or Processed. It Is Shed-Free And Tangle-Free, So You Can Rest Assured That You Are Purchasing Top Notch Hair. We Guarantee That You Will Love Our Long Lasting And Beautiful Hair.</font>";
+}
+
+else if($cname=="Closure Hair")
+{
+echo "<font class='leftimg80'><img class='leftimg800' src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Lace Closure' /><h1>$cnames$cname</h1>Human Hair Lace Closures Pieces Are Used To Close Your Weave,Lace Closure Is Used To Close Wefts, Tracks, Or Extensions. Our Closures Are Perfect For Balding And Thinning Hair At The Crown, Or Just Worn As A Protective Style To Avoid Leaving Any Hair Out With A Full Head Weave. Instant Volume, Length And Style To Thinning Hair In Just Minutes With Any Of These Top Hairpieces That Come In Human Hair,Beautiful And Natural Looking.</font>";
+}
+
+
+else if($cname=="7A Hair")
+{
+echo "<font class='leftimg80'><img class='leftimg800' src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='7a hair' /><h1>$cnames$cname</h1>T1 hair is devoted to be the best quality, the most natural and the real human hair originating from Brazilian girls.<br>We collect our human hair in the most excellent birthplace of human hair - Brazil.<br>Perhaps, it is exactly because of poverty that this Brazilian hair, without too much chemical pollutions is the quality that T1 hair.Among the hair extensions, 7A Brazilian hair is the top, can be dyed to any color and curl,identical length let the hair looks more fuller.</font>";
+}
+
+else if($cname=="Bundles + Closure")
+{
+echo "<font class='leftimg80'><img class='leftimg800' src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Bundles + Closure' /><h1>$cnames$cname</h1>It's a good choice for you to purchase hair weft with a closure. The role of the closure is making your hair looks more fuller and nature,also used to close your wefts. Both hair extensions and closures are 100 percent human hair,full cuticle. It has very soft and smooth texture,can be dyed and bleached. Want to own a amazing hairstyle,get now!</font>";
+}
+else if($cname=="European Hair")
+{
+echo "<font class='leftimg80'><img class='leftimg800' src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='European Hair' /><h1 class='leftimg081'>$cnames$cname</h1>European hair is a very popular and fashionable hair style in U.S And Europe countries. The texture of European hair is very soft and silk. They are made of 100 percent human virgin hair. Full cuticle, no processing.Not easy get shed or get tangle cause its double drawn. Last 2-3 years with good care,it looks luster when you under the sunlight,very nature and shinning! You are going to be more confident and amazing if you get this look.</font>";
+}
+
+
+//else
+//{
+//echo "<font class='leftimg80'><img class='leftimg800' src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='' /><h1>$cnames$cname</h1>Our KBL hair is 100% virgin human hair and each individual piece comes from a separate donor.<br>Our natural hair comes in straight, wavy and deep wave pattern, the color range between a natural 1b and 2. <br>Our 100%  virgin hair are extremely strong and durable. It can be used for more than one year if you take care properly, it looks natural, manageable, any ideal color you can dye yourself.</font>";
+//}
+
+elseif($id==20)
+{
+echo "<div class='category-ban'><h1>Brazilian Curly Hair</h1></div><div class='cat-content'>KBL Brazilian Curly Hair is 100% virgin human hair and each individual piece comes from a separate donor.</div>";
+}
+
+elseif($id==22)
+{
+echo "<div class='category-ban'><h1>Brazilian Body Wave</h1></div><div class='cat-content'>Our Natural Brazilian Body Wave is grade brazilian body wave hair extension,unprocessed brazilian hair,no smell,no tangle,can be dying any color</div>";
+}
+elseif($id==5)
+{
+echo "<div class='category-ban'><h1>Brazilian Loose Wave</h1></div><div class='cat-content'>Brazilian Loose Wave Extension is the best hot selling product Texture is soft and silk No Tangling No Shedding Highly recommend</div>";
+}
+elseif($id==23)
+{
+echo "<div class='category-ban'><h1>Brazilian Hair Straight</h1></div><div class='cat-content'>Wholesale price,direct factory price for the best quality hair 5A Brazilian straight weaving hair,virgin hair extension</div>";
+}
+elseif($id==21)
+{
+echo "<div class='category-ban'><h1>Brazilian Deep Wave</h1></div><div class='cat-content'>Can do a deep wave hair treatment before installed the hair Don't use narrow comb to comb your curly hair Easy get shed or tangle</div>";
+}
+elseif($id==7)
+{
+echo "<div class='category-ban'><h1>Indian Body Wave</h1></div><div class='cat-content'>Unprocessed 5A Indian Virgin Hair Indian Body Wave Human Hair Weave</div>";
+}
+elseif($id==15)
+{
+echo "<div class='category-ban'><h1>Indian Deep Wave</h1></div><div class='cat-content'>Indian Virgin Hair 5A Indian Deep Wave 100% Human Hair Weaving Unprocessed Virgin Hair Remy Queen Hair</div>";
+}
+elseif($id==17)
+{
+echo "<div class='category-ban'><h1>Indian Hair Straight</h1></div><div class='cat-content'>Human Hair Extensions 100% Indian Virgin Remy Hair Staight 1# Ombre Soft Hair</div>";
+}
+elseif($id==16)
+{
+echo "<div class='category-ban'><h1>Indian Loose Wave</h1></div><div class='cat-content'>Virgin Indian Hair is hair that has not been chemically altered and its roots and tips are running in the same direction.</div>";
+}
+elseif($id==3)
+{
+echo "<div class='category-ban'><h1>Peruvian Body Wave</h1></div><div class='cat-content'>Last 2-3 years Long with good care,12-26inch,Double drawn,singel layer,100% virgin peruvian body wave,wholesale price hair,can be bleached</div>";
+}
+elseif($id==12)
+{
+echo "<div class='category-ban'><h1>Peruvian Deep Wave</h1></div><div class='cat-content'>unprocessed 100% 6A peruvian deep wave,cheap peruvian virgin hair,can be dye any color and bleached!</div>";
+}
+elseif($id==13)
+{
+echo "<div class='category-ban'><h1>Peruvian Loose Wave</h1></div><div class='cat-content'>100% Human Hair,Direct Factory Price,Thousands of pieces Each length,Unprocessed Peruvian Loose Wave,natural black virgin hair,can be dye any color</div>";
+}
+elseif($id==14)
+{
+echo "<div class='category-ban'><h1>Peruvian Hair Straight</h1></div><div class='cat-content'>6A unprocessed peruvian human hair,human peruvian hair straight extension,12 26inch,tangle&shed free,can be dyed to any color or bleached</div>";
+}
+elseif($id==9)
+{
+echo "<div class='category-ban'><h1>Malaysian Body Wave</h1></div><div class='cat-content'>Virgin Malaysian Body Wave Bundles Deal Malaysian Hair Unprocessed Virgin Hair Weave 100% Human Hair Extensions</div>";
+}
+elseif($id==18)
+{
+echo "<div class='category-ban'><h1>Malaysian Loose Wave</h1></div><div class='cat-content'>New Virgin Hair Malaysian Loose Wave Hair Weave Bundles 6A Grade Virgin Unprocessed Human Hair</div>";
+}
+elseif($id==19)
+{
+echo "<div class='category-ban'><h1>Malaysian Hair Straight</h1></div><div class='cat-content'>Grade 6A Cheap Virgin Malaysian Hair Straight Unprocessed Malaysian Hair Human Weave Bundles Malaysian Straight Hair</div>";
+}
+
+
+else
+{
+echo "<div class='category-ban'><h1>$cname</h1></div>";
+}
+
+?>

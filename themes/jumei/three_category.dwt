@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>1{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,global.js,compare.js'}</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="block clearfix">
+  <div class="AreaL">   
+<!-- #BeginLibraryItem "/library/category_tree2.lbi" -->
+
+<div class="box">
+ <div class="box_1">
+  <div id="category_tree">
+    <!--{foreach from=$categories item=cat}-->
+     <dl>
+     <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
+     <!--{foreach from=$cat.children item=child}-->
+     <dd><a href="{$child.url}">{$child.name|escape:html}</a></dd>
+     <!--{/foreach}-->
+     </dl>
+    <!--{/foreach}--> 
+  </div>
+ </div>
+</div>
+<div class="blank5"></div>
+
+ <!-- #EndLibraryItem -->
+ 
+ 
+ 
+  <!-- #BeginLibraryItem "/library/top10.lbi" --><!-- #EndLibraryItem -->
+  
+  
+   <!-- #BeginLibraryItem "/library/links.lbi" --><!-- #EndLibraryItem -->
+  
+ <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="左边广告区域（宽200px）" -->
+<!-- TemplateEndEditable -->
+    <div class="blank"></div>
+  </div>
+  
+  
+  <div class="AreaR">
+   <div id="ur_here">
+  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+ </div>
+   <div class="cgy_r">
+   
+<!-- #BeginLibraryItem "/library/ban2.lbi" --><!-- #EndLibraryItem -->
+
+      <!-- TemplateBeginEditable name="右边广告区域（宽730 283px）" -->
+<!-- TemplateEndEditable -->   </div>
+    <div class="blank"></div> 
+	
+	  <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}--> 
+	<div class="mod1" id="filter">
+    
+    <div class="shaixuantitle">Screening Conditions</div>
+	<div class="mod1con">
+	<!--{if $brands.1}-->
+			<div class="screeBox">
+			  {$lang.brand}：
+				<!--{foreach from=$brands item=brand}-->
+					<!-- {if $brand.selected} -->
+					<p>{$brand.brand_name}</p>
+					<!-- {else} -->
+					<a href="{$brand.url}">{$brand.brand_name}</a>&nbsp;
+					<!-- {/if} -->
+				<!--{/foreach}-->
+			</div>
+			<!--{/if}-->
+	<!--{if $price_grade.1}-->
+			<div class="screeBox">
+			{$lang.price}：
+			<!--{foreach from=$price_grade item=grade}-->
+				<!-- {if $grade.selected} -->
+				<p>{$grade.price_range}</p>
+				<!-- {else} -->
+				<a href="{$grade.url}">{$grade.price_range}</a>&nbsp;
+				<!-- {/if} -->
+			<!--{/foreach}-->
+			</div>
+			<!--{/if}-->
+		<!--{foreach from=$filter_attr_list item=filter_attr}-->
+      <div class="screeBox">
+		{$filter_attr.filter_attr_name|escape:html} :
+			<!--{foreach from=$filter_attr.attr_list item=attr}-->
+				<!-- {if $attr.selected} -->
+				<p>{$attr.attr_value}</p>
+				<!-- {else} -->
+				<a href="{$attr.url}">{$attr.attr_value}</a>&nbsp;
+				<!-- {/if} -->
+			<!--{/foreach}-->
+			</div>
+      <!--{/foreach}-->
+		</div>
+	</div>
+    <div class="blank"></div>
+			  <!-- {/if} -->
+  <!-- #BeginLibraryItem "/library/goods_list.lbi" --><!-- #EndLibraryItem -->  
+<div class="blank5"></div>	
+  <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+  </div>  
+</div>
+    <div class="clear"></div>    
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

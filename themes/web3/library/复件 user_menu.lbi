@@ -1,0 +1,17 @@
+<div style="position:relative">
+
+<div  class="btn send-button btn-block hvr-bounce-to-right hover-focus-border before-bg meback memuser"><i class="fa fa-home"></i> <a rel="nofollow" href="user.php">{$lang.label_welcome}</a></div>
+<div  class="btn send-button hvr-bounce-to-right hover-focus-border before-bg meback memuser"><i class="fa fa-user"></i> <a rel="nofollow" href="user.php?act=profile"{if $action eq 'profile'}class="userlist"{/if} class="userlist"> {$lang.label_profile}</a> |
+<i class="fa fa-usd"></i> <a rel="nofollow" href="user.php?act=order_list" class="userlist"> {$lang.label_order}</a></div>
+<div  class="btn send-button hvr-bounce-to-right hover-focus-border before-bg meback memuser"><i class="fa fa-book"></i> <a rel="nofollow" href="user.php?act=address_list"> {$lang.label_address}</a></div>
+<div  class="btn send-button hvr-bounce-to-right hover-focus-border before-bg meback memuser"><i class="fa fa-comment"></i> <a rel="nofollow" href="user.php?act=comment_list"> {$lang.label_comment}</a></div>
+<div  class="btn send-button hvr-bounce-to-right hover-focus-border before-bg meback memuser" ><i class="fa fa-bookmark"></i> <a rel="nofollow" href="user.php?act=booking_list"> {$lang.label_booking}</a></div>
+<div  class="btn send-button hvr-bounce-to-right hover-focus-border before-bg meback memuser">Regist</div>
+</div>
+
+
+
+
+<div class="userMenu membermenu">
+
+</div>

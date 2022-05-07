@@ -1,0 +1,10 @@
+<div style="position:relative">
+
+<a rel="nofollow" href="user.php"><div  class="btn send-button btn-block hvr-bounce-to-right hover-focus-border before-bg meback memuser"><i class="fa fa-home"></i> {$lang.label_welcome}</div></a>
+<a rel="nofollow" href="user.php?act=profile"><div  class="btn send-button hvr-bounce-to-right hover-focus-border before-bg meback memuser"><i class="fa fa-user"></i> {$lang.label_profile}</div></a>
+<a rel="nofollow" href="user.php?act=order_list"><div  class="btn send-button hvr-bounce-to-right hover-focus-border before-bg meback memuser"><i class="fa fa-usd"></i> {$lang.label_order}</div></a>
+<a rel="nofollow" href="user.php?act=address_list"><div  class="btn send-button hvr-bounce-to-right hover-focus-border before-bg meback memuser"><i class="fa fa-book"></i> {$lang.label_address}</div></a>
+<a rel="nofollow" href="user.php?act=comment_list"><div  class="btn send-button hvr-bounce-to-right hover-focus-border before-bg meback memuser"><i class="fa fa-comment"></i> {$lang.label_comment}</div></a>
+<a rel="nofollow" href="user.php?act=booking_list"><div  class="btn send-button hvr-bounce-to-right hover-focus-border before-bg meback memuser" ><i class="fa fa-bookmark"></i> {$lang.label_booking}</div></a>
+
+</div>

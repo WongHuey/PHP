@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- TemplateBeginEditable name="doctitle" --><!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="css/master.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
+<!-- SWITCHER -->
+<link rel="stylesheet" id="switcher-css" type="text/css" href="plugins/switcher/css/switcher.css" media="all" />
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+<style type="text/css">
+.select {
+	display: inline-block;
+	width: 150px;
+	position: relative;
+	vertical-align: middle;
+	padding: 0;
+	overflow: hidden;
+	background-color: #fff;
+	color: #555;
+	border: 1px solid #aaa;
+	text-shadow: none;
+	border-radius: 4px;
+	transition: box-shadow 0.25s ease;
+	z-index: 2;
+}
+.select:hover {
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.select:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #ccc;
+	top: 14px;
+	right: 10px;
+	cursor: pointer;
+	z-index: -2;
+}
+.select select {
+	cursor: pointer;
+	padding: 10px;
+	width: 100%;
+	border: none;
+	background: transparent;
+	background-image: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.select select:focus {
+	outline: none;
+}
+.abc {
+	font-size:18px;
+	margin-top:-5px;
+	font-weight:bold;
+}
+.sel01 {
+	width:38%;
+	float:left;
+}
+.sel02 {
+	width:30%;
+	float:left;
+	margin-left:1%;
+}
+.sel03 {
+	width:30%;
+	float:left;
+	margin-left:1%;
+}
+@media only screen and (max-width:767px) {
+.abd {
+padding:0px;
+margin:0px;
+}
+}
+.inbest {
+	background-color:#fff;
+	height:70px;
+	color:#000;
+	margin-bottom:20px;
+}
+.kclink05 {
+	font-size:10px;
+	margin-left:3px;
+	color:#999999;
+	border-bottom-width: 1px;
+	border-bottom-style: double;
+	border-bottom-color: #ccc;
+	font-weight:normal;
+}
+</style>
+</head>
+<body class="animated-css" data-scrolling-animations="false">
+<div class="sp-body">
+  <!-- Loader Landing Page -->
+  <div id="loader">
+    <div class="loader"></div>
+  </div>
+  <!-- Loader end -->
+  <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+  <section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('images/detail-heading-bg.jpg');">
+    <div class="overlay"></div>
+    <div class="container relative">
+      <h2 class="title color-main text-capitalize zoomIn" style="color:#333333">Product Search</h2>
+    </div>
+  </section>
+  <section id="pageContent" class="page-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 clearfix" style="width:100%; padding:1px">
+          <div class="content-box">
+            <div class="category-filter clearfix fadeIn"></div>
+            <div class="products-cat clearfix">
+              <div class="category-pagination col-sm-12"> <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+                <nav>
+                  <ul class="pagination pagination-small pull-right">
+                    <li> </li>
+                  </ul>
+                </nav>
+              </div>
+              <form action="search.php" method="post" class="sort" name="listform" id="form" style="margin-bottom:10px;display:inline-block; width:100%; text-align:right;">
+                <div class="select sel01">
+                  <select name="sort">
+                    <option value="goods_id">Sort by time</option>
+                    <option value="shop_price" selected>Sort by price</option>
+                    <option value="last_update">Sort by update</option>
+                  </select>
+                </div>
+                <div class="select sel02">
+                  <select name="order">
+                    <option value="DESC">↓</option>
+                    <option value="ASC" selected>↑</option>
+                  </select>
+                </div>
+                <button type="submit"  name="login"  class="btn send-button btn-block hvr-bounce-to-right hover-focus-border before-bg meback sel03">Search</button>
+                <input type="hidden" name="page" value="{$pager.page}" />
+                <input type="hidden" name="display" value="{$pager.display}" id="display" />
+                <!--{foreach from=$pager.search key=key item=item}-->
+                {if $key neq "sort" and $key neq "order"} {if $key eq 'keywords'}
+                <input type="hidden" name="{$key}" value="{$item|escape:decode_url}" />
+                {else}
+                <input type="hidden" name="{$key}" value="{$item}" />
+                {/if} {/if}
+                <!--{/foreach}-->
+              </form>
+              <div class="container abd" style="padding-bottom:20px; padding:0px">
+                <div class="row">
+                  <div class="ask-que">
+                    <ul class="category-images bestgood">
+                      <!--{foreach from=$goods_list item=goods name=goods_list}-->
+                      <!-- {if $goods.goods_id} -->
+                      <li class="grid"> <a href="{$goods.url}"><img src="{$goods.goods_img}" alt="" ></a>
+                        <div class="inbest">
+                          <div class="catname088">
+                            <!-- {if $goods.goods_number <=0} -->
+                            <font class="kclink">Out of stock</font>
+                            <!--{/if}-->
+                            {$goods.goods_name|truncate:50}</div>
+                          <div class="product-item_price  font-third abc">
+                            <!-- {if $goods.goods_weight >=3} -->
+                            {$goods.shop_price} <font class="kclink05">/ {$goods.goods_weight}pcs</font>
+                            <!--{elseif $goods.goods_weight == 2.5}-->
+                            {$goods.shop_price} <font class="kclink05"></font>
+                            <!--{else}-->
+                            {$goods.shop_price} <font class="kclink05">/ 1piece</font>
+                            <!--{/if}-->
+                          </div>
+                        </div>
+                      </li>
+                      <!--{/if}-->
+                      <!--{/foreach}-->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+              <div class="category-pagination col-sm-12">
+                <nav>
+                  <ul class="pagination pagination-small pull-right">
+                    <li> </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
+</body>
+</html>

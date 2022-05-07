@@ -1,0 +1,183 @@
+{insert_scripts files='common.js,shopping_flow.js'}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="fonts/elegant-icon-font/style.css" rel="stylesheet">
+<link href="fonts/simple-line-icons-webfont/simple-line-icons.css" rel="stylesheet">
+<link href="css/theme.css" rel="stylesheet">
+    
+    
+    
+    
+  <section class="main-container col1-layout wow bounceInUp animated">
+    <div class="main container">
+    
+     <form action="message.php" method="post" name="formMsg" onSubmit="return submitMsgBoard(this)">
+    <section class="col-main col-sm-12">
+   <div id="contact1" class="page-content page-contact" style="margin-top:0; padding-top:0">
+     <div class="row">
+     
+     
+     
+     
+     <div class="col-xs-12 col-sm-6 ycmobile2" id="contact_form_map">
+                <h3 class="page-subheading">Let's get in touch</h3>
+       
+                <br/>
+                <ul>
+                  <li><a href="article-18-Payment-Methods.html" target="_blank">About Payment Methods</a></li>
+                  <li><a href="article-17-Shippment--Package.html" target="_blank">Shippment & Package</a></li>
+                  <li><a href="article-12-FAQs.html" target="_blank">Brazilian hair Faq's</a></li>
+                </ul>
+                <br/>
+                <ul class="store_info">
+                  <li><i class="fa fa-home"></i>1Bai Yun Dis.Guangzhou,Guangdong,China</li>
+                  <li><i class="fa fa-phone"></i><span>+ 86 13544332082</span></li>
+                  <li><i class="fa fa-fax"></i><span>+ 86 020 26298437</span></li>
+                  <li><i class="fa fa-whatsapp"></i><span>+ 86 13544332082</span></li>
+                  <li><i class="fa fa-skype"></i><span>css20160820@hotmail.com</span></li>
+                  <li><i class="fa fa-envelope"></i>Email: <span><a href="mailto:webmaster@kabeilu.com">webmaster@kabeilu.com </a></span></li>
+                </ul>
+              </div>
+     
+     
+     
+     
+     
+     
+     
+     
+   <div class="col-sm-6">
+                <h3 class="page-subheading">Welcome to contact us</h3>
+                <div class="contact-form-box">
+                  <div class="form-selector">
+                    <label>Username</label>
+                    
+                                           
+               <!--{if $smarty.session.user_name}-->
+            <input type="text" class="form-control input-sm" id="msg_title" name="msg_title" value="{$username}" required>
+                <!--{else}-->
+                <input type="text" class="form-control input-sm" id="msg_title" name="msg_title"  required >
+                <!--{/if}-->     
+                    
+                  </div>
+                  <div class="form-selector">
+                    <label>Email</label>
+                    <input type="email" value="{$smarty.session.email|escape}" class="form-control input-sm" id="user_email" name="user_email" required >
+                  </div>         
+                 
+                  <div class="form-selector">
+                    <label>Message</label>
+                     
+                     
+                    <textarea class="form-control input-sm" name="msg_content" rows="3"  id="msg_content" required></textarea>        
+                                
+                  
+                    <input type="hidden" name="act" value="act_add_message" />
+                  </div>
+                  <div class="form-selector">
+                   
+                    <input name="msg_type" type="hidden" class="inputBg" size="30" value="2" />
+      
+            <!-- 判断是否启用验证码{if $enabled_mes_captcha} -->
+
+                
+                <input type="text" size="8" style="width:100px" class="message-field font-additional font-weight-normal color-third text-capitalize" id="captcha" name="captcha"  placeholder="" >
+                
+                <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" /> 
+      
+            <!--{/if}-->
+            
+<button type="submit"  name="login"  class="btn send-button font-additional font-weight-normal btn-block hvr-bounce-to-right hover-focus-border before-bg meback">{$lang.post_message}</button>
+                   
+                   
+                    </div>
+
+                    
+                </div>
+                <h3 class="page-subheading">Click as follows</h3>
+                 <a href="mailto:webmaster@kabeilu.com" target="_blank" title="Email"><img src="images/email-on.png"></a>
+                 <a href="skype:css20160820@hotmail.com" class="chatbtn" onclick="return skypeCheck();" target="_blank" title="Skype"><img src="images/skype-on.png"></a>
+                <a href="tel:+8613544332082"><img src="images/whatapp-on.png"></a>
+                <a href="tel:+8613544332082"><img src="images/tel-on.png"></a>
+                
+            </div>
+            </div>
+          </div>
+        </section>
+    
+    
+    
+
+               
+                  
+                  
+                  
+  
+    </form>
+    
+                <script type="text/javascript">
+        {foreach from=$lang.message_board_js item=item key=key}
+        var {$key} = "{$item}";
+        {/foreach}
+        {literal}
+        /**
+         * 提交留言信息
+        */
+        function submitMsgBoard(frm)
+        {
+            var msg = new Object;
+
+             msg.user_email  = frm.elements['user_email'].value;
+             msg.msg_title   = frm.elements['msg_title'].value;
+             msg.msg_content = frm.elements['msg_content'].value;
+             msg.captcha     = frm.elements['captcha'] ? frm.elements['captcha'].value : '';
+
+            var msg_err = '';
+
+            if (msg.user_email.length > 0)
+            {
+               if (!(Utils.isEmail(msg.user_email)))
+               {
+                  msg_err += msg_error_email + '\n';
+                }
+             }
+             else
+             {
+                  msg_err += msg_empty_email + '\n';
+             }
+            if (msg.msg_title.length == 0)
+            {
+                msg_err += msg_title_empty + '\n';
+            }
+            if (frm.elements['captcha'] && msg.captcha.length==0)
+            {
+                msg_err += msg_captcha_empty + '\n'
+            }
+            if (msg.msg_content.length == 0)
+            {
+                msg_err += msg_content_empty + '\n'
+            }
+            if (msg.msg_title.length > 200)
+            {
+                msg_err += msg_title_limit + '\n';
+            }
+
+            if (msg_err.length > 0)
+            {
+                alert(msg_err);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        {/literal}
+        </script>
+    
+    
+    </div>
+  </section>
+  

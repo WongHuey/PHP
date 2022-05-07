@@ -1,0 +1,40 @@
+/*重置*/
+
+
+
+
+
+/*客服按钮*/
+#service{margin-top:20px;position:fixed; _position:absolute;right:0;top:170px;width:56px;height:400px;filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+#service a{display:block;width:56px;height:50px;text-indent:-9999px;background:url(../images/service.png) no-repeat;cursor:pointer;margin-bottom:1px}
+
+
+#service a.pause{background-position:0 bottom}
+
+
+#service .srvLog{}
+
+#service .srvLog:hover{background-position:-56px 0}
+
+#service .srvCns{background-position:0 -50px}
+
+
+#service .chatbtn{background-position:0 -200px}
+
+
+#service .srvCns:hover{background-position:-56px -50px}
+#service .chatbtn:hover{background-position:-56px -200px}
+
+#service .srvCns2{background-position:0 -100px}
+
+#service .srvCns2:hover{background-position:-56px -100px}
+
+#service .srvCns3{background-position:0 -150px}
+
+#service .srvCns3:hover{background-position:-56px -150px}
+
+
+
+#service .srvDj{background-position:0 -200px}
+
+#service .srvDj:hover{background-position:-56px -200px}

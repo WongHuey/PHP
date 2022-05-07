@@ -1,0 +1,5 @@
+{if $user_info}
+<li class="dropdown currency"><a rel="nofollow" href="user.php" style="float:left;">{$user_info.username}</a></li> <li class="dropdown currency"><a rel="nofollow" href="user.php?act=logout" style="float:left;">{$lang.user_logout}</a></li>
+{else}
+<li class="dropdown currency"><a rel="nofollow" data-toggle="dropdown" class="dropdown-toggle" href="user.php" style="float:left;">Login</a></li>  <li class="dropdown currency"><a rel="nofollow" data-toggle="dropdown" class="dropdown-toggle" href="user.php?act=register" style="float:left;">Register</a></li>
+{/if}

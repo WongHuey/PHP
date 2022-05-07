@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8">
+        <!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="googlebot" content="NOODP" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{$page_title}" />
+<meta property="og:description" content="{$description}" />
+<meta property="og:url" content="{$get_url_cat}" />
+<meta property="og:site_name" content="KaBeiLu Hair" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />    
+		<link href="css/master.css" rel="stylesheet">
+		<link href="css/header.css" rel="stylesheet">
+    <link href="css/icon-menu.css" rel="stylesheet">
+		<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="plugins/switcher/css/switcher.css" media="all" />
+        <link rel="canonical" href="{$get_url_cat}" />
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+{insert_scripts files='compare.js,common.js'}
+	</head>
+	<body class="animated-css" data-scrolling-animations="false">
+     <div class="sp-body">
+
+      <!-- Loader Landing Page -->
+       <div id="loader">
+        <div class="loader"></div>  
+      </div>
+      <!-- Loader end -->
+    
+    
+    <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+			<section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('images/detail-heading-bg.jpg');">
+        	<div class="overlay"></div>
+				<div class="container relative">
+               <h2 class="title color-main text-capitalize wow zoomIn" data-wow-delay="0.3s"><!-- #BeginLibraryItem "/library/ban2.lbi" --><!-- #EndLibraryItem --></h2>
+
+				</div>
+			</section>
+			<section id="pageContent" class="page-content">
+				<div class="container">
+                      <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+					<div class="row"> 
+						<div class="sidebar col-lg-3 col-md-3 col-sm-3 col-xs-12 clearfix">
+                 <!-- #BeginLibraryItem "/library/category_tree8.lbi" --> <!-- #EndLibraryItem -->
+                	</div>
+						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 clearfix">
+							<div class="content-box">
+							  <div class="products-cat clearfix">
+
+                  <ul class="products-grid">
+                                    
+                            
+<!--{foreach from=$goods_list item=goods name=goods_list}-->
+                                     <!-- {if $goods.goods_id} -->
+<li class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+	<div class="product-item5 hvr-underline-from-center">	
+												<div class="product-item_body"><img class="product-item_image" src="{$goods.goods_img}" alt="{$goods.keywords}">
+                           					  <a class="product-item_link" href="{$goods.url}">												</a></div>
+												<a href="{$goods.url}" class="product-item_footer">
+													<span class="product-item_title lineh text-center text-capitalize">{$goods.goods_name}</span>				
+												</a>                             
+				  </div>
+                  <div class="cat032">
+                                                
+                                                   <div class="left089"><font class="fontred">{$goods.shop_price}</font> <font class="delxian">{$goods.market_price}</font> <font class="fontred2">{$goods.zhekou_price2}%OFF</font></div>        
+                                             <div class="left090">   
+                                                   Feedback ({$goods.comment_count})<span class="fontred3">
+                                                   <img src="images/stars{$goods.comment_rank}.gif" alt="{$comment.comment_rank}" />
+                                                 </span></div>
+                  </div></li>
+                   <!--{/if}-->
+    <!--{/foreach}--> </ul>
+ <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->  
+              <div class="category-pagination col-sm-12">
+                   <nav>
+                      <ul class="pagination pagination-small pull-right">
+                        <li>
+                     </li>
+                      
+                      </ul>
+                    </nav>
+                  </div> 
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+      <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+		</div>
+	</body>
+</html>

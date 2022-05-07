@@ -1,0 +1,233 @@
+
+
+
+
+
+<h3 class="sidebar-title font-additional font-weight-bold text-capitalize customColor wow fadeIn" data-wow-delay="0.3s">{$cat_name}</h3>
+              <ul class="categories-tree wow fadeIn" data-wow-delay="0.6s" style="z-index:100">
+              
+ <!--{foreach from=$categories1 item=cat name=cat}-->
+             
+                <li style="z-index:100">
+                  <a href="{$cat.url}" class="font-additional font-weight-normal hover-focus-color color-third text-capitalize">
+                    <span class="pull-left">{$cat.name|escape:html}</span>
+            
+                  </a>
+                  
+              
+              </li>
+              
+               
+
+<!--{/foreach}-->
+                 
+</ul>
+
+
+
+
+  
+  
+                
+<h3 class="sidebar-title font-additional font-weight-bold text-capitalize customColor wow fadeIn ycmobile" data-wow-delay="0.3s">categories</h3>        
+              
+  
+<ul class="categories-tree wow fadeIn ycmobile" data-wow-delay="0.6s">
+
+<!--{foreach from=$categories item=cat  name=tosssoods}-->
+                <li class="dropdown">
+                  <a href="{$cat.url}" style="z-index:100" class="font-additional font-weight-normal hover-focus-color color-third text-capitalize" data-toggle="dropdown">
+                    <span class="pull-left">{$cat.parent_id}{$cat.name|escape:html}</span>
+                    
+                    
+                    
+                     <span class="pull-right fa fa-long-arrow-down"></span>
+            
+                  </a>
+                  
+                    	<ul role="menu" class="dropdown-menu" style="z-index:8000">
+                        
+                        
+                        <!--{foreach from=$cat.cat_id item=child}-->
+                        
+  								<li style="z-index:8000"><a href="{$child.url}">{$child.name|escape:html}</a></li>
+ <!--{/foreach}-->
+  							</ul>
+                  
+                  
+                  
+                </li>
+                
+ <!--{/foreach}-->
+              
+              </ul>
+
+
+
+
+<h3 class="sidebar-title font-additional font-weight-bold text-capitalize customColor wow fadeIn ycmobile" data-wow-delay="0.3s">Size Select</h3>
+
+
+
+            <div class="arr008 goodarr scrollx ycmobile" id="scrollx">
+              <ul>
+              <!--{foreach from=$filter_attr_list item=filter_attr}-->
+              			<!--{foreach from=$filter_attr.attr_list item=attr}-->
+				<!-- {if $attr.selected} -->
+                <a href="#" class="arr009"><li>{$attr.attr_value}</li></a>
+				<!-- {else} -->
+                <a href="{$attr.url}" class="arr010"><li>{$attr.attr_value}</li></a>
+				<!-- {/if} -->
+			<!--{/foreach}-->
+      <!--{/foreach}-->
+                
+
+              </ul>
+            </div>
+
+   
+
+
+
+
+              <h3  class="sidebar-title font-additional font-weight-bold text-capitalize customColor wow fadeIn ycmobile" data-wow-delay="0.3s">featured products</h3>
+              <ul class="sidebar-popular-product wow fadeIn ycmobile" data-wow-delay="0.6s">
+                <li>
+                  <a class="popular-product-item" href="goods-31-Top+Grade+5A+High-quality+Body+Wave+Brazilian+Wholesale+Hair+Extension.html">
+                    <img src="images/products/latest-1.jpg" alt="Product">
+                    <span class="popular-product-item_title font-additional font-weight-bold text-capitalize">Top Grade 5A High-quality Body Wave Brazilian Wholesale Hair Extension</span>
+                    <span class="popular-product-item_price font-additional color-third">$27.90</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="popular-product-item" href="goods-34-Grade+5a+best+quality+kabeilu+Brazilian+deep+wave+virgin+hair+extensions.html">
+                    <img src="images/products/latest-2.jpg" alt="Product">
+                    <span class="popular-product-item_title font-additional font-weight-bold text-capitalize">Grade 5a best quality kabeilu Brazilian deep wave virgin hair extensions</span>
+                    <span class="popular-product-item_price font-additional color-third">$27.90</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="popular-product-item" href="goods-37-100%25+Virgin+Brazilian+Human+Hair+Big+Wave+Hair+Extensions.html">
+                    <img src="images/products/latest-3.jpg" alt="Product">
+                    <span class="popular-product-item_title font-additional font-weight-bold text-capitalize">100% Virgin Brazilian Human Hair Big Wave Hair Extensions</span>
+                    <span class="popular-product-item_price font-additional color-third">$37.50</span>
+        
+                  </a>
+                </li>
+               
+               
+              </ul>
+              
+              
+       <script type="text/javascript" src="/js/jquery2.js"></script>
+<script type="text/javascript" src="/js/scroll2.js"></script>       
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.list_lh li:even').addClass('lieven');
+})
+$(function(){
+	$("div.list_lh").myScroll({
+		speed:40, //数值越大，速度越慢
+		rowHeight:68 //li的高度
+	});
+});
+</script>
+
+
+<style>
+*{margin:0;padding:0;font-size:12px;}
+body{ background:none;}
+input,button,select,textarea{outline:none;}
+ul,li,dl,ol{list-style:none;}
+a{color:#666; text-decoration:none;}
+
+.box{ width:980px; margin:0 auto;}
+.bcon{ width:270px; border:1px solid #eee; margin:30px auto;}
+.bcon h1{ border-bottom:1px solid #eee; padding:0 10px;}
+.bcon h1 b{ font:bold 14px/40px '宋体'; border-top:2px solid #3492D1; padding:0 8px; margin-top:-1px; display:inline-block;}
+
+.list_lh{ height:400px; overflow:hidden;}
+.list_lh li{ padding:10px;}
+.list_lh li.lieven{ background:#F0F2F3;}
+.list_lh li p{ height:24px; line-height:24px;}
+.list_lh li p a{ float:left;}
+.list_lh li p em{ width:80px; font:normal 12px/24px Arial; color:#FF3300; float:right; display:inline-block;}
+.list_lh li p span{ color:#999; float:right;}
+.list_lh li p a.btn_lh{ background:#28BD19; height:17px; line-height:17px; color:#fff; padding:0 5px; margin-top:4px; display:inline-block; float:right;}
+.btn_lh:hover{ color:#fff; text-decoration:none;}
+
+.btm p{ font:normal 12px/24px 'Microsoft YaHei'; text-align:center;}
+
+</style>
+              
+              
+              <div class="box">
+	<div class="bcon">
+		<h1><b>领号实时播报</b></h1>
+		<!-- 代码开始 -->
+		<div class="list_lh">
+			<ul>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">1000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">2000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">3000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">4000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">5000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">6000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">7000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">8000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">9000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">1000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">1100000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">1200000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+			</ul>
+		</div>
+		<!-- 代码结束 -->
+	</div>
+	
+	<div class="btm">
+	<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持及以下浏览器。</p>
+	<p>来源：<a href="http://www.16sucai.com/" target="_blank">16素材网</a></p>
+	</div>
+	
+</div>
+              
+              
+              
+              
+             

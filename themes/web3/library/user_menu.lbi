@@ -1,0 +1,47 @@
+<style>
+.memuser02 {
+	border-radius:0px;
+	padding:10px;
+	width:100px;
+	font-size:39px;
+	float:left;
+	text-align:center;
+	width:20%;
+	padding-bottom:3px;
+}
+.menfont {
+	font-size:12px;
+	margin-top:0px;
+}
+.memuser02:link {
+	text-decoration:none;
+}
+.memuser02:hover {
+	text-decoration:none;
+	background-color:#028af8;
+	color:#FFFFFF;
+}
+@media only screen and (max-width:1199px) {
+.memuser02 {
+width:20%;
+padding:5px;
+font-size:30px;
+padding-bottom:0px;
+}
+.menfont {
+	font-size:10px;
+	margin-top:0px;
+}
+}
+</style>
+<div style="background-color:#F7F7F7;border-radius:5px; padding:7px; position:relative; line-height:22px;display:inline-block; width:100%; margin-bottom:10px;"> <a href="user.php" class="memuser02">
+  <div><i class="fa fa-home"></i></div>
+  <div class="menfont">Home</div> </a> <a  href="user.php?act=profile" class="memuser02">
+  <div><i class="fa fa-edit"></i></div>
+  <div class="menfont">My Profile</div> </a> <a href="user.php?act=order_list" class="memuser02">
+  <div><i class="fa fa-file-text"></i></div>
+  <div class="menfont">My Order</div> </a> <a  href="user.php?act=address_list" class="memuser02">
+  <div><i class="fa fa-building"></i></div>
+  <div class="menfont">Address</div> </a> <a href="user.php?act=logout" class="memuser02">
+  <div><i class="fa fa-sign-out"></i></div>
+  <div class="menfont">Sign Out</div> </a> </div>

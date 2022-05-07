@@ -1,0 +1,98 @@
+<div class="flowBox">
+<h6 style="background-color:#E6F2FF; height:34px; line-height:30px; padding-left:5px"><span style="color:#000; font-size:18px">{$lang.consignee_info}</span></h6>
+{insert_scripts files='utils.js,good_transport.js'}
+<style>
+     .col{ width: 50%; height: 34px; float: left; line-height:26px; position:relative; }
+	 .col2{ width: 100%; height: 34px; float: left; position:relative; line-height:26px;}
+    .input{ margin-left: 5px;position:relative }
+    .input input{ width: 100%; box-sizing: border-box; height: 34px; border: 1px solid #ccc; border-radius: 3px; position:relative; padding:5px }
+	.country{ width: 100%; box-sizing: border-box; height: 34px; border: 1px solid #ccc; border-radius: 3px; position:relative; padding:5px ;
+	
+	}
+</style>
+<div style="width:100%;position:relative; height:520px; margin-top:10px">
+<div style="position:relative; height:auto; height:70px;">
+<div class="col">
+<div class="input">Name: <font color="#FF0000">*</font>
+<input type="text" name="consignee" id="consignee_{$sn}" value="{$consignee.consignee|escape}" >
+</div>
+</div>
+<div class="col">
+<div class="input"> Email: <font color="#FF0000">*</font>
+<input type="text" name="email" value="{$consignee.email|escape}"   id="email_{$sn}">
+</div>
+</div>
+</div>
+<div style="position:relative; height:auto; height:70px;">
+<div class="col">
+<div class="input">Phone/Mobile: <font color="#FF0000">*</font>
+<input type="text" name="tel" class="inputBg"  id="tel_{$sn}" value="{$consignee.tel|escape}" >
+</div>
+</div>
+<div class="col">
+<div class="input"> Country: <font color="#FF0000">*</font>
+<select name="country" class="country" id="selCountries" onChange="aaaaa()">
+<option value="0">{$lang.please_select}{$name_of_region[0]}</option>
+<!-- {foreach from=$country_list item=country} -->
+<option value="{$country.region_id}" {if $consignee.country eq $country.region_id}selected{/if}>{$country.region_name}</option>
+<!-- {/foreach} -->
+</select>
+</div>
+</div>
+</div>
+
+
+
+<div style="position:relative; height:auto; height:70px;">
+<div class="col">
+<div class="input">State/Province: <font color="#FF0000">*</font>
+<input type="text" name="province" class="inputBg" value="{$consignee.province|escape}">
+</div>
+</div>
+<div class="col">
+<div class="input"> City: <font color="#FF0000">*</font>
+<input type="text" name="city" class="inputBg" value="{$consignee.city|escape}">
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div  style="position:relative; height:70px;">
+<div class="col2">
+<div class="input">Address: <font color="#FF0000">*</font>
+<input type="text" name="address" class="inputBg"  id="address_{$sn}" value="{$consignee.address|escape}">
+</div>
+</div>
+</div>
+<div style="position:relative; height:auto; height:70px;">
+<div class="col">
+<div class="input">Postalcode:
+<input name="zipcode" type="text" class="inputBg"  id="zipcode_{$sn}" value="{$consignee.zipcode|escape}">
+</div>
+</div>
+<div class="col">
+<div class="input"> Sign building:
+<input name="sign_building"  type="text" class="inputBg"  id="sign_building_{$sn}" value="{$consignee.sign_building|escape}">
+</div>
+</div>
+</div>
+<div  style="position:relative; height:70px;">
+<div class="col2">
+<div class="input">Optimal shipping time:
+<input  name="best_time" type="text"  class="inputBg" id="best_time_{$sn}" value="{$consignee.best_time|escape}" >
+</div>
+</div>
+</div>
+<input type="hidden" name="step" value="consignee" />
+<input type="hidden" name="act" value="checkout" />
+<input name="address_id" type="hidden" value="{$consignee.address_id}" />
+<div style="text-align:center; padding-top:10px">
+<input name="submit" type="submit" value="Shipping this address" class="btn send-button btn-block hvr-bounce-to-right hover-focus-border before-bg meback" style="width:200px" />
+</div>
+</div>
+</div>

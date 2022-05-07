@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="css/master.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
+<link href="css/icon-menu.css" rel="stylesheet">
+<!-- SWITCHER -->
+<link rel="stylesheet" id="switcher-css" type="text/css" href="plugins/switcher/css/switcher.css" media="all" />
+<link rel="stylesheet" href="images/login/css/style.css" type="text/css" media="all" />
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+{insert_scripts files='common.js,user.js,good_transport.js'}
+<style>
+table {
+	font-size:13px;
+}
+</style>
+</head><body class="animated-css" data-scrolling-animations="false">
+<div class="sp-body">
+<!-- Loader Landing Page -->
+<div id="loader">
+<div class="loader"></div>
+</div>
+<!-- Loader end -->
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('images/contact-heading-bg.jpg');">
+<!-- <div class="overlay"></div> -->
+<div class="container relative">
+<h2 class="title color-main text-capitalize zoomIn" data-wow-delay="0.3s">MY
+ACCOUNT</h2>
+</div>
+</section>
+<!-- Map -->
+<!-- Map -->
+<section id="contact-us" class="memb">
+<div class="container">
+<div class="row">
+<div class="block block1">
+<!--#登录界面 start-->
+<!-- {if $action eq 'login'} -->
+<!-- content -->
+<div class="sub-main-w3">
+<form name="formLogin" action="user.php" method="post" onSubmit="return userLogin()">
+<h2 style="margin-bottom:30px; color:#FFFFFF">Login Now <i class="fa fa-level-down-alt"></i> </h2>
+<div class="form-style-agile">
+<input type="text" id="username" name="username"  placeholder="Name" required>
+</div>
+<div class="form-style-agile">
+<input type="password" id="password" name="password"  placeholder="PassWord" required >
+</div>
+<!-- checkbox -->
+<div class="wthree-text">
+<ul>
+<li style="color:#FFFFFF"> <a href="mailto:webmaster@kabeilu.com">Forgot Password?</a> | <a href="/user.php?act=register">Sign
+up</a> </li>
+</ul>
+</div>
+<input type="hidden" value="1" name="remember" id="remember" />
+<input type="hidden" name="act" value="act_login" />
+<input type="hidden" name="back_act" value="{$back_act}" />
+<!-- //checkbox -->
+<input type="submit" value="Log In">
+</form>
+</div>
+<!-- //content -->
+<!--{/if}-->
+<!--#登录界面 end-->
+<!--*会员注册界面 start-->
+<!--{if $action eq 'register'}-->
+<!-- {if $shop_reg_closed eq 1} -->
+<div class="usBox">
+<div class="usBox_2 clearfix">
+<div class="f1 f5" align="center">{$lang.shop_register_closed}</div>
+</div>
+</div>
+<!-- {else} -->
+{insert_scripts files='utils.js'}
+<!-- content -->
+<div class="sub-main-w3">
+<form action="user.php" method="post" name="formUser" onsubmit="return register();">
+<h2 style="margin-bottom:30px; color:#FFFFFF">Create An Account <i class="fa fa-level-down-alt"></i> </h2>
+<div class="form-style-agile">
+<label> <i class="fa fa-user"></i> Username </label>
+<input name="username" type="text" style="" id="username" onblur="is_registered(this.value);" required />
+</div>
+<div class="form-style-agile">
+<label> <i class="fa fa-envelope-o"></i> Email </label>
+<input name="email" type="text" size="25" id="email" onblur="checkEmail(this.value);" required />
+</div>
+<div class="form-style-agile">
+<label> <i class="fa fa-unlock-alt"></i> Password </label>
+<input name="password" type="password" id="password1" onblur="check_password(this.value);" onkeyup="checkIntensity(this.value)" required />
+</div>
+<div class="form-style-agile">
+<table width="145" border="0" cellspacing="0" cellpadding="1" style="color:#FFFFFF">
+<tr align="center">
+<td width="33%" id="pwd_lower">{$lang.pwd_lower}</td>
+<td width="33%" id="pwd_middle">{$lang.pwd_middle}</td>
+<td width="33%" id="pwd_high">{$lang.pwd_high}</td>
+</tr>
+</table>
+</div>
+<div class="form-style-agile">
+<label> <i class="fa fa-unlock-alt"></i> Re-password </label>
+<input name="confirm_password" type="password" id="conform_password" onblur="check_conform_password(this.value);" required />
+</div>
+<div class="form-style-agile">
+<input type="text" size="8" name="captcha" style="width:100px" placeholder="Verification" required />
+　 <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer; height:45px" onClick="this.src='captcha.php?'+Math.random()" /> </div>
+<input name="ipaddress" type="hidden" value="127.0.0.1" />
+<input name="agreement" type="hidden" value="1" checked="checked" />
+<input name="act" type="hidden" value="act_register" >
+<input type="hidden" name="back_act" value="{$back_act}" />
+<!-- //checkbox -->
+<input type="submit" value="Regist">
+</form>
+</div>
+<!-- //content -->
+<!--{/if}-->
+<!--{/if}-->
+<!--#会员注册界面 end-->
+<!--*找回密码界面 -->
+<!--{if $action eq 'get_password'} -->
+{insert_scripts files='utils.js'}
+<script type="text/javascript">
+    {foreach from=$lang.password_js item=item key=key}
+      var {$key} = "{$item}";
+    {/foreach}
+    </script>
+<div class="usBox">
+<div class="usBox_2 clearfix">
+<form action="user.php" method="post" name="getPassword" onsubmit="return submitPwdInfo();">
+<br />
+<table width="70%" border="0" align="center" cellpadding="1" cellspacing="1">
+<tr>
+<td colspan="2" align="center"><strong>{$lang.username_and_email}</strong></td>
+</tr>
+<tr>
+<td width="29%" align="right">{$lang.username}</td>
+<td width="61%">
+<input name="user_name" type="text" size="30" class="inputBg" />
+</td>
+</tr>
+<tr>
+<td align="right">{$lang.email}</td>
+<td>
+<input name="email" type="text" size="30" class="inputBg" />
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<input type="hidden" name="act" value="send_pwd_email" />
+<input type="submit" name="submit" value="{$lang.submit}" class="bnt_blue" style="border:none;" />
+<input name="button" type="button" onclick="history.back()" value="{$lang.back_page_up}" style="border:none;" class="bnt_blue_1" />
+</td>
+</tr>
+</table>
+<br />
+</form>
+</div>
+</div>
+<!--{/if}-->
+<!--*通过问题找回密码的确认找回账号界面 -->
+<!--{if $action eq 'qpassword_name'} -->
+<div class="usBox">
+<div class="usBox_2 clearfix">
+<form action="user.php" method="post">
+<br />
+<table width="70%" border="0" align="center" cellpadding="1" cellspacing="1">
+<tr>
+<td colspan="2" align="center"><strong>{$lang.get_question_username}</strong></td>
+</tr>
+<tr>
+<td width="29%" align="right">{$lang.username}</td>
+<td width="61%">
+<input name="user_name" type="text" size="30" class="inputBg" />
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<input type="hidden" name="act" value="get_passwd_question" />
+<input type="submit" name="submit" value="{$lang.submit}" class="bnt_blue" style="border:none;" />
+<input name="button" type="button" onclick="history.back()" value="{$lang.back_page_up}" style="border:none;" class="bnt_blue_1" />
+</td>
+</tr>
+</table>
+<br />
+</form>
+</div>
+</div>
+<!--{/if}-->
+<!--*根据输入账号显示密码问题界面 -->
+<!--{if $action eq 'get_passwd_question'} -->
+<div class="usBox">
+<div class="usBox_2 clearfix">
+<form action="user.php" method="post">
+<br />
+<table width="70%" border="0" align="center" cellpadding="1" cellspacing="1">
+<tr>
+<td colspan="2" align="center"><strong>{$lang.input_answer}</strong></td>
+</tr>
+<tr>
+<td width="29%" align="right">{$lang.passwd_question}：</td>
+<td width="61%">{$passwd_question}</td>
+</tr>
+<tr>
+<td align="right">{$lang.passwd_answer}：</td>
+<td>
+<input name="passwd_answer" type="text" size="20" class="inputBg" />
+</td>
+</tr>
+<!-- 判断是否启用验证码{if $enabled_captcha} -->
+<tr>
+<td align="right">{$lang.comment_captcha}</td>
+<td>
+<input type="text" size="8" name="captcha" class="inputBg" />
+<img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" /> </td>
+</tr>
+<!--{/if}-->
+<tr>
+<td></td>
+<td>
+<input type="hidden" name="act" value="check_answer" />
+<input type="submit" name="submit" value="{$lang.submit}" class="bnt_blue" style="border:none;" />
+<input name="button" type="button" onclick="history.back()" value="{$lang.back_page_up}" style="border:none;" class="bnt_blue_1" />
+</td>
+</tr>
+</table>
+<br />
+</form>
+</div>
+</div>
+<!--{/if}-->
+<!-- {if $action eq 'reset_password'} -->
+<script type="text/javascript">
+    {foreach from=$lang.password_js item=item key=key}
+      var {$key} = "{$item}";
+    {/foreach}
+    </script>
+<div class="usBox">
+<div class="usBox_2 clearfix">
+<form action="user.php" method="post" name="getPassword2" onSubmit="return submitPwd()">
+<br />
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="1">
+<tr>
+<td>{$lang.new_password}</td>
+<td>
+<input name="new_password" type="password" size="25" class="inputBg" />
+</td>
+</tr>
+<tr>
+<td>{$lang.confirm_password}:</td>
+<td>
+<input name="confirm_password" type="password" size="25"  class="inputBg"/>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input type="hidden" name="act" value="act_edit_password" />
+<input type="hidden" name="uid" value="{$uid}" />
+<input type="hidden" name="code" value="{$code}" />
+<input type="submit" name="submit" value="{$lang.confirm_submit}" />
+</td>
+</tr>
+</table>
+<br />
+</form>
+</div>
+</div>
+<!--{/if}-->
+</div>
+</div>
+</div>
+</section>
+<div class="modal fade bs-example-modal-lg20" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">X</span></button>
+<h4 id="gridSystemModalLabel" class="modal-title">RETRIEVE YOUR PASSWORD OR USERNAME
+HERE</h4>
+</div>
+<div class="modal-body">
+<form class="navbar-form"  method="post" action="/images/password-zh.php" onSubmit="return checkSearchForm()">
+<div id="search">
+<div class="input-group"> <font class="searchtitle"></font>
+<input type="email" id="searchQuery" name="keywords" placeholder="Email Address" class="form-control" required>
+<button type="submit" class="btn-search"><i class="fa fa-arrow-right"></i></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+{foreach from=$lang.passport_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var username_exist = "{$lang.username_exist}";
+</script>
+</body>
+</html>

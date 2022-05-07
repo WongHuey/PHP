@@ -1,0 +1,84 @@
+﻿
+
+
+
+
+<h3 class="sidebar-title font-additional font-weight-bold text-capitalize customColor wow fadeIn" data-wow-delay="0.3s">{$cat_name}</h3>
+              <ul class="categories-tree wow fadeIn" data-wow-delay="0.6s" style="z-index:100">
+              
+ <!--{foreach from=$categories1 item=cat name=cat}-->
+             
+                <li style="z-index:100">
+                  <a href="{$cat.url}" class="font-additional font-weight-normal hover-focus-color color-third text-capitalize">
+                    <span class="pull-left">{$cat.name|escape:html}</span>
+            
+                  </a>
+                  
+              
+              </li>
+              
+               
+
+<!--{/foreach}-->
+                 
+</ul>
+
+
+
+
+  
+ 
+                
+<h3 class="sidebar-title font-additional font-weight-bold text-capitalize customColor wow fadeIn ycmobile" style="z-index:8000" data-wow-delay="0.3s">categories</h3>        
+              
+  
+<ul class="categories-tree wow fadeIn ycmobile" style="z-index:800" data-wow-delay="0.6s">
+
+<!--{foreach from=$categories item=cat  name=tosssoods}-->
+                <li class="dropdown">
+                  <a href="{$cat.url}" class="font-additional font-weight-normal hover-focus-color color-third text-capitalize" data-toggle="dropdown">
+                    <span class="pull-left">{$cat.parent_id}{$cat.name|escape:html}</span>
+                    
+                    
+                    
+                     <span class="pull-right fa fa-long-arrow-down"></span>
+            
+                  </a>
+                  
+                    	<ul role="menu" class="dropdown-menu">
+                        
+                        
+                        <!--{foreach from=$cat.cat_id item=child}-->
+                        
+  								<li><a href="{$child.url}">{$child.name|escape:html}</a></li>
+ <!--{/foreach}-->
+				  </ul>
+                  
+                  
+                  
+                </li>
+                
+ <!--{/foreach}-->
+              
+</ul>
+
+
+
+<h3 class="sidebar-title font-additional font-weight-bold text-capitalize customColor fadeIn ycmobile" style="z-index:0" data-wow-delay="0.3s">Size Select</h3>
+
+<div class="arr008 goodarr scrollx ycmobile">
+  <ul>
+              <!--{foreach from=$filter_attr_list item=filter_attr}-->
+              			<!--{foreach from=$filter_attr.attr_list item=attr}-->
+				<!-- {if $attr.selected} -->
+                <a href="#" class="arr009"><li>{$attr.attr_value}</li></a>
+				<!-- {else} -->
+                <a href="{$attr.url}" class="arr010"><li>{$attr.attr_value}</li></a>
+				<!-- {/if} -->
+			<!--{/foreach}-->
+      <!--{/foreach}-->
+                
+
+  </ul>
+              
+            </div>

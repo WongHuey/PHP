@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>KBL Blog</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="/css/master.css" rel="stylesheet">
+<link href="/css/header.css" rel="stylesheet">
+<link rel="stylesheet" href="/blog2/css/zerogrid.css">
+<link rel="stylesheet" href="/blog2/css/style.css">
+<link rel="stylesheet" href="/blog2/css/responsive.css">
+<!-- SWITCHER -->
+<link rel="stylesheet" id="switcher-css" type="text/css" href="/plugins/switcher/css/switcher.css" media="all" />
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+{insert_scripts files='common.js'}
+</head>
+<body class="animated-css" data-scrolling-animations="false">
+<div class="sp-body">
+ <!-- Loader Landing Page -->
+ <div id="loader">
+  <div class="loader"></div>
+ </div>
+ <!-- Loader end -->
+ <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+ <section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('/images/contact-heading-bg.jpg');">
+  <!-- <div class="overlay"></div> -->
+  <div class="container relative">
+   <h2 class="title color-main text-capitalize wow zoomIn" data-wow-delay="0.3s" style="color:#333333">KBL Blog</h2>
+  </div>
+ </section>
+ <!-- Map -->
+ <!-- Map -->
+ <section id="contact-us">
+  <div class="container">
+   <div class="row col-xs-12" style="line-height:22px">
+    <div class="box">
+     <div class="box_1">
+      <div class="boxCenterList">
+       <form action="{$search_url}" style="height:50PX; padding-top:10PX" name="search_form" method="post" class="article_search">
+        <input name="keywords" type="text" style="width:60%" id="requirement" value="{$search_value}" class="inputBg" />
+        <input name="id" type="hidden" value="{$cat_id}" />
+        <input name="cur_url" id="cur_url" type="hidden" value="" />
+        <input type="submit" value="{$lang.button_search}" class="bnt_blue_1" style="width:29%" />
+       </form>
+       
+       
+       
+       
+       
+       
+       
+       <div class="wrap-body zerogrid">
+<!--------------Header---------------><!--------------Content--------------->
+<section id="content">
+	<div class="wrap-content">
+		<div class="row block">
+			<div id="main-content" class="col-2-3">
+				<div class="wrap-col">
+					<article>
+						<div class="heading">
+							<h2><a href="#">Sed accumsan libero quis mi commodo et suscipit</a></h2>
+						</div>
+						<div class="content">
+							<img src="images/img1.jpg" width="250px" height="100px"/>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi rutrum vulputate est sed faucibus. Nulla sed nisl mauris, id tristique tortor. Sed iaculis dapibus urna nec dictum. Morbi rutrum vulputate est sed faucibus. Nulla sed nisl mauris, id tristique tortor. Sed iaculis dapibus urna nec dictum [...]</p>
+		
+						</div>
+						<div class="info">
+							<p>By Admin on December 01, 2012 - <a href="#">01 Commnets</a></p>
+						</div>
+					</article>
+					<article>
+						<div class="heading">
+							<h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
+						</div>
+						<div class="content">
+							<img src="images/img2.jpg" width="250px" height="100px"/>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi rutrum vulputate est sed faucibus. Nulla sed nisl mauris, id tristique tortor. Sed iaculis dapibus urna nec dictum. Morbi rutrum vulputate est sed faucibus. Nulla sed nisl mauris, id tristique tortor. Sed iaculis dapibus urna nec dictum [...]</p>
+						</div>
+						<div class="info">
+							<p>By Admin on December 01, 2012 - <a href="#">01 Commnets</a></p>
+						</div>
+					</article>
+					<article>
+						<div class="heading">
+							<h2><a href="#">Morbi rutrum vulputate est sed faucibus</a></h2>
+						</div>
+						<div class="content">
+							<img src="images/img3.jpg" width="250px" height="100px"/>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi rutrum vulputate est sed faucibus. Nulla sed nisl mauris, id tristique tortor. Sed iaculis dapibus urna nec dictum. Morbi rutrum vulputate est sed faucibus. Nulla sed nisl mauris, id tristique tortor. Sed iaculis dapibus urna nec dictum [...]</p>
+						</div>
+						<div class="info">
+							<p>By Admin on December 01, 2012 - <a href="#">01 Commnets</a></p>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div id="sidebar" class="col-1-3">
+				<div class="wrap-col">
+					<div class="box">
+						<div class="heading"><h2>About us</h2></div>
+						<div class="content">
+							<img src="images/zerotheme.jpg" style="border: 0px;"/>
+							<p>Html5 Templates created by chinaz. You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files.</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="heading"><h2>Categories</h2></div>
+						<div class="content">
+							<ul>
+								<li><a href="http://sc.chinaz.com/">Free Html5 Templates</a></li>
+								<li><a href="http://sc.chinaz.com/">Free Responsive Themes</a></li>
+								<li><a href="http://sc.chinaz.com/">Free Html5 and Css3 Themes</a></li>
+								<li><a href="http://sc.chinaz.com/">Free Responsive Html5 and Css3 Themes</a></li>
+								<li><a href="http://sc.chinaz.com/">Free Basic Responsive Html5 Css3 Layouts</a></li>
+								<li><a href="http://sc.chinaz.com/">Premium Responsive Html5 Css3 Templates</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="box">
+						<div class="heading"><h2>Popular Post</h2></div>
+						<div class="content">
+							<div class="post">
+								<img src="images/img4.jpg" width="50px"/>
+								<h4><a href="#">Lorem ipsum dolor sit</a></h4>
+								<p>November 11 ,2012</p>
+							</div>
+							<div class="post">
+								<img src="images/img5.jpg" width="50px"/>
+								<h4><a href="#">Lorem ipsum dolor sit</a></h4>
+								<p>November 11 ,2012</p>
+							</div>
+							<div class="post">
+								<img src="images/img1.jpg" width="50px"/>
+								<h4><a href="#">Lorem ipsum dolor sit</a></h4>
+								<p>November 11 ,2012</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--------------Footer--------------->
+</div>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      </div>
+     </div>
+    </div>
+    <div class="blank5"></div>
+    <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
+  </div>
+ </section>
+ <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
+</body>
+</html>

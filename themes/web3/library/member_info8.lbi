@@ -1,0 +1,5 @@
+{if $user_info}
+<a href="user.php" title="{$user_info.username}" style="color:#fff">Hi, {$user_info.username|truncate:8}</a> | <a href="user.php?act=logout" style="color:#fff">{$lang.user_logout}</a>
+{else}
+ <a href="user.php" style="color:#fff">Log in</a> | <a href="user.php?act=register" style="color:#fff">Sign up</a>
+{/if}

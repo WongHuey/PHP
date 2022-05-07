@@ -1,0 +1,183 @@
+<!-- $Id: order_info.htm 17060 2010-03-25 03:44:42Z liuhui $ -->
+
+{include file="pageheader.htm"}
+{insert_scripts files="topbar.js,../js/utils.js,listtable.js,selectzone.js,../js/common.js"}
+{if $user}
+<div id="topbar">
+  <div align="right"><a href="" onclick="closebar(); return false"><img src="images/close.gif" border="0" /></a></div>
+  <table width="100%" border="0">
+    <caption><strong> {$lang.buyer_info} </strong></caption>
+    <tr>
+      <td> {$lang.email} </td>
+      <td> <a href="mailto:{$user.email}">{$user.email}</a> </td>
+    </tr>
+    <tr>
+      <td> {$lang.user_money} </td>
+      <td> {$user.formated_user_money} </td>
+    </tr>
+    <tr>
+      <td> {$lang.pay_points} </td>
+      <td> {$user.pay_points} </td>
+    </tr>
+    <tr>
+      <td> {$lang.rank_points} </td>
+      <td> {$user.rank_points} </td>
+    </tr>
+    <tr>
+      <td> {$lang.rank_name} </td>
+      <td> {$user.rank_name} </td>
+    </tr>
+    <tr>
+      <td> {$lang.bonus_count} </td>
+      <td> {$user.bonus_count} </td>
+    </tr>
+  </table>
+
+  {foreach from=$address_list item=address}
+  <table width="100%" border="0">
+    <caption><strong> {$lang.consignee} : {$address.consignee|escape} </strong></caption>
+    <tr>
+      <td> {$lang.email} </td>
+      <td> <a href="mailto:{$address.email|escape}">{$address.email|escape}</a> </td>
+    </tr>
+    <tr>
+      <td> {$lang.address} </td>
+      <td> {$address.address|escape} </td>
+    </tr>
+    <tr>
+      <td> {$lang.zipcode} </td>
+      <td> {$address.zipcode|escape} </td>
+    </tr>
+    <tr>
+      <td> {$lang.tel} </td>
+      <td> {$address.tel|escape} </td>
+    </tr>
+    <tr>
+      <td> {$lang.mobile} </td>
+      <td> {$address.mobile|escape} </td>
+    </tr>
+  </table>
+  {/foreach}
+</div>
+{/if}
+
+<form action="order.php?act=operate" method="post" name="theForm">
+<div class="list-div" style="margin-bottom: 5px">
+
+
+
+
+
+
+<table width="100%" cellpadding="3" cellspacing="1">
+  <tr>
+    <td colspan="4">
+      <div align="center">
+        <input name="prev" type="button" class="button" onClick="location.href='order.php?act=info&order_id={$prev_id}';" value="{$lang.prev}" {if !$prev_id}disabled{/if} />
+        <input name="next" type="button" class="button" onClick="location.href='order.php?act=info&order_id={$next_id}';" value="{$lang.next}" {if !$next_id}disabled{/if} />
+      </div></td>
+  </tr>
+  <tr>
+    <th colspan="4">{$lang.base_info}</th>
+  </tr>
+  <tr>
+    <td width="18%" height="39"><div align="right"><strong>{$lang.label_order_sn}</strong></div></td>
+    <td height="39" colspan="3">{$order.order_sn}</td>
+    </tr>
+  <tr>
+    <td height="39"><div align="right"><strong>客户名称：</strong></div></td>
+    <td height="39" colspan="3">{$order.consignee}</td>
+    </tr>
+  <tr>
+    <td height="39"><div align="right"><strong>商品名称：</strong></div></td>
+    <td height="39" colspan="3">{$order.tradename}</td>
+    </tr>
+  <tr>
+    <td height="39"><div align="right"><strong>商品货号：</strong></div></td>
+    <td height="39" colspan="3">{$order.commoditycode}</td>
+    </tr>
+  <tr>
+    <td height="39"><div align="right"><strong>数量：</strong></div></td>
+    <td height="39" colspan="3">{$order.quantity}</td>
+    </tr>
+  
+  <tr>
+    <td height="39"><div align="right"><strong>单位：</strong></div></td>
+    <td height="39" colspan="3">{$order.unit}</td>
+    </tr>
+    
+    
+  <tr>
+    <td height="39"><div align="right"><strong>订单金额：</strong></div></td>
+    <td height="39" colspan="3">{$order.order_amount}</td>
+    </tr>
+    
+    
+  <tr>
+    <td height="39"><div align="right"><strong>支付状态：</strong></div></td>
+    <td height="39" colspan="3">{$order.paymentstatus}</td>
+    </tr>
+ 
+  <tr>
+    <td height="39"><div align="right"><strong>物流运单号：</strong></div></td>
+    <td height="39" colspan="3">{$order.waybillnumber}</td>
+    </tr>
+ 
+  <tr>
+    <td height="39"><div align="right"><strong>发往国家：</strong></div></td>
+    <td height="39" colspan="3">{$order.tradename}</td>
+    </tr>
+    
+  <tr>
+    <td height="39"><div align="right"><strong>收件地址：</strong></div></td>
+    <td height="39" colspan="3">{$order.thecountry}</td>
+    </tr>
+    
+  <tr>
+    <td height="39"><div align="right"><strong>支付时间：</strong></div></td>
+    <td height="39" colspan="3">{$order.paymenttime}</td>
+    </tr>
+    
+
+
+
+</table>
+</div>
+
+
+
+
+</form>
+{literal}
+<script language="JavaScript">
+{/literal}
+  var oldAgencyId = {$order.agency_id|default:0};
+{literal}
+  onload = function()
+  {
+    // 开始检查订单
+    startCheckOrder();
+  }
+
+  /**
+   * 把订单指派给某办事处
+   * @param int agencyId
+   */
+  function assignTo(agencyId)
+  {
+    if (agencyId == 0)
+    {
+      alert(pls_select_agency);
+      return false;
+    }
+    if (oldAgencyId != 0 && agencyId == oldAgencyId)
+    {
+      alert(pls_select_other_agency);
+      return false;
+    }
+    return true;
+  }
+</script>
+{/literal}
+
+{include file="pagefooter.htm"}

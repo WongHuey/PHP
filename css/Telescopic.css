@@ -1,0 +1,45 @@
+.Telescopic{
+	position: fixed;
+	width: 56px;
+	right: 0px;
+	top:445px;
+	z-index:500;
+
+}
+.rq{
+	width: 56px;
+	height: 50px;
+	text-align: center;
+	line-height: 40px;
+	background: #3d86ff;
+	color: #fcff00;
+	font-size: 18px;
+	font-weight: bold;
+}
+.wx{
+	width: 106px;
+	height: 147px;
+}
+.return_top{
+	width: 56px;
+	height: 50px;
+	background: url(/images/top.gif) no-repeat;
+	cursor: pointer;
+	display:none;
+}
+
+a.goodlinks:link {
+	color:#000000;
+	text-decoration: none;
+	font-style: normal;
+}
+a.goodlinks:visited {
+	color: #000000;
+	text-decoration: none;
+	font-style: normal;
+}
+a.goodlinks:hover {
+	color:#999999;
+	text-decoration:none;
+	font-style: normal;
+}

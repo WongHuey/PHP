@@ -1,0 +1,153 @@
+<header id="header">
+				<div class="header-top ycmobile">
+					<div class="container">
+                    <ul class="custormer-tel"><i class="fa fa-angle-down"></i> <font class="lanen">English</font> <i class="fa fa-phone widcss"></i>Customer Service (+8613544332082)</ul>
+  					<ul class="nav nav-pills nav-top navbar-right">
+  						{insert name='member_info'}
+                         <li class="dropdown my-cart">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="flow.php"><i class="fa fa-shopping-cart"></i></a>
+                <ul role="menu" class="dropdown-menu header-cart_product_list">
+                    <li class="added-items">
+            
+                       <a href="flow.php" style="background:none; margin-left:0px; ">{insert name='cart_info2'}</a>                    </li>
+                  </ul>
+              </li>
+  					</ul>            
+				  </div> 
+          <div class="container-fluid trigger-container">
+            <div class="row text-center">
+              <button class="menu-trigger"><i class="fa fa-bars"></i></button>
+            </div>
+          </div>         
+				</div>
+				<div class="header-middle">
+					<div class="container relative">
+                    <div class="pull-left logo">
+						<a href="https://www.kabeilu.com/" title="Kabeilu"><img src="../images/orang-logo.png" alt="Kabeilu"></a>
+                        </div>
+                        <script type="application/ld+json">
+						{
+						  "@context": "http://schema.org",
+						  "@type": "Organization",
+						  "url": "https://www.kabeilu.com/",
+						  "contactPoint": [{
+                             "@type": "ContactPoint",
+                              "telephone": "+86-13544332082",
+                              "contactType": "customer service"
+                                }],
+						  "logo": "https://www.kabeilu.com/themes/web3/images/logo.png"
+						}
+						</script>
+<div class="menumo">
+<div class="ycmenu2"><a data-target=".bs-example-modal-lg" data-toggle="modal" class="search-focus dropdown-toggle"><span class=""><i class="fa fa-search menu-trigger-css2"></i></span></a></div>
+<div class="ycmenu"><button class="menu-trigger"><i class="fa fa-bars"></i></button></div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">X</span></button>
+                          <h4 id="gridSystemModalLabel" class="modal-title">Search Products</h4>
+                        </div>
+                        <div class="modal-body">
+                        
+                         <form class="navbar-form"  method="get" action="search.php" onSubmit="return checkSearchForm()">
+                            <div id="search">
+                              <div class="input-group">
+                                <font class="searchtitle">All Products</font>
+                                <input type="text" id="searchQuery" name="keywords" placeholder="Search" class="form-control" required>
+                                <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+                              </div>
+                            </div>
+                          </form>
+           
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+				  </div>
+				</div>
+			</header> 
+            <nav id="icon-menu" class="main-menu"> 
+        <div class="scrollbar" id="style-1">
+          <ul>
+            <li class="lightli">                                   
+              <a href="/">
+                <i class="fa fa-home fa-lg"></i>
+                <span class="nav-text">Home</span>
+              </a>
+            </li> 
+            <li class="lightli">                                 
+              <a href="article-8-About+KBL.html">
+                <i class="fa fa-user fa-lg"></i>
+                <span class="nav-text">About KBL</span>
+              </a>
+            </li>
+              <li class="darkerli">
+                <a href="brazilian-hair">
+                  <i class="fa menu003"></i>
+                   <span class="nav-text">Brazilian Hair</span>
+                </a>
+              </li>  
+              <li class="darkerli">
+                <a href="indian-hair">
+                  <i class="fa menu005"></i>
+                  <span class="nav-text">Indian Hair</span>
+                </a>
+              </li>
+              <li class="darkerli">
+                <a href="peruvian-hair">
+                  <i class="fa menu006"></i>
+                  <span class="nav-text">Peruvian Hair</span>
+                </a>
+              </li>
+              <li class="darkerli">
+                <a href="malaysian-hair">
+                  <i class="fa menu007"></i>
+                  <span class="nav-text">Malaysian Hair</span>
+                </a>
+              </li> 
+              <li class="darkerli">
+                <a href="closure-hair">
+                  <i class="fa menu008"></i>
+                  <span class="nav-text">Closure Hair</span>
+                </a>
+              </li>
+              <li class="darkerli">
+                <a href="7a-hair">
+                  <i class="fa menu009"></i>
+                  <span class="nav-text">7A Hair</span>
+                </a>
+              </li>
+
+              <li class="darkerli">
+                <a href="bundles-closure">
+                  <i class="fa menu0010"></i>
+                  <span class="nav-text">Bundles + Closure</span>
+                </a>
+              </li>       
+              
+              <li class="darkerli">
+                <a href="european-hair">
+                  <i class="fa menu0011"></i>
+                  <span class="nav-text">European Hair</span>
+                </a>
+              </li>    
+              <li class="lightli">
+                <a href="/article_cat-15-Human+Hair+News.html">
+                  <i class="fa fa-book"></i>
+                  <span class="nav-text">Blog</span>
+                </a>
+              </li>     
+              <li class="lightli">                                 
+              <a href="article-13-Contact+Us.html">
+                <i class="fa fa-envelope-o fa-lg"></i>
+                <span class="nav-text">Contact Us</span>
+              </a>
+            </li>   
+          </ul>
+        </div>
+      </nav>
+     

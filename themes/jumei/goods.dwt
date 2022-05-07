@@ -1,0 +1,699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+
+
+<link rel='canonical' href='https://www.kabeilu.com/' />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{$page_title}" />
+<meta property="og:description" content="{$description}" />
+<meta property="og:url" content="http://www.kabeilu.com/" />
+<meta property="og:site_name" content="KaBeiLu Hair" />
+
+
+<!-- TemplateBeginEditable name="doctitle" -->
+
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+<script type="text/javascript" src="themes/jumei/images/js/scrollpic.js"></script>
+
+
+
+
+    <link href="themes/jumei/js/magiczoomplus.css" rel="stylesheet" type="text/css" media="screen"/>
+
+        <script src="themes/jumei/js/magiczoomplus.js" type="text/javascript"></script>
+
+<script language="javascript">
+
+var $$ = function(func){
+            if (document.addEventListener) {
+                window.addEventListener("load", func, false);
+            }
+            else if (document.attachEvent) {
+                window.attachEvent("onload", func);
+            }
+        }
+        
+        $$(function(){
+		document.getElementById('loadcenter').style.display = "none";
+        })
+				
+</script> 
+
+    </head>
+    <body>
+
+<div id="loadcenter"><img src="images/loading.jpg" /></div>
+<script type="text/javascript">
+
+function $id(element) {
+  return document.getElementById(element);
+}
+
+function reg(str){
+  var bt=$id(str+"_b").getElementsByTagName("h2");
+  for(var i=0;i<bt.length;i++){
+    bt[i].subj=str;
+    bt[i].pai=i;
+    bt[i].style.cursor="pointer";
+    bt[i].onclick=function(){
+      $id(this.subj+"_v").innerHTML=$id(this.subj+"_h").getElementsByTagName("blockquote")[this.pai].innerHTML;
+      for(var j=0;j<$id(this.subj+"_b").getElementsByTagName("h2").length;j++){
+        var _bt=$id(this.subj+"_b").getElementsByTagName("h2")[j];
+        var ison=j==this.pai;
+        _bt.className=(ison?"":"h2bg");
+      }
+    }
+  }
+  $id(str+"_h").className="none";
+  $id(str+"_v").innerHTML=$id(str+"_h").getElementsByTagName("blockquote")[0].innerHTML;
+}
+function changeAtt(t) {
+t.lastChild.checked='checked';
+for (var i = 0; i<t.parentNode.childNodes.length;i++) {
+        if (t.parentNode.childNodes[i].className == 'cattsel') {
+            t.parentNode.childNodes[i].className = '';
+        }
+    }
+t.className = "cattsel";
+changePrice();
+}
+</script>
+<style>
+#inner{
+	width: 730px;
+	height:42px;line-height: 42px;color: #000000; z-index:99999;
+	box-shadow:2px 2px 7px rgba(0,0,0,.2);
+	border-radius: 4px;
+}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="block clearfix">
+  <div class="AreaL">
+<!-- #BeginLibraryItem "/library/category_tree3.lbi" -->
+
+<div class="box">
+ <div class="box_1">
+  <div id="category_tree">
+    <!--{foreach from=$categories item=cat}-->
+     <dl>
+     <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
+     <!--{foreach from=$cat.cat_id item=child}-->
+     <dd><a href="{$child.url}">{$child.name|escape:html}</a></dd>
+       <!--{foreach from=$child.cat_id item=childer}-->
+       <dd>&nbsp;&nbsp;<a href="{$childer.url}">{$childer.name|escape:html}</a></dd>
+       <!--{/foreach}-->
+     <!--{/foreach}-->
+       
+       </dl>
+    <!--{/foreach}--> 
+  </div>
+ </div>
+</div>
+<div class="blank5"></div>
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/goods_related.lbi" -->
+
+<!-- {if $related_goods} -->
+<div class="box">
+     <div class="box_1">
+      <h3><span>{$lang.releate_goods}</span></h3>
+      <div class="boxCenterList clearfix">
+      <!--{foreach from=$related_goods item=releated_goods_data}-->
+        <ul class="clearfix">
+          <li class="goodsimg"><a href="{$releated_goods_data.url}"><img src="{$releated_goods_data.goods_thumb}" alt="{$releated_goods_data.goods_name}" class="B_blue" /></a></li>
+          <li>
+        <a href="{$releated_goods_data.url}" title="{$releated_goods_data.goods_name}">{$releated_goods_data.short_name}</a><br />
+        <!-- {if $releated_goods_data.promote_price neq 0} -->
+        {$lang.promote_price}<font class="f1">{$releated_goods_data.formated_promote_price}</font>
+        <!-- {else} -->
+        {$lang.shop_price}<font class="f1">{$releated_goods_data.shop_price}</font>
+        <!-- {/if} -->
+          </li>
+        </ul>
+        <!--{/foreach}-->
+      </div>
+     </div>
+    </div>
+<div class="blank5"></div>
+<!-- {/if} -->
+
+ <!-- #EndLibraryItem -->
+ 
+ 
+<!-- #BeginLibraryItem "/library/goods_fittings.lbi" -->
+
+<!-- {if $fittings} -->
+<div class="box">
+ <div class="box_1">
+  <h3><span>{$lang.accessories_releate}</span></h3>
+  <div class="boxCenterList clearfix">
+    <!--{foreach from=$fittings item=goods}-->
+    <ul class="clearfix">
+      <li class="goodsimg">
+      <a href="{$goods.url}" target="_blank"><img src="{$goods.goods_thumb}" alt="{$goods.name|escape:html}" class="B_blue" /></a>
+      </li>
+      <li>
+      <a href="{$goods.url}" target="_blank" title="{$goods.goods_name|escape:html}">{$goods.short_name|escape:html}</a><br />
+      {$lang.fittings_price}<font class="f1">{$goods.fittings_price}</font><br />
+      </li>
+    </ul>
+    <!--{/foreach}-->
+  </div>
+ </div>
+</div>
+<div class="blank5"></div>
+<!-- {/if} -->
+
+
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/goods_article.lbi" -->
+
+<!-- {if $goods_article_list} -->
+<div class="box">
+ <div class="box_1">
+  <h3><span>{$lang.article_releate}</span></h3>
+  <div class="boxCenterList RelaArticle">
+    <!-- {foreach from=$goods_article_list item=article} 相关文章 -->
+    <a href="{$article.url}" title="{$article.title|escape:html}">{$article.short_title|escape:html}</a><br />
+    <!--{/foreach}-->
+  </div>
+ </div>
+</div>
+<div class="blank5"></div>
+<!-- {/if} -->
+ <!-- #EndLibraryItem -->
+ 
+ 
+ 
+<!-- #BeginLibraryItem "/library/goods_attrlinked.lbi" -->
+
+<!-- 开始循环属性关联的商品 {foreach from=$attribute_linked item=linked}-->
+<!-- {if $linked.goods} -->
+<div class="box">
+ <div class="box_1">
+  <h3><span title="{$linked.title}">{$linked.title|truncate:11:"...":true}</span></h3>
+  <div class="boxCenterList clearfix">
+  <!-- {foreach from=$linked.goods item=linked_goods_data} -->
+  <ul class="clearfix">
+      <li class="goodsimg">
+      <a href="{$linked_goods_data.url}" target="_blank"><img src="{$linked_goods_data.goods_thumb}" alt="{$linked_goods_data.name|escape:html}" class="B_blue" /></a>
+      </li>
+      <li>
+      <a href="{$linked_goods_data.url}" target="_blank" title="{$goods.linked_goods_data_name|escape:html}">{$linked_goods_data.short_name|escape:html}</a><br />
+      {$lang.shop_price}<font class="f1">{$linked_goods_data.shop_price}</font><br />
+      </li>
+    </ul>
+  <!-- {/foreach} -->
+  </div>
+ </div>
+</div>
+<div class="blank5"></div>
+<!-- {/if} -->
+<!-- 结束属性关联的商品 {/foreach}-->
+ <!-- #EndLibraryItem -->
+ 
+ <!-- #BeginLibraryItem "/library/links.lbi" --><!-- #EndLibraryItem -->
+ 
+ 
+     <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
+     <br />
+<!-- TemplateBeginEditable name="左边广告区域（宽200px）" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+    <!--AD end-->
+
+  </div>
+  <div class="AreaR">
+ <div id="ur_here">
+  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+ </div>
+  <div id="goodsInfo" class="clearfix">
+     <div class="imgInfo">
+     
+     
+     
+
+     
+     
+     
+     
+     
+     
+     
+
+     
+	 <!-- {if $pictures}-->
+     
+<a href="{$pictures.0.img_url}" id="Zoomer" class="MagicZoom MagicThumb" title="{$goods.goods_style_name}" rel="selectors-effect: fade; selectors-change: mouseover; ">
+   <img src="{$goods.goods_img}" alt="{$goods.goods_name|escape:html}" width="350px;"/>
+    </a>
+      <!-- {else} -->
+      <a href="{$pictures.0.img_url}" id="Zoomer" class="MagicZoom MagicThumb" title="{$goods.goods_style_name}">
+   <img src="{$goods.goods_img}" alt="{$goods.goods_name|escape:html}" width="350px;"/>
+    </a>
+      <!-- {/if}-->
+      
+      
+      
+      
+	 <div style="text-align:center; position:relative; width:100%; height:30px;">
+     
+     
+	      {if $prev_good}
+      <a href="{$prev_good.url}"><img alt="prev" src="./images/up.gif"  style="position: absolute; left:0;" /></a>
+      {/if}
+            
+		    {if $next_good}
+      <a href="{$next_good.url}"><img alt="next" src="./images/down.gif" style="position: absolute;right:0;" /></a>
+      {/if}	
+      
+      
+
+     
+     
+            </div>
+	  <!--相册 START-->
+     <!-- #BeginLibraryItem "/library/goods_gallery.lbi" --><!-- #EndLibraryItem -->
+     <!--相册 END-->
+     
+          <div id="fenxiang">
+	 <div id="fenxiang2">share:</div>
+	 
+	  <div id="fenxiang3">
+	 
+	 <script>
+	  u=location.href;t=document.title;
+	 function fbs_click() {
+	window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
+ <a href="http://www.facebook.com/share.php?u=<url>" onclick="return fbs_click()" target="_blank"><img src="images/sns/f.jpg" alt="Share on Facebook" width="38" height="38" border="0" /></a>
+     
+ <a href="http://twitter.com/home?status=Currentlyreading "+encodeURIComponent(u)+"" title="Click to share this post on Twitter" target="_blank"><img src="images/sns/tw.jpg" alt="Share on Twitter" width="38" height="38" border="0"></a>
+ 
+ 
+   <a href="http://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(u)+"&title="+encodeURIComponent(t)+"&source=ADD_YOUR_BLOG_URL_HERE" target="_blank"><img src="images/sns/in.jpg" width="38" height="38" border="0" ></a>
+   
+<a href="http://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-shape="round" data-pin-height="28"  target="_blank"><img src="images/sns/pin.jpg"  alt="pinterest" width="38" height="38" border="0"  /></a>
+   
+   
+<a href="javascript: void(window.open('https://plus.google.com/share?url='.concat(encodeURIComponent(location.href)), '', 'menubar=no,toolbar= no,resizable=yes,scrollbars=yes,height=600,width=600'));">
+<img src="images/sns/gg.jpg" width="38" height="38" border="0" title="Google+"  /></a></div>
+</div>
+     
+     
+     
+     
+</div>	 
+	 <style>
+	 .AreaR #goodsInfo .textInfo #ECS_FORMBUY .clearfix dd{ float:left; width:131px;}
+.AreaR #goodsInfo .textInfo #ECS_FORMBUY .clearfix .ddR{ float:right; width:160px;}
+	 </style>
+     <div class="textInfo">
+         <form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+      <ul>
+      <li class="clearfix" style="font-size:16px; font-weight:bold; padding-bottom:0px; color: #3d3a3c;">{$goods.goods_style_name}</li>
+      <li class="clearfix" style="height:15px;">
+      <dd>
+       <!-- {if $cfg.show_goodssn} 显示商品货号-->
+       <strong>{$lang.goods_sn}</strong>{$goods.goods_sn}
+       <!-- {/if} -->
+       </dd>
+       <dd class="ddR">
+       <!-- {if $goods.goods_number neq "" and $cfg.show_goodsnumber} 商品库存-->
+        <!-- {if $goods.goods_number eq 0} -->
+          <strong>{$lang.goods_number}</strong>
+          <font color='red'>{$lang.stock_up}</font>
+        <!-- {else} -->
+          <strong>{$lang.goods_number}</strong>
+          {$goods.goods_number} {$goods.measure_unit}
+        <!-- {/if} -->
+      <!-- {/if} -->
+       </dd>
+            </li> 
+    
+                <li class="clearfix">
+         
+                 <dd style="height:15px; line-height:18px">
+       <!-- {if $goods.goods_brand neq "" and $cfg.show_brand} 显示商品品牌-->
+       <strong>{$lang.goods_brand}</strong><a href="{$goods.goods_brand_url}" >{$goods.goods_brand}</a>
+       <!--{/if}-->
+       </dd>      
+       <dd class="ddR">
+       <!--点击数-->
+       <strong>{$lang.goods_click_count}:</strong>141{$goods.click_count}
+       </dd>
+      </li>
+      <li class="clearfi" style="height:20px; line-height:; margin-top:5px; font-size:14px;">
+	         <strong>{$lang.shop_price}</strong><font class="shop" id="ECS_SHOPPRICE" style="color:#FF0000"><strong>{$goods.shop_price_formated}</strong></font>
+       <!-- {if $cfg.show_marketprice} 市场价格-->
+       <strong style="margin-left:15px;">{$lang.market_price}</strong><font class="market" style="font-size:18px">{$goods.market_price}</font><br />
+       <!-- {/if} -->
+       <!--本店售价-->
+       
+      </li>
+
+      <!--{if $volume_price_list } -->
+      <li class="padd">
+       <font class="f1">{$lang.volume_price}:</font><br />
+       <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#cccccc">
+        <tr>
+          <td align="center" bgcolor="#FFFFFF"><strong>{$lang.number_to}</strong></td>
+          <td align="center" bgcolor="#FFFFFF"><strong>{$lang.preferences_price}</strong></td>
+        </tr>
+        <!-- {foreach from=$volume_price_list item=price_list key=price_key} -->
+        <tr>
+        <td align="center" bgcolor="#FFFFFF" class="shop">{$price_list.number}</td>
+        <td align="center" bgcolor="#FFFFFF" class="shop">{$price_list.format_price}</td>
+        </tr>
+        <!-- {/foreach} -->
+       </table>
+      </li>
+      <!--{/if}-->
+	  
+<li class="clearfix" style="padding:0; margin:0; height:30px">
+  <dd>
+  <strong>Sold:</strong><b style="color:#ED145B; font-size:14px">{$buy_num}</b>
+  </dd>
+ </li>
+ 
+<li class="clearfix" style="padding:0; margin:0; height:30px">
+ <dd style="width:342px;">
+       <strong>{$lang.goods_rank}</strong>
+      <img src="images/stars{$goods.comment_rank}.gif" alt="comment rank {$goods.comment_rank}" />(<a href="#commentlisti">{$comment_num} people have comments)</a>
+ </dd>
+ 
+ </li>
+
+      <!--{if $goods.is_promote and $goods.gmt_end_time } 促销-->
+      {insert_scripts files='lefttime.js'}
+      <li class="padd loop" style="margin-bottom:5px; border-bottom:1px dashed #ccc;">
+      <img align=left style="margin-right:10px; margin-bottom:10px;" src="./images/countdown.gif" /><strong>{$lang.promote_price}</strong><font class="shop">{$goods.promote_price}</font><br />
+      <strong>{$lang.residual_time}</strong>
+      <font class="f4" id="leftTime" style="font-size:12px;">{$lang.please_waiting}</font><br />
+      </li>
+      <!--{/if}-->
+      <!-- {if $goods.bonus_money} 红包-->
+      <li class="padd loop" style="margin-bottom:5px; border-bottom:1px dashed #ccc;">
+      <strong>{$lang.goods_bonus}</strong><font class="shop">{$goods.bonus_money}</font><br />
+      </li>
+      <!-- {/if} -->
+	  
+	  
+      <li class="clearfix" style="padding:0; margin:0; height:30px">
+       <!-- {if $cfg.use_integral} 购买此商品可使用积分-->
+       <strong>{$lang.goods_integral}</strong><font class="f4" style="font-size:12px; color:#000">{$goods.integral} {$points_name}</font>
+       <!-- {/if} -->
+      </li>
+      <!-- {if $goods.is_shipping} 为免运费商品则显示-->
+      <li style="height:20px;padding-top:4px;">
+      {$lang.goods_free_shipping}<br />
+      </li>  <!-- {/if} -->
+            <li  style="padding:5px 0px; _margin-top:-2px;">
+         				<!-- {foreach from=$specification item=spec key=spec_key} -->	 
+ <font style="font-size:12px;">{$spec.name}:</font><DIV class=catt>
+  <!-- {foreach from=$spec.values item=value key=key} -->
+<a {if $key eq 0}class="cattsel"{/if} onclick="changeAtt(this)" href="javascript:;" name="{$value.id}" title="[{if $value.price gt 0}{$lang.plus}{elseif $value.price lt 0}{$lang.minus}{/if} {$value.format_price|abs}]">{$value.label}<input style="display:none" id="spec_value_{$value.id}" type="radio" name="spec_{$spec_key}" value="{$value.id}" {if $key eq 0}checked{/if} /></a>
+<!-- {/foreach} -->
+ <input type="hidden" name="spec_list" value="{$key}" /> </DIV>
+    <!-- {/foreach} -->     
+      </li>      
+<li class="padd" style="padding:0">
+	  <div style=" padding:10px 0px 15px 15px; margin-top:0px;" class="eeebackground" onmouseover="this.className='fenbackground'" onmouseout="this.className='eeebackground'">
+	  <div class="mb10">
+       <strong style="width:50px; height:24px; float:left; margin-top:10px;">Number:</strong>
+        <script language="javascript" type="text/javascript">  function goods_cut(){var num_val=document.getElementById('number');  var new_num=num_val.value;  var Num = parseInt(new_num);  if(Num>1)Num=Num-1;  num_val.value=Num;}  function goods_add(){var num_val=document.getElementById('number');  var new_num=num_val.value;  var Num = parseInt(new_num);  Num=Num+1;  num_val.value=Num;} </script>  <span class="goods_cut" onclick="goods_cut();changePrice();"></span> <input name="number" type="text" class="goodsBuyBox" id="number" value="1" size="4" onblur="changePrice();"/> <span class="goods_add" onclick="goods_add();changePrice();"></span>
+        
+       <div style="width:200px; float:left; height:24px; margin-top:8px;"> <strong style="margin-left:15px; ">Price:</strong><font id="ECS_GOODS_AMOUNT" class="shop" style="color:#FF0000"></font></div>
+	  </div>
+	  <div class="btnahon"> 
+      <div style="height:0px; line-height:0px; clear:both;"></div>
+      <a href="javascript:addToCart({$goods.goods_id})" ><img src="./images/btn_shopcart.gif" align="absmiddle"  style="margin-top:10px; *margin-top:0px;"/></a>
+      
+      <a href="javascript:addToCart({$goods.goods_id})" style="margin-left:15px" ><img src="./images/btn_shopcart2.gif" align="absmiddle" style="margin-top:10px; *margin-top:0px;"/></a>
+      
+      
+      </div>
+	  </div>
+      </li>
+      <li class="padd" style="height:32px;">
+
+
+	  </li>
+      </ul>
+      </form>
+     </div>
+   </div>
+  
+   <div class="blank"></div>
+  <div class="mall_main">
+     <div class="box" >
+        <div  id="inner">
+   <div class="infotit clearfix" id="com_b"  style="background:url() #eeeeee no-repeat right 0px; width:818px">
+    <a  href="#com_v" style="float:left; width:150px; height:39px; font-size:14px; line-height:39px; text-align:center;" class="goodlinks">Description</a>	        
+ <a  href="#youshi" style="float:left; width:150px; height:39px; font-size:14px; line-height:39px; text-align:center;" class="goodlinks">Advantage</a>
+            <a  href="#fuwu" style="float:left; width:150px; height:39px; font-size:14px; line-height:39px;  text-align:center;" class="goodlinks">Customer Service</a>
+              <a  href="#FAQ" style="float:left; width:150px; height:39px; font-size:14px; line-height:39px;  text-align:center;" class="goodlinks">FAQ's</a>
+        <a  href="#commentlisti" style="float:left; width:150px; height:39px; font-size:14px; line-height:39px; text-align:center;" class="goodlinks">Feedback</a>
+      <a href="javascript:addToCart({$goods.goods_id})" style="cursor:pointer">
+          <h2 style="width:120px; float:right;"></h2></a>
+               
+	</div>
+    </div>
+    
+    
+    
+    <div  id="inner2">
+   <div class="infotit clearfix" id="com_b"  style="background:url(./images/buygif.gif) #eeeeee no-repeat right 0px; width:818px">
+    <a  href="#com_v" style="float:left; width:120px; height:39px; font-size:14px; line-height:39px;  text-align:center;" class="goodlinks">Description</a>	        
+ <a  href="#youshi" style="float:left; width:120px; height:39px; font-size:14px; line-height:39px;  text-align:center;" class="goodlinks">Advantage</a>
+            <a  href="#fuwu" style="float:left; width:120px; height:39px; font-size:14px; line-height:39px; text-align:center;" class="goodlinks">Customer Service</a>
+              <a  href="#FAQ" style="float:left; width:120px; height:39px; font-size:14px; line-height:39px;  text-align:center;" class="goodlinks">FAQ's</a>
+        <a  href="#commentlisti" style="float:left; width:120px; height:39px; font-size:14px; line-height:39px; text-align:center;" class="goodlinks">Feedback</a>
+ 
+          <a href="javascript:addToCart({$goods.goods_id})" style="cursor:pointer">
+          <h2 style="width:180px; float:right;"></h2></a>
+               
+	</div>
+    </div>
+    
+    
+    
+    
+
+     <div class="">
+      <div  class="boxGoods" style="width:790px; padding-left:8px" >
+  <div id="com_v" style="padding:10px 0px 10 10px;" >
+
+      <div style="max-width:100%;">
+      <div style="margin-left:0px; margin-top:0px;">
+ <img src="./images/pay01.jpg" />
+<span class="font19">
+
+
+The hair excluding shipping fee and paypal fee. The price we provided is <FONT color="#FF0000">our direct factory price</FONT>,the lowest.If pay thru western union or money gram,need to pay extra $5 for transaction fee.Any question,pls feel free to contact our seller and Welcome to order!
+
+
+        </span><br /><br />
+<div id="a1"></div>
+<script type="text/javascript" src="ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+	var flashvars={
+
+		f:'http://www.020hair.com/102.flv',
+		c:0,
+		b:1,
+		e:5,
+		v:80,
+		j:2,
+		p:0,
+	
+		e:1,
+
+		};
+
+
+	
+var video = { 'http://www.020hair.com/102.flv': 'video/flv' };
+	CKobject.embed('ckplayer/ckplayer.swf','a1','ckplayer_a1','800','500',false,flashvars,video)	
+	
+	
+
+
+
+</script>
+
+<br />
+
+     {$goods.goods_desc}
+      </div>
+ 
+
+
+</div></div>
+      
+
+<div id="youshi" style="padding-left:0px; padding-top:40px">
+
+
+
+
+    <img src="./images/youshi.gif" /><br /><br />
+    
+    
+<FONT style="font-size:16px; font-weight:bold">Why choose us ?</FONT><br />
+ 
+Business Experience : More than 8 years of experience in hair industry.<br />
+Delivery Quantity : 150 bags or 150boxes shipped by DHL every day.<br />
+Supply Ability : At least 20000 Kilograms per Month.<br />
+Supply Area : All over the world, about 100 countries (Most of them are from Asian, Europe and Africa etc.)<br />
+Certificate :  Supplier Assessment Reports  Audited by TÜV Rheinland.<br />
+OEM/ODM :  1.Label design for free ; 2.Banner for Webpage for free ; 3.Drop shipping with your LOGO.<br />
+           <img src="./images/good01.jpg" width="800" /><img src="./images/good02.jpg" width="800" /><img src="./images/good03.jpg" width="800" /><img src="./images/good05.jpg" width="800" /><img src="./images/good06.jpg" width="800" /><img src="./images/good07.jpg" width="800" />
+
+       
+   </div>
+   <div id="fuwu" style=" padding-top:40px;">         
+       <img src="./images/fuwu.gif" />  
+       
+       
+Customer first, our products have been sold all over the world, and have won good reputation in both domestic
+and overseas markets. Help them to open their own business smoothly.    <br />
+<p>1.If any item is defective upon receipt,pls contact us for the return   address,return is accepted within 10 days after the buyer receives the   goods.<br />
+  2.If it is quality problem or seller ships wrong type or color,we will   pay the return shipping fee.But pls choose the same shipment as   seller.<br />
+  3.Returned item has to be in its original state.<br />
+  4.After reveiving   the returned goods,we will made a replacement depends on our available stock,if   not available,a refund will be issued.<br />
+  5.If item is damaged by buyer,we will   not accept any changing or refunding,hope you can understand.<br />
+  6.   Return/Refund is accepted within 7 days (the date depends on the DHL); please   contact us first and return the goods according to the return address.<br />
+  7. To   avoid delivery lost, return should be arranged by register airmail, and the   shipping fees of return should be paid by the buyer.<br />
+  8. Please make the items   remain the original state. We only accept not damaged items.</p>
+<br />
+
+
+
+
+ 
+       <img src="./images/shservice1.jpg" />
+       
+       <br />
+
+   </div>
+   
+   <div id="FAQ" style=" padding-top:40px;"> 
+   <img src="./images/faq.gif" />  <br /><br>
+ <strong>Q1. How long does it last?</strong><br>
+  A:How long the hair lasts depends on how you maintain it. Treat it like your own hair and take very good care of it,then normally it could last longer than 1 year.<br><br>
+<strong>Q2: Can they be straightened, curled ?</strong><br>
+  A:Yes you could use hair straightener or hair curler to style the brazilian virgin hair .<br>
+  However, don't do it too frequently, or the heat will make the hair easily get dry and tangled.<br>
+  <br>
+  <strong>Q3. Why are my hair extensions getting tangled?</strong><br>
+  A:It could be caused by dry hair. Pls make sure to wash &amp; condition your hair at least once a week, twice a week is better. brazilian virgin hair Comb the hair from time to time. You could go to your stylist for further suggestions.<br>
+  <br>
+  <strong>Q4.what is your virgin brazilian hair quality guarantee ?</strong><br>
+  A:we are the Supplier Assessment in Alibaba, our quality is audited by TüV  Rheinland and Bureau Veritas, who are the leading global independent test provider with a history stretching back 140 years.<br>
+  What is more, if any quality problem, we will refund you money or exchange new goods for you.<br>
+  <br>
+  <strong>Q5:How to care your brazilian hair?</strong><br>
+  A:a. Wash the virgin brazilian hair in one week.<br>
+  b. Water to wet hair,use a mild Shampoo, Rinse and leave to dry.<br>
+  c. Comb with a wire brush after dry.<br>
+  d. You can perming dyeing, but please remember do not do this too frequent,and remember to use the nutrition water.<br>
+  e. The combs you`d better choose the round with wide-toothed comb.<br>
+  f. Don't make the hair under the blazing sun for quite a long time.<br>
+  g. Don't blows the root of hairs too near with the hair drier.<br>
+  h. Don't grasping the root of hair overexert when washing.</p>
+
+   </div>
+   
+   
+   
+   
+       
+<!-- #BeginLibraryItem "/library/comments.lbi" -->
+
+{insert_scripts files='transport.js,utils.js'}
+<div id="ECS_COMMENT"> {* ECSHOP 提醒您：动态载入comments_list.lbi，显示评论列表和评论表单 *}{insert name='comments' type=$type id=$id}</div>
+
+ <!-- #EndLibraryItem -->
+      </div>
+     </div>
+    </div>
+  </div>
+  
+ </div>
+</div>
+    
+ 
+    <div class="clear"></div>  
+    <div id="b10"></div>
+    <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var goods_id = {$goods_id};
+var goodsattr_style = {$cfg.goodsattr_style|default:1};
+var gmt_end_time = {$promote_end_time|default:0};
+{foreach from=$lang.goods_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var goodsId = {$goods_id};
+var now_time = {$now_time};
+
+<!-- {literal} -->
+onload = function(){
+  changePrice();
+  fixpng();
+  try { onload_leftTime(); }
+  catch (e) {}
+}
+
+/**
+ * 
+ */
+function changePrice()
+{
+  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+
+  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+}
+
+/**
+ * 
+ */
+function changePriceResponse(res)
+{
+  if (res.err_msg.length > 0)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+    document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+
+    if (document.getElementById('ECS_GOODS_AMOUNT'))
+      document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+  }
+}
+<!-- {/literal} -->
+</script>
+</html>

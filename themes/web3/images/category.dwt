@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="googlebot" content="NOODP" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="/animated_favicon.gif" type="image/gif" />
+<link href="/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/fonts/elegant-icon-font/style.css" rel="stylesheet">
+<link href="/css/bootstrap-t.css" rel="stylesheet">
+<link href="/css/category-min01.css" rel="stylesheet">
+<!-- SWITCHER -->
+<link rel="canonical" href="{$get_url_cat}" />
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body class="animated-css" data-scrolling-animations="false">
+<div class="sp-body">
+<!-- Loader Landing Page -->
+<div id="loader">
+<div class="loader"></div>
+</div>
+<!-- Loader end -->
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<section id="pageTitleBox" class="paralax breadcrumb-container2"  style="background-image: url('images/detail-heading-bg.jpg');">
+<div class="overlay"></div>
+<div class="container relative"> <span class="zoomIn" style="font-size:12px" data-wow-delay="0.3s"><!-- #BeginLibraryItem "/library/ban2.lbi" --><!-- #EndLibraryItem --></span> </div>
+</section>
+<section id="pageContent" class="page-content">
+<div class="container"> <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 clearfix categorytitle">
+<ul class="categories-tree wow fadeIn ycmobile" data-wow-delay="0.6s">
+<!--{foreach from=$categories item=cat  name=tosssoods}-->
+<li class="dropdown"><a href="/{$cat.url}"><font style="font-size:18px; font-weight:bold">{$cat.parent_id}{$cat.name|escape:html}</font></a> </li>
+<!--{foreach from=$cat.cat_id item=child name=no }-->
+<li style="padding-left:6px"><a href="/{$child.url}" {if $child.id eq $category}style="color:red"{/if}><i class="fa fa-angle-right" style="padding-right:6px"></i>{$child.name|escape:html}</a></li>
+<!--{/foreach}-->
+<!--{/foreach}-->
+</ul>
+<div class="sidebar-title text-capitalize customColor fadeIn ycmobile" data-wow-delay="0.3s"><font class="cat009">Size
+Select</font></div>
+<div class="arr008 goodarr scrollx ycmobile" id="box">
+<ul>
+<!--{foreach from=$filter_attr_list item=filter_attr}-->
+<!--{foreach from=$filter_attr.attr_list item=attr}-->
+<!-- {if $attr.selected} -->
+<a href="#" class="arr009">
+<li>{$attr.attr_value}</li>
+</a>
+<!-- {else} -->
+<a href="/{$attr.url}" class="arr010">
+<li>{$attr.attr_value}</li>
+</a>
+<!-- {/if} -->
+<!--{/foreach}-->
+<!--{/foreach}-->
+</ul>
+</div>
+<script> 
+function show(){ 
+var box = document.getElementById("box"); 
+var text = box.innerHTML; 
+var newBox = document.createElement("div"); 
+var btn = document.createElement("a"); 
+newBox.innerHTML = text.substring(0,1500); 
+btn.innerHTML = text.length > 1500 ? "<br><br><br><br><br><br><br><br><br><br>Show More..." : ""; 
+btn.href = "###"; 
+btn.onclick = function(){ 
+if (btn.innerHTML == "<br><br><br><br><br><br><br><br><br><br>Show More..."){ 
+btn.innerHTML = ""; 
+newBox.innerHTML = text; 
+}else{ 
+btn.innerHTML = "<br><br><br><br><br><br><br><br><br><br>Show More..."; 
+newBox.innerHTML = text.substring(0,1500); 
+} 
+} 
+box.innerHTML = ""; 
+box.appendChild(newBox); 
+box.appendChild(btn); 
+} 
+show(); 
+</script>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 clearfix2 categorylist">
+<div class="content-box">
+<div class="isotope-frame">
+<div class="sidebar-title text-capitalize customColor fadeIn" style="float:left;" data-wow-delay="0.3s">
+<div class="catselect" style=" width:110px;float:left;margin-left:5px;">
+<select id="pid2" onchange="gradeChange()">
+<option value="">Category</option>
+<!--{foreach from=$categories1 item=cat name=cat}-->
+<option grade="{$cat.url}" value="{$cat.url}" {if $cat.id eq $category}selected{/if}>{$cat.name|escape:html}</option>
+<!--{/foreach}-->
+</select>
+</div>
+<div class="catselect" style="width:60px;float:left; margin-left:5px; margin-right:5px">
+<select id="pid3" onchange="gradeChange2()">
+<!--{foreach from=$filter_attr_list item=filter_attr}-->
+<!--{foreach from=$filter_attr.attr_list item=attr}-->
+<option grade="{$attr.url}" value="{$attr.url}" {if $attr.selected}selected{/if}>{$attr.attr_value}</option>
+<!--{/foreach}-->
+<!--{/foreach}-->
+</select>
+</div>
+<script type="text/JavaScript">
+       function gradeChange(){
+        var objS = document.getElementById("pid2");
+        var grade = objS.options[objS.selectedIndex].value;
+		window.location.href=grade;
+       }
+       function gradeChange2(){
+        var objS = document.getElementById("pid3");
+        var grade2 = objS.options[objS.selectedIndex].value;
+		window.location.href=grade2;
+       }
+</script>
+<div style="float:left"> <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list"><img src="images/shop_price_<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.shop_price}"  class="bianjikddyi"></a> <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=<!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/last_update_<!-- {if $pager.sort == 'last_update'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.last_update}"  class="bianjikddyi"></a></div>
+</div>
+<div class="isotope-filter">
+<!--{foreach from=$goods_list item=goods name=goods_list}-->
+<!-- {if $goods.goods_id} -->
+<div class="isotope-item newproducts  col-md-4 col-sm-6" >
+<div class="product-item-cat hvr-underline-from-center">
+<div class="product-item_body"> <img class="product-item_image" src="/{$goods.goods_img}" alt="{$goods.keywords}"> <a class="product-item_link" href="/{$goods.url}" title="{$goods.goods_name}"> <span class="product-item_sale color-main font-additional customBgColor circle">{$goods.goods_weight}</span> </a></div>
+<a href="{$goods.url}" class="product-item_footer" title="{$goods.goods_name}">
+<div class="product-item_title lineh text-center text-capitalize catname08">{$goods.goods_name}</div>
+<div class="product-item_price font-weight-normal customColor"><font class="catretail">US
+{$goods.shop_price}</font></div>
+</a></div>
+</div>
+<!--{/if}-->
+<!--{/foreach}-->
+</div>
+</div>
+<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+<div class="category-pagination col-sm-12">
+<nav>
+<ul class="pagination pagination-small pull-right">
+<li> </li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
+</body>
+</html>

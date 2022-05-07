@@ -1,0 +1,5 @@
+{if $user_info}
+<i class="fa fa-user"></i> <a href="user.php" title="{$user_info.username}">{$user_info.username|truncate:5}</a> <i class="fa fa-sign-out"></i> <a href="user.php?act=logout">{$lang.user_logout}</a>
+{else}
+<i class="fa fa-sign-in"></i> <a href="user.php" style="color:#000000">Log in</a> <i class="fa fa-registered"></i> <a href="user.php?act=register" style="color:#000000">Sign up</a>
+{/if}

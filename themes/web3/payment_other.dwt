@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>KaBeiLu</title>
+		
+		<link href="css/master.css" rel="stylesheet">
+		<link href="css/header.css" rel="stylesheet">
+    <link href="css/icon-menu.css" rel="stylesheet">
+
+		<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="plugins/switcher/css/switcher.css" media="all" />
+
+
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body class="animated-css" data-scrolling-animations="false">
+		<div class="sp-body">
+
+      <!-- Loader Landing Page -->
+       <div id="loader">
+        <div class="loader"></div>  
+      </div>
+      <!-- Loader end -->
+
+		<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+			<section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('images/contact-heading-bg.jpg');">
+				<!-- <div class="overlay"></div> -->
+				<div class="container relative">
+					<h1 class="title font-additional font-weight-normal color-main text-uppercase wow zoomIn" data-wow-delay="0.3s">Kabielu Attention</h1>
+					<ul class="breadcrumb-list wow zoomIn" data-wow-delay="0.3s">
+						<li>
+							<a href="/" class="font-additional font-weight-normal color-main text-uppercase">HOME</a>
+							<span><i class="fa fa-angle-double-right"></i></span>
+						</li>
+						<li>
+							<a href="article-18-Payment+Methods.html" class="font-additional font-weight-normal color-main text-uppercase">payment</a>							
+						</li>						
+					</ul>
+				</div>
+			</section>
+
+      <!-- Map -->
+      <!-- Map -->
+<section id="contact-us">
+        <div class="container">
+          <div class="row">
+          
+          
+          <div class="block clearfix" style="word-wrap: break-word;word-break: normal; ">
+
+<div style="width:100%; height:50px; text-align:left"><font style="font-size:36px"><b>Kabielu Attention</b></font></div>
+
+
+<div class="xgfont2" style="width:100%; _height:880px; line-height:30px; font-size:20px">
+Your order has been generated, due to the order had exceed $500,pls use western union,money gram or T/T to finish your payment,only need to pay us the shippment fee and product moeny,when we received the money,we will ship the hair for you at once.any question,pls send E-mail to:<a href="mailto:webmaster@kabeilu.com"><u><font color="#FF0000">webmaster@kabeilu.com</font></u></a> or click <a onclick="openchat()" style="cursor:pointer" title="Chat Online"><u><font color="#FF0000">Chat online</font></u></a> to contact us. Thank you for your support.
+
+<br>
+<br>
+<strong>Bank Account:</strong><br><br>
+<strong>Western union</strong><br>
+First name: zhibin<br>
+Last  name: Zhang<br />
+Location:China<br>
+Address:  Room 303, Bai Yun Hua Yuan, Xin Shi Xu, Bai Yun, Guangzhou, Guangdong, <br>
+China<br>
+code : 510000<br>
+<br>
+<strong>Money gram</strong> <br>
+First name: dingqin<br>
+Last  name: Xie<br />
+Location:China<br>
+Address: Room 303, Bai Yun Hua Yuan, Xin Shi Xu, Bai Yun, Guangzhou, Guangdong, <br>
+China<br>
+code : 510000<br>
+<br>
+<strong>T/T  (Bank Transfer /bank wire) please pay to us dollars  </strong><br>
+Bank wire：Company Account <br>
+Beneficiary Bank: HSBC Hong Kong  <br>
+Beneficiary Bank Code:  004 <br>
+SWIFT Address: HSBCHKHHHKH <br>
+Receiver's Company Name: BEAUTIFUL FASHION TRADING LIMITED<br>
+Account No: 614043230838<br>
+Beneficiary Bank Address: Head Office 1 Queen's Road Central Hong Kon
+
+
+
+</div>
+
+
+
+</div>
+          
+          
+          </div>
+        </div>
+      </section>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+		</div>
+
+
+
+	</body>
+</html>

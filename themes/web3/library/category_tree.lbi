@@ -1,0 +1,54 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div class="left_cp"><font class="xgfont2">Hair Categories</font></div>
+
+<DIV class="allsort fl allsorthover">
+  <DIV class="category fl color_white_none" id=allCategoryHeader>
+    <DIV class=ap_category id=ap_category >
+      <DIV class=mc  style="padding-bottom:8px;">
+     
+     
+     
+     
+     
+ <link href="themes/jumei/jquery/css/zzsc.css" type="text/css" rel="stylesheet" />
+<script src="themes/jumei/jquery/js/jquery.min.js"></script>
+<script>
+$(function (){
+  $(".left_nav88 dd").hover(function(){
+  $(".nav_right",this).show();
+  });
+  $(".left_nav88 dd").mouseleave(function(){
+  $(".nav_right",this).hide();
+  });
+});
+</script>
+     
+     
+    <div class="left_nav88">
+    <dl>
+    
+    <!--{foreach from=$categories item=cat  name=tosssoods}-->
+    <dd><a href="{$cat.url}" class="nav_left">{$cat.parent_id}{$cat.name|escape:html}</a>
+    
+    <div class="nav_right">
+    <!--{foreach from=$cat.cat_id item=child}-->
+    <a href="{$child.url}">{$child.name|escape:html}</a>
+    <!--{/foreach}-->
+    </div>
+
+    </dd>
+    <!--{/foreach}-->
+    </dl>
+  </div>
+     
+     
+	        
+              
+              
+               
+              </DIV>
+    </DIV>
+  </DIV>
+</div>
+<div class="blank5"></div>

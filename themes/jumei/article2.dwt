@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Our Culture in KaBeiLu</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="stylesheet" href="themes/jumei/aboutkbl/css/img_baguettebox.min.css">
+<link rel="stylesheet" href="themes/jumei/aboutkbl/css/img_lrtk.css">
+
+</head>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="block clearfix">
+
+<div style="width:100%; height:50px; text-align:left">　　<font class="xgfont2" style="font-size:36px"><b>Our Culture</b></font></div>
+
+
+
+
+
+
+<!-- 代码 开始 -->
+<div class="baguetteBoxOne gallery">
+
+        <a href="themes/jumei/aboutkbl/img_images/1.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/1.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/2.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/2.jpg" alt="KBL"></a>
+        
+        <a href="themes/jumei/aboutkbl/img_images/3.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/3.jpg" alt="KBL"></a>
+        
+        <a href="themes/jumei/aboutkbl/img_images/4.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/4.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/5.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/5.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/6.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/6.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/7.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/7.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/8.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/8.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/9.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/9.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/10.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/10.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/11.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/11.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/12.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/12.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/13.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/13.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/14.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/14.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/15.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/15.jpg" alt="KBL"></a>
+        <a href="themes/jumei/aboutkbl/img_images/16.jpg" data-caption="KBL Travel"><img src="themes/jumei/aboutkbl/img_images/thumbs/16.jpg" alt="KBL"></a>
+
+
+
+
+</div>
+
+<!-- 代码 结束 -->
+
+
+  
+
+  
+</div>
+
+
+    <div class="clear"></div> 
+    
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+    <script src="themes/jumei/aboutkbl/js/img_baguettebox.min.js"></script>
+<script>
+baguetteBox.run('.baguetteBoxOne', {
+    animation: 'fadeIn',
+});
+</script>
+
+</body>
+</html>

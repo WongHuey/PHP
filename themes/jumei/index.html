@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/zzsc.css"/>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/zzsc.js"></script>
+<title>搜狐畅言网站宣传介绍幻灯片切换</title>
+</head>
+<body>
+<div class="focus-bg">
+		    <div id="bg-big" class="">
+		        <div class="area focus">
+		            <div class="focus-wrap" id="scrollA">
+		            <!-- Begin -->
+		                    <div class="cons">
+		                        <div id="carousel_container" class="con">
+		                            <div class="pt pt_cur" style="display:block"><img src="images5/f01.jpg" width="1000" height="506" alt=""/>
+		                                <div class="link-wrap" style="margin:-420px 0 0 664px;"><span><a href="http://sc.admin5.com/" target="_blank"></a></span><em><a href="http://sc.admin5.com/"></a></em></div>
+		                            </div>
+		                            <div class="pt"><img src="images5/f02.jpg" width="1000" height="506" alt=""/>
+		                                <div class="link-wrap" style="margin:-166px 0 0 664px;"><span><a href="http://sc.admin5.com/" target="_blank"></a></span><em><a href="http://sc.admin5.com/"></a></em></div>
+		                            </div>
+		                            <div class="pt"><img src="images5/f03.jpg" width="1000" height="506" alt=""/>
+		                                <div class="link-wrap" style="margin:-136px 0 0 0;"><span><a href="http://sc.admin5.com/" target="_blank"></a></span><em><a href="http://sc.admin5.com/"></a></em></div>
+		                            </div>
+		                            <div class="pt"><img src="images5/f04.jpg" width="1000" height="506" alt=""/>
+		                                <div class="link-wrap" style="margin:-430px 0 0 664px;"><span><a href="http://sc.admin5.com/" target="_blank"></a></span><em><a href="http://sc.admin5.com/"></a></em></div>
+		                            </div>
+		                            <div class="pt"><img src="images5/f05.jpg" width="1000" height="506" alt=""/>
+		                                <div class="link-wrap" style="margin:-156px 0 0 664px;"><span><a href="http://sc.admin5.com/" target="_blank"></a></span><em><a href="http://sc.admin5.com/"></a></em></div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="btns">
+                                <a id="carousel_up" class="up uN" href="javascript:void(0)" onClick="carouselPrevious()"></a>
+                                <a id="carousel_down" class="down" href="javascript:void(0)" onClick="carouselNext()"></a>
+                            </div>
+		                    <div class="autoS">
+		                        <ul id="carousel_point" class="clear">
+		                            <li turn="1" class="libg"></li>
+		                            <li turn="2"></li>
+		                            <li turn="3"></li>
+		                            <li turn="4"></li>
+		                            <li turn="5"></li>
+		                        </ul>
+		                    </div>
+		            <!-- End -->
+		        </div>
+		        </div>
+		    </div>
+		</div>
+		
+		<div class="sum-bg">
+		    <div class="area sum">
+
+		
+		    </div>
+		</div>
+		
+    <script>
+        var carousel_taskId;
+        (function(){
+            jQuery('#user_name').hover(function(){
+                jQuery('#name_menu').show();
+	        });
+	        jQuery('#name_menu').mouseleave(function(){
+	            jQuery('#name_menu').hide();
+	        });
+        
+            getCmtNum();
+            showPvNum(165019088 + 150000000);
+            showGarbageNum(1943050);
+            setInterval(getCmtNum,3000);
+            bindCarousel();
+            carousel_taskId = setTimeout(carouselNext,4000);
+        })(jQuery)
+    </script>
+
+<div style="text-align:center;clear:both"><br>
+</div>
+</body>
+</html>

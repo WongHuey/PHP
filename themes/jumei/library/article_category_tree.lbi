@@ -1,0 +1,46 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- {if $article_categories} -->
+
+
+<div class="left_cp"><font class="xgfont2">{$lang.article_cat}</font></div>
+
+<DIV class="allsort fl allsorthover">
+ <DIV class="category fl color_white_none" id=allCategoryHeader>
+  
+  
+  
+    <DIV class=ap_category id=ap_category >
+      <DIV class=mc  style="padding-bottom:8px;">
+  
+  
+  
+    <!--{foreach from=$article_categories item=cat}-->
+                                  <DIV class="item fore ">
+          <H3 style=" padding-left:10px; width:190px;" ><a href="{$cat.url}"><b>{$cat.name|escape:html}</b></a></H3>
+        </DIV>
+        
+        
+        
+   
+      <!--{foreach from=$cat.children item=child}-->
+      
+                                        <DIV class="item fore ">
+          <H3 style=" padding-left:10px; width:190px;" ><a href="{$child.url}" style="background-image:none;">　<font color="#333333">-{$child.name|escape:html}</font></a></H3>
+        </DIV>
+
+      <!--{/foreach}-->
+    <!--{/foreach}-->
+    
+    
+    
+
+
+
+
+     </DIV>
+    </DIV>
+  </DIV>
+</div>
+<div class="blank5"></div>
+<!-- {/if} -->

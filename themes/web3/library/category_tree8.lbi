@@ -1,0 +1,8 @@
+﻿<div class="catselect" style=" width:90px;float:left;margin-left:5px;">
+<select id="pid2" onchange="gradeChange()">
+<option value="">Category</option>
+ <!--{foreach from=$categories1 item=cat name=cat}-->
+<option grade="{$cat.url}" value="{$cat.url}" {if $cat.id eq $category}selected{/if}>{$cat.name|escape:html}</option>
+<!--{/foreach}-->
+</select>
+</div>

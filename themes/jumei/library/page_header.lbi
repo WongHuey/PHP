@@ -1,0 +1,216 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="themes/jumei/images/css.css" rel="stylesheet" type="text/css" />
+<link href="themes/jumei/images/webfonts/ostrich-sans.css" rel="stylesheet" type="text/css" />
+<!-- dd menu -->
+<script type="text/javascript" src="themes/jumei/images/js/menu.js"></script>
+<script type="text/javascript" src="themes/jumei/images/js/indexjs.js"></script>
+<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+
+
+   
+    <div id="header_container">
+        <div id="user_header">
+        <div id="user_control">
+              <ul class="menu_header">
+			  <li class="menu_intro"><a href="article-13-Contact+Us.html"><span class="arrow"></span>Contact Us</a><em>|</em></li>
+			  
+        <li class="menu_stow"><a href="sitemap.xml" id="bookmark_us" target="_blank"><span class="arrow"></span>SiteMap</a><em>|</em></li>
+        <li class="menu_stow2"><a href="article-52-How+to+view+the+KBL+wap+site.html" id="bookmark_us" target="_blank"><span class="arrow"></span>Wap</a><em>|</em></li>
+         <li id="my_jumei_attention_link" style=" position:relative; overflow:inherit; z-index:999;">
+  
+      <div class="headeraccount" style="position:relative;" onmouseover="showtopMenu('show')" onmouseout="showtopMenu('hide')" >
+         <a href="article_cat-15-Hair+Extensions.html" title="" id="myxiu_a" style="position:relative; left:5px; width:150px; color:#d4062d; z-index:999; top:1px;background:url(themes/jumei/images/top_corn.gif) no-repeat right 12px; *background:url(themes/jumei/images/top_corn.gif) no-repeat right 10px;_background:url(themes/jumei/images/top_corn.gif) no-repeat right 12px;" class="">About Hair Extensions</a>
+		
+    
+		  <div  id="topnavboxss" style="display:none; width:190px">
+     
+                        <ul>
+                            <li><a href="Brazilian-Virgin-Hair" style="width:190px" title="Brazilian Virgin Hair">Brazilian Virgin Hair Product</a></li>  
+                            <li><a href="article_cat-12-Brazilian+Virgin+Hair.html"  style="width:190px" title="Brazilian Virgin Hair News">Brazilian Virgin Hair News</a></li>
+                            <li><a href="article_cat-14-Peruvian+virgin+Hair.html"  style="width:190px" title="Peruvian Virgin Hair News">Peruvian Virgin Hair News</a></li>
+              
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+		  
+          <SCRIPT language=Javascript>
+function showtopMenu(dos){
+	if(dos=='show'){
+		document.getElementById('topnavboxss').style.display="block";
+			document.getElementById('myxiu_a').className="hover";
+	}else{
+		document.getElementById('topnavboxss').style.display="none";
+		document.getElementById('myxiu_a').className="";
+	}
+}
+</SCRIPT>
+
+
+
+
+        </div>
+                  </li>
+              
+              </ul>
+              <ul class="login_header">
+               <li class="cartindex">　<a href="flow.php" style="background:none; margin-left:0px; ">{insert name='cart_info2'}</a></li>
+              <li>
+
+   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font></li>
+ 
+                 
+                              </ul>
+        </div>
+    </div>
+    
+    
+    <div id="top2">
+    
+        <div id="logo2">
+		<a href="/" title="Brazilian Hair"><img src="images/logo.png" alt="Brazilian Hair" ></a>
+
+
+        	
+</div>
+    
+                     <div id="res">
+                     <div id="tel"><img src="themes/jumei/images/tel.jpg" ></div>
+                     
+                     <div id="gw">
+                     
+                     
+                     <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()"  >
+                   <div class="top_search_bg">
+                        <input name="keywords" type="text" class="top_search_input" id="keyword" value=""/>
+                    </div>
+                    <div id="search_btn" class="div_after top_search_buttom">
+                     <input name="imageField" type="submit" value="" style="cursor:pointer; background:url(images/images/search_top_buttom.jpg); border:none; width:32px; height:26px;" /> 
+                      
+                    </div>
+                    
+                    
+                    
+                      </form>
+                     </div>
+                     
+                  
+                      
+                      
+                              
+</div>  
+    
+    </div>
+    
+
+    <div class="clear"></div>
+    
+
+<!--xxxx-->
+
+
+<!--xxxx-->
+<div id="top_menu" >
+
+<div id="top_nav">
+
+<ul id="sddm">
+	<li><a href="/" onmouseover="mopen('m1')" onmouseout="mclosetime()">Home</a>
+  		
+	</li>
+	<li class="menuback2"><a href="brazilian-hair" onmouseover="mopen('m2')" onmouseout="mclosetime()">Brazilian Hair</a>
+		<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="category-5-b0-Body+Wave.html">Body Wave</a>
+		<a href="category-21-b0-Deep+Wave.html">Deep Wave</a>
+        <a href="category-22-b0-Big+Wave.html">Big Wave</a>
+        <a href="category-23-b0-Straight.html">Straight</a>
+        <a href="category-34-b0-Funmi+hair.html">Funmi hair</a>
+        <a href="category-36-b0-Clip-In+Hair.html">Clip-In Hair</a>
+        <a href="category-20-b0-Curly.html">Curly</a>
+		</div>
+	</li>
+	<li class="menuback2"><a href="Indian-Hair" onmouseover="mopen('m3')" onmouseout="mclosetime()">Indian Hair</a>
+		<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="category-7-b0-Body+Wave.html">Body Wave</a>
+		<a href="category-15-b0-Deep+Wave.html">Deep Wave</a>
+        <a href="category-16-b0-Loose+Wave.html">Loose Wave</a>
+        <a href="category-17-b0-Straight.html">Straight</a>
+		</div>
+	</li>
+	<li class="menuback2"><a href="Peruvian-Hair" onmouseover="mopen('m4')" onmouseout="mclosetime()">Peruvian Hair</a>
+		<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="category-3-b0-Body+Wave.html">Body Wave</a>
+		<a href="category-12-b0-Deep+Wave.html">Deep Wave</a>
+        <a href="category-13-b0-Loose+Wave.html">Loose Wave</a>
+        <a href="category-14-b0-Straight.html">Straight</a>
+		</div>
+	</li>
+	<li class="menuback2"><a href="Malaysian-Hair" onmouseover="mopen('m5')" onmouseout="mclosetime()">Malaysian Hair</a>
+		<div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="category-9-b0-Body+Wave.html">Body Wave</a>
+        <a href="category-18-b0-Loose+Wave.html">Loose Wave</a>
+        <a href="category-19-b0-Straight.html">Straight</a>
+		</div>
+	</li>
+    
+    	<li class="menuback2"><a href="Lace-Closure" onmouseover="mopen('m6')" onmouseout="mclosetime()">Closure Hair</a>
+		<div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="category-11-b0-Body+Wave.html">Body Wave</a>
+		<a href="category-24-b0-Deep+Wave.html">Deep Wave</a>
+         <a href="category-26-b0-Straight.html">Straight</a>
+         <a href="category-25-b0-Curly.html">Curly</a>
+		</div>
+	</li>
+    
+
+    
+       <li class="menuback2"><a href="7A-Hair" onmouseover="mopen('m8')" onmouseout="mclosetime()">7A Hair</a>
+		<div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="category-39-b0-Body+Wave.html">Body Wave</a>
+		<a href="category-40-b0-Deep+Wave.html">Deep Wave</a>
+        <a href="category-41-b0-Loose+Wave.html">Loose Wave</a>
+        <a href="category-42-b0-Straight.html">Straight</a>
+		</div>
+       
+	</li>
+    
+            	<li class="menuback2"><a href="article-8-About+KBL.html" onmouseover="mopen('m7')" onmouseout="mclosetime()">About KBL</a>
+		<div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="article-8-About+KBL.html">About KBL</a>
+        <a href="article2.php?id=15" target="_blank">Our Culture</a>
+        <a href="article-15-Our+Promises.html">Our Promises</a>
+        <a href="article-10-Our+Honor.html">Our Honor</a>
+        <a href="article-13-Contact+Us.html">Contact Us</a>
+        
+        
+		</div>
+	</li>
+    
+    
+</ul>
+
+
+
+
+</div>
+
+
+
+
+
+
+        
+    </div>
+    </div>
+
+
+
+
+
+
+<div id="kbaidddddd"></div>

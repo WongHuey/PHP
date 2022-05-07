@@ -1,0 +1,233 @@
+<?php
+if($_REQUEST['id'])
+{
+	$id = $_REQUEST['id'];
+    
+}
+else
+{
+	$id = $_REQUEST['category'];
+}
+
+
+function get_categories($cat_id = 0)
+{
+    if ($cat_id > 0)
+    {
+			  $parent_id = $cat_id;
+    }
+    else
+    {
+        $parent_id = 0;
+    }
+
+    /*
+     判断当前分类中全是是否是底级分类，
+     如果是取出底级分类上级分类，
+     如果不是取当前分类及其下的子分类
+    */
+    $sql = 'SELECT count(*) FROM ' . $GLOBALS['ecs']->table('category') . " WHERE parent_id = '$cat_id' AND is_show = 1 ";
+    if ($GLOBALS['db']->getOne($sql) || $parent_id == 0)
+    {
+        /* 获取当前分类及其子分类 */
+        $sql = 'SELECT a.cat_id, a.cat_name, a.sort_order AS parent_order, a.cat_id, a.is_show,' .
+                    'b.cat_id AS child_id, b.cat_name AS child_name, b.sort_order AS child_order ' .
+                'FROM ' . $GLOBALS['ecs']->table('category') . ' AS a ' .
+                'LEFT JOIN ' . $GLOBALS['ecs']->table('category') . ' AS b ON b.parent_id = a.cat_id AND b.is_show = 1 ' .
+                "WHERE a.parent_id = '$parent_id' ORDER BY parent_order ASC, a.cat_id ASC, child_order ASC";
+    }
+    else
+    {
+        /* 获取当前分类及其父分类 */
+        $sql = 'SELECT a.cat_id, a.cat_name, b.cat_id AS child_id, b.cat_name AS child_name, b.sort_order, b.is_show ' .
+                'FROM ' . $GLOBALS['ecs']->table('category') . ' AS a ' .
+                'LEFT JOIN ' . $GLOBALS['ecs']->table('category') . ' AS b ON b.parent_id = a.cat_id AND b.is_show = 1 ' .
+                "WHERE b.parent_id = '$parent_id' ORDER BY sort_order ASC";
+    }
+    $res = $GLOBALS['db']->getAll($sql);
+
+    $cat_arr = array();
+    foreach ($res AS $row)
+    {
+        if ($row['is_show'])
+        {
+            $cat_arr[$row['cat_id']]['id']   = $row['cat_id'];
+            $cat_arr[$row['cat_id']]['name'] = $row['cat_name'];
+            $cat_arr[$row['cat_id']]['url']  = build_uri('category', array('cid' => $row['cat_id']), $row['cat_name']);
+
+            if ($row['child_id'] != NULL)
+            {
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['id']   = $row['child_id'];
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['name'] = $row['child_name'];
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['url']  = build_uri('category', array('cid' => $row['child_id']), $row['child_name']);
+            }
+        }
+    }
+
+    return $cat_arr;
+}
+function get_cat_name_add($id)
+{
+    $sql = 'SELECT cat_name ' . 'FROM ' . $GLOBALS['ecs']->table('category')  . "WHERE cat_id =$id " ;
+		$cat_name = $GLOBALS['db']->getOne($sql);
+		return $cat_name;
+}
+function get_parent($value,$id='')
+{
+
+    if($value!=0)
+    {
+			$sql = 'SELECT parent_id FROM ' . $GLOBALS['ecs']->table('category') . " WHERE cat_id = '$value'";
+			$res = $GLOBALS['db']->getOne($sql);
+			return get_parent($res,$value);
+    }
+		else
+		{
+			return $id;
+		}
+}
+include_once("includes/lib_goods.php");
+$this->assign('categories1'     ,    get_categories(get_parent($id)));
+
+if($id==500)
+{
+$this->assign('cat_name'     ,       "Body Wave");
+}
+else if($id==600)
+{
+$this->assign('cat_name'     ,       "Deep Wave");
+}
+else if($id==700)
+{
+$this->assign('cat_name'     ,       "Loose Wave");
+}
+
+else if($id==800)
+{
+$this->assign('cat_name'     ,       "Straight");
+}
+
+else if($id==900)
+{
+$this->assign('cat_name'     ,       "Curly");
+}
+
+
+
+else
+{
+$this->assign('cat_name'     ,       get_cat_name_add(get_parent($id)));
+}
+
+
+
+?>
+
+
+
+
+<h3 class="sidebar-title font-additional font-weight-bold text-capitalize customColor wow fadeIn" data-wow-delay="0.3s">{$cat_name}</h3>
+              <ul class="categories-tree wow fadeIn" data-wow-delay="0.6s">
+              
+ <!--{foreach from=$categories1 item=cat name=cat}-->
+             
+                <li>
+                  <a href="{$cat.url}" class="font-additional font-weight-normal hover-focus-color color-third text-capitalize">
+                    <span class="pull-left">{$cat.name|escape:html}</span>
+            
+                  </a>
+                  
+              
+              </li>
+              
+               
+
+<!--{/foreach}-->
+                 
+</ul>
+
+
+
+
+  
+  
+                
+<h3 class="sidebar-title font-additional font-weight-bold text-capitalize customColor wow fadeIn" data-wow-delay="0.3s">categories</h3>        
+              
+  
+<ul class="categories-tree wow fadeIn" data-wow-delay="0.6s">
+
+<!--{foreach from=$categories item=cat  name=tosssoods}-->
+                <li class="dropdown">
+                  <a href="{$cat.url}" class="font-additional font-weight-normal hover-focus-color color-third text-capitalize" data-toggle="dropdown">
+                    <span class="pull-left">{$cat.parent_id}{$cat.name|escape:html}</span>
+                    
+                    
+                    
+                     <span class="pull-right fa fa-long-arrow-down"></span>
+            
+                  </a>
+                  
+                    	<ul role="menu" class="dropdown-menu">
+                        
+                        
+                        <!--{foreach from=$cat.cat_id item=child}-->
+                        
+  								<li><a href="{$child.url}">{$child.name|escape:html}</a></li>
+ <!--{/foreach}-->
+  							</ul>
+                  
+                  
+                  
+                </li>
+                
+ <!--{/foreach}-->
+              
+              </ul>
+
+
+
+
+              <ul class="category-images sidebar-product wow fadeIn" data-wow-delay="0.3s">
+                <li class="grid">
+                 <figure class="effect-ruby">
+                    <img src="images/products/1.jpg" alt="product">
+                    <figcaption>
+                      <div class="category-images_content">
+                        <h2 class="font-additional font-weight-bold text-capitalize color-main customBgColor" style="font-size:18px;">HOT COLLECTION</h2>
+                      </div>
+                      <a href="brazilian-hair">View more</a>
+                    </figcaption>     
+                 </figure>
+                </li>
+              </ul>
+              
+              
+    
+              <h3 class="sidebar-title font-additional font-weight-bold text-capitalize customColor wow fadeIn" data-wow-delay="0.3s">featured products</h3>
+              <ul class="sidebar-popular-product wow fadeIn" data-wow-delay="0.6s">
+                <li>
+                  <a class="popular-product-item" href="goods-31-Top+Grade+5A+High-quality+Body+Wave+Brazilian+Wholesale+Hair+Extension.html">
+                    <img src="images/products/latest-1.jpg" alt="Product">
+                    <span class="popular-product-item_title font-additional font-weight-bold text-capitalize">Top Grade 5A High-quality Body Wave Brazilian Wholesale Hair Extension</span>
+                    <span class="popular-product-item_price font-additional color-third">$27.90</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="popular-product-item" href="goods-34-Grade+5a+best+quality+kabeilu+Brazilian+deep+wave+virgin+hair+extensions.html">
+                    <img src="images/products/latest-2.jpg" alt="Product">
+                    <span class="popular-product-item_title font-additional font-weight-bold text-capitalize">Grade 5a best quality kabeilu Brazilian deep wave virgin hair extensions</span>
+                    <span class="popular-product-item_price font-additional color-third">$27.90</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="popular-product-item" href="goods-37-100%25+Virgin+Brazilian+Human+Hair+Big+Wave+Hair+Extensions.html">
+                    <img src="images/products/latest-3.jpg" alt="Product">
+                    <span class="popular-product-item_title font-additional font-weight-bold text-capitalize">100% Virgin Brazilian Human Hair Big Wave Hair Extensions</span>
+                    <span class="popular-product-item_price font-additional color-third">$37.50</span>
+        
+                  </a>
+                </li>
+               
+               
+              </ul>

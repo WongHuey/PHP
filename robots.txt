@@ -1,0 +1,13 @@
+User-agent: *
+#Website Sitemap
+Sitemap: https://www.kabeilu.com/sitemap.xml
+
+Disallow: /affiche.php
+Disallow: /cycle_image.php
+Disallow: /goods_script.php
+Disallow: /receive.php
+Disallow: /region.php
+Disallow: /respond.php
+Disallow: /feed.php
+Disallow: /gallery.php
+Disallow: /mobile

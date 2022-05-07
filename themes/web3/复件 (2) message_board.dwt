@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+		
+		<link href="css/master.css" rel="stylesheet">
+		<link href="css/header.css" rel="stylesheet">
+    <link href="css/icon-menu.css" rel="stylesheet">
+{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+		<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="plugins/switcher/css/switcher.css" media="all" />
+
+
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+        {insert_scripts files='common.js'}
+	</head>
+	<body class="animated-css" data-scrolling-animations="false">
+		<div class="sp-body">
+
+      <!-- Loader Landing Page -->
+       <div id="loader">
+        <div class="loader"></div>  
+      </div>
+      <!-- Loader end -->
+
+		<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+			<section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('images/contact-heading-bg.jpg');">
+				<!-- <div class="overlay"></div> -->
+				<div class="container relative">
+					<h1 class="title font-additional font-weight-normal color-main text-capitalize wow zoomIn" data-wow-delay="0.3s">Feedback</h1>
+
+				</div>
+			</section>
+
+   
+<section id="contact-us">
+        <div class="container">
+          <div class="row">
+          
+          
+          <form action="message.php" method="post" name="formMsg" onSubmit="return submitMsgBoard(this)">
+            <table width="100%" border="0" cellpadding="3">
+            
+            
+            
+                          <tr>
+                <td height="97" colspan="2" align="center"><font style="font-size:30px; line-height:30px">Welcome to contact us, we will reply you as soon as possible.</font></td>
+              </tr>
+            
+            
+              <tr>
+                <td width="32%" align="right">{$lang.username}</td>
+                <td width="68%">
+                <!--{if $smarty.session.user_name}-->
+                <font class="f4_b">{$username}</font>
+                <label for="anonymous" style="margin-left:8px;"><input type="checkbox" name="anonymous" value="1" id="anonymous" />{$lang.message_anonymous}</label>
+                <!--{else}-->
+                <input type="text" class="message-field font-additional font-weight-normal color-third text-capitalize" id="msg_title" name="msg_title"  placeholder="Username" >
+                <!--{/if}-->                </td>
+              </tr>
+              <tr>
+                <td align="right">{$lang.email}</td>
+                <td><input type="text" value="{$smarty.session.email|escape}" class="message-field font-additional font-weight-normal color-third text-capitalize" id="user_email" name="user_email"  placeholder="Email" >                </td>
+              </tr>
+
+      <input name="msg_type" type="hidden" class="inputBg" size="30" value="1" />
+      
+            <!-- 判断是否启用验证码{if $enabled_mes_captcha} -->
+              <tr>
+                <td align="right">{$lang.comment_captcha}</td>
+                <td>
+                
+                <input type="text" size="8" style="width:100px" class="message-field font-additional font-weight-normal color-third text-capitalize" id="captcha" name="captcha"  placeholder="" >
+                
+                <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" /> </td>
+              </tr>
+            <!--{/if}-->
+              <tr>
+                <td align="right" valign="top">{$lang.message_content}</td>
+                <td>
+                
+                
+                <textarea class="message-field font-additional font-weight-normal color-third text-capitalize" name="msg_content" id="msg_content" placeholder="Message" required></textarea>                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td><input type="hidden" name="act" value="act_add_message" />
+           
+                   <button type="submit"  name="login"  class="btn send-button font-additional font-weight-normal btn-block hvr-bounce-to-right hover-focus-border before-bg">{$lang.post_message}</button>
+                  
+                  
+                  
+                                </td>
+              </tr>
+            </table>
+          </form>
+            <script type="text/javascript">
+        {foreach from=$lang.message_board_js item=item key=key}
+        var {$key} = "{$item}";
+        {/foreach}
+        {literal}
+        /**
+         * 提交留言信息
+        */
+        function submitMsgBoard(frm)
+        {
+            var msg = new Object;
+
+             msg.user_email  = frm.elements['user_email'].value;
+             msg.msg_title   = frm.elements['msg_title'].value;
+             msg.msg_content = frm.elements['msg_content'].value;
+             msg.captcha     = frm.elements['captcha'] ? frm.elements['captcha'].value : '';
+
+            var msg_err = '';
+
+            if (msg.user_email.length > 0)
+            {
+               if (!(Utils.isEmail(msg.user_email)))
+               {
+                  msg_err += msg_error_email + '\n';
+                }
+             }
+             else
+             {
+                  msg_err += msg_empty_email + '\n';
+             }
+            if (msg.msg_title.length == 0)
+            {
+                msg_err += msg_title_empty + '\n';
+            }
+            if (frm.elements['captcha'] && msg.captcha.length==0)
+            {
+                msg_err += msg_captcha_empty + '\n'
+            }
+            if (msg.msg_content.length == 0)
+            {
+                msg_err += msg_content_empty + '\n'
+            }
+            if (msg.msg_title.length > 200)
+            {
+                msg_err += msg_title_limit + '\n';
+            }
+
+            if (msg_err.length > 0)
+            {
+                alert(msg_err);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        {/literal}
+        </script>
+          
+          </div>
+    </div>
+      </section>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+		</div>
+
+
+
+	</body>
+</html>

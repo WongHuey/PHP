@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="googlebot" content="NOODP" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/css/master-art.css" rel="stylesheet">
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+{insert_scripts files='common.js'}
+<style>
+.pf{ width:100%;}
+.float01{ position:fixed;top:0px; padding-top:10px;}
+.float02{ position:relative;top:0px;padding:10px;}
+@media screen and (max-width:1200px){.wyc{visibility:hidden;display:none;}
+.wyc01{width:100%;}
+}
+</style>
+</head>
+<body class="animated-css" data-scrolling-animations="false">
+<div class="sp-body"> <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+  <section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('images/contact-heading-bg.jpg');">
+    <!-- <div class="overlay"></div> -->
+    <div class="container relative">
+      <h2 class="title color-main text-capitalize zoomIn" style="color:#333333">KBL Blog</h2>
+    </div>
+  </section>
+  <!-- Map -->
+  <!-- Map -->
+  <section id="contact-us">
+    <div class="container">
+      <div class="row" style="line-height:22px">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 wyc01"> <span class="h1css">
+          <h1>{$article.title}</h1>
+          </span>
+          <div class="author" style="margin-top:10px; margin-bottom:10px; padding:5px; padding-bottom:10px; background-color:; font-size:18px;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #CCCCCC;"> <i class="fa fa-user"></i> By: {$article.author}</span>　<span class="date"><i class="fa fa-calendar"></i> {$article.add_time}</div>
+          {$article.content}</div>
+          
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 clearfix wyc" style="padding-left:24px; height:100%;">
+            <div class="pf" style=" height:auto; min-height:300px;width:100%; max-width:324px; min-width:30px;">
+              <div class="sidebar-title text-capitalize"><font class="cat009" style="font-weight:bold">Wholesale Best Sellers</font></div>
+              <ul class="sidebar-popular-product fadeIn">
+                <li> <a class="popular-product-item" href="/goods-31-high-quality-blue-band-hair-loose-wave-brazilian-hair-extension.html"> <img src="images/products/latest-1.jpg" alt="Product"> <span class="popular-product-item_title text-capitalize">High-Quality Blue Band Hair Loose Wave Brazilian Hair Extension</span> <span class="popular-product-item_price font-third">$27.90</span> </a> </li>
+                <li> <a class="popular-product-item" href="/goods-34-best-brazilian-blue-rubber-band-hair-deep-wave-extensions.html"> <img src="images/products/latest-2.jpg" alt="Product"> <span class="popular-product-item_title text-capitalize">Best Brazilian Blue Rubber Band Hair Deep Wave Extensions</span> <span class="popular-product-item_price  font-third">$27.90</span> </a> </li>
+                <li> <a class="popular-product-item" href="/goods-37-soft-and-silk-100%25-virgin-brazilian-human-hair-body-wave-hair-extensions.html"> <img src="images/products/latest-3.jpg" alt="Product"> <span class="popular-product-item_title text-capitalize">Soft And Silk 100% Virgin Brazilian Human Hair Body Wave Hair Extensions</span><span class="popular-product-item_price font-third">$43.50</span></a> </li>
+                
+                
+                 <li> <a class="popular-product-item" href="/goods-40-wholesale-supplier-brazilian-silky-straight-hair-weaving.html"> <img src="images/products/latest-5.jpg" alt="Product"> <span class="popular-product-item_title text-capitalize">Wholesale Supplier Brazilian Silky Straight Hair Weaving</span><span class="popular-product-item_price font-third">$27.90</span></a> </li>
+                 
+                 
+                <li> <a class="popular-product-item" href="/goods-140-factory-price-613%23-straight-hair-blonde-color-100%25-human-hair.html"> <img src="images/products/latest-6.jpg" alt="Product"> <span class="popular-product-item_title text-capitalize">Factory Price 613# Straight Hair Blonde Color 100% Human Hair</span><span class="popular-product-item_price font-third">$47.30</span></a> </li>              
+                
+              </ul>
+            </div>
+<script type="text/javascript">
+function getScrollTop(){
+　　var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+　　if(document.body){
+　　　　bodyScrollTop = document.body.scrollTop;
+　　}
+　　if(document.documentElement){
+　　　　documentScrollTop = document.documentElement.scrollTop;
+　　}
+　　scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+　　return scrollTop;
+}
+function getScrollHeight(){
+　　var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+　　if(document.body){
+　　　　bodyScrollHeight = document.body.scrollHeight;
+　　}
+　　if(document.documentElement){
+　　　　documentScrollHeight = document.documentElement.scrollHeight;
+　　}
+　　scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+　　return scrollHeight;
+}
+function getWindowHeight(){
+　　var windowHeight = 0;
+　　if(document.compatMode == "CSS1Compat"){
+　　　　windowHeight = document.documentElement.clientHeight;
+　　}else{
+　　　　windowHeight = document.body.clientHeight;
+　　}
+　　return windowHeight;
+}
+window.onscroll = function(){
+
+
+　if(document.body.scrollHeight < 1500  ){
+　　　$(".pf").addClass('float02');
+　　}
+
+
+if ($(document).scrollTop() > 320)
+{
+//$("#pf_nav").show();
+$(".pf").addClass('float01');
+}else{
+//$("#pf_nav").hide();
+$(".pf").removeClass('float01');
+}
+　　if(getScrollTop() + getWindowHeight()+300 >  getScrollHeight()){
+　　　$(".pf").removeClass('float01');
+　　}
+};
+</script>
+          </div>
+        <script>
+	  u=location.href;t=document.title;
+	 function fbs_click() {
+	window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
+        <div class="product-options_footer clearfix fadeIn" id="tabs-review" style="margin-top:30px">
+          <div class="product-options_row">
+            <h4 class="font-weight-bold text-capitalize">Share this blog</h4>
+            <ul class="social-list" style="font-size:30px">
+              <li><a rel="nofollow" href="#" onclick="return fbs_click()" class="hover-focus-border hover-focus-bg hvr-rectangle-out before-bg"><span class="social_facebook" aria-hidden="true"></span></a></li>
+              <li><a rel="nofollow" href="javascript: void(window.open('https://twitter.com/share?url='.concat(encodeURIComponent(location.href)), '', 'menubar=no,toolbar= no,resizable=yes,scrollbars=yes,height=600,width=600'));" title="Click to share this post on Twitter" class="hover-focus-border hover-focus-bg hvr-rectangle-out before-bg"><span class="social_twitter" aria-hidden="true"></span></a></li>
+              <li><a rel="nofollow" href="javascript: void(window.open('https://plus.google.com/share?url='.concat(encodeURIComponent(location.href)), '', 'menubar=no,toolbar= no,resizable=yes,scrollbars=yes,height=600,width=600'));" class="hover-focus-border hover-focus-bg hvr-rectangle-out before-bg"><span class="social_googleplus" aria-hidden="true"></span></a></li>
+              <li><a rel="nofollow" href="javascript: void(window.open('https://www.pinterest.com/pin/create/button/?url='.concat(encodeURIComponent(location.href)), '', 'menubar=no,toolbar= no,resizable=yes,scrollbars=yes,height=600,width=600'));" data-pin-do="buttonBookmark"  data-pin-shape="round" data-pin-height="28" class="hover-focus-border hover-focus-bg hvr-rectangle-out before-bg"><span class="social_pinterest" aria-hidden="true"></span></a></li>
+              <li><a rel="nofollow" href="javascript: void(window.open('https://www.linkedin.com/cws/share?url='.concat(encodeURIComponent(document.title)) .concat(' ') .concat(encodeURIComponent(location.href))));" class="hover-focus-border hover-focus-bg hvr-rectangle-out before-bg"><span class="social_instagram" aria-hidden="true"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
+</body>
+</html>

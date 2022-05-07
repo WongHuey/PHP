@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="googlebot" content="NOODP" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel='canonical' href='{$get_url}' />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{$page_title}" />
+<meta property="og:description" content="{$description}" />
+<meta property="og:url" content="{$get_url}" />
+<meta property="og:site_name" content="KaBeiLu Hair" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="css/master.css" rel="stylesheet">
+		<link href="css/header.css" rel="stylesheet">
+    <link href="css/icon-menu.css" rel="stylesheet">
+
+		<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="plugins/switcher/css/switcher.css" media="all" />
+
+
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+        
+        
+
+{insert_scripts files='good_common.js'}
+        <script type="text/javascript">
+
+function $id(element) {
+  return document.getElementById(element);
+}
+
+function reg(str){
+  var bt=$id(str+"_b").getElementsByTagName("h2");
+  for(var i=0;i<bt.length;i++){
+    bt[i].subj=str;
+    bt[i].pai=i;
+    bt[i].style.cursor="pointer";
+    bt[i].onclick=function(){
+      $id(this.subj+"_v").innerHTML=$id(this.subj+"_h").getElementsByTagName("blockquote")[this.pai].innerHTML;
+      for(var j=0;j<$id(this.subj+"_b").getElementsByTagName("h2").length;j++){
+        var _bt=$id(this.subj+"_b").getElementsByTagName("h2")[j];
+        var ison=j==this.pai;
+        _bt.className=(ison?"":"h2bg");
+      }
+    }
+  }
+  $id(str+"_h").className="none";
+  $id(str+"_v").innerHTML=$id(str+"_h").getElementsByTagName("blockquote")[0].innerHTML;
+}
+function changeAtt(t) {
+t.lastChild.checked='checked';
+for (var i = 0; i<t.parentNode.childNodes.length;i++) {
+        if (t.parentNode.childNodes[i].className == 'cattsel') {
+            t.parentNode.childNodes[i].className = '';
+        }
+    }
+t.className = "cattsel";
+changePrice();
+}
+</script>
+	</head>
+	<body class="animated-css" data-scrolling-animations="false">
+		<div class="sp-body">
+
+      <!-- Loader Landing Page -->
+       <div id="loader">
+        <div class="loader"></div>  
+      </div>
+      <!-- Loader end -->
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+			<section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('images/detail-heading-bg.jpg');">
+								<div class="container relative">
+					<h1 class="title font-additional font-weight-normal color-main text-uppercase wow zoomIn" data-wow-delay="0.3s">
+                    
+                    KBL Hair
+   
+                    
+                    </h1>
+
+				</div>
+			</section>
+
+       
+			<section id="productDetails" class="product-details">
+				<div class="container">
+                  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+					<div class="row">
+						<div class="product-gallery col-lg-4 col-md-4 col-sm-7 col-xs-12 clearfix">
+							<ul class="bxslider" data-mode="fade" data-slide-margin="0" data-min-slides="1" data-move-slides="1" data-pager="true" data-pager-custom="#bx-pager" data-controls="false">
+								
+                             <!-- {foreach from=$pictures item=picture name=pictures} name=pictures -->    
+{if $smarty.foreach.pictures.index <3}          
+                                <li><img  src="{$picture.img_url}" alt="{$picture.goods_name}"  /></li>
+{/if}                    
+<!--{/foreach}-->
+							</ul>
+							<div id="bx-pager" class="product-gallery_preview">
+                            
+                            
+ <!-- {foreach from=$pictures item=picture name=pictures}-->
+{if $smarty.foreach.pictures.index <3}                     
+								<a data-slide-index="{$smarty.foreach.pictures.index}" href="#"><img src="{if $picture.thumb_url}{$picture.thumb_url}{else}{$picture.img_url}{/if}" alt="{$goods.goods_name}" /></a>
+{/if}  
+								 <!--{/foreach}-->
+							</div>
+						</div>
+            <div class="sidebar col-lg-3 col-md-3 col-sm-5 col-xs-12 clearfix ycmobile">
+            
+            
+             
+            <!-- #BeginLibraryItem "/library/category_tree5.lbi" -->
+
+
+ <!-- #EndLibraryItem -->
+            
+            
+            
+            </div>
+            
+            
+            
+  <form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+            
+            
+            
+            
+						<div class="product-cart col-lg-5 col-md-5 col-sm-12 col-xs-12 clearfix">
+              <div class="product-options_header clearfix wow fadeIn" data-wow-delay="0.3s">
+                <h3 class="font-third text-uppercase">{$goods.goods_style_name}</h3>Item Code:KBL-889{$goods.goods_id}
+                <div class="product-item_price font-additional font-weight-normal customColor"><font id="ECS_GOODS_AMOUNT" class="shopprice" style="color:#FF0000"></font> <span id="old-price">{$goods.market_price}</span> <font style="font-size:12px; color:#FF0000"><!-- {if $goods.goods_number neq "" and $cfg.show_goodsnumber} 商品库存-->
+        <!-- {if $goods.goods_number eq 0} -->
+         {$lang.goods_number}
+          <font color="#FF0000">{$lang.stock_up}</font>
+        <!-- {else} -->
+          {$lang.goods_number}
+          {$goods.goods_number} {$goods.measure_unit}
+        <!-- {/if} -->
+      <!-- {/if} --> / Sold:{$buy_num} </font></div>
+                
+                
+                <div class="tigs">
+                Hey!Dear Customers. The price we provided now is the best price,without shipping fee and transaction fee,welcome to order and Thanks for your understanding. 
+                </div>
+                
+                <ul class="rating">
+                  <li><span aria-hidden="true" class="icon-star customColor"></span></li>
+                  <li><span aria-hidden="true" class="icon-star customColor"></span></li>
+                  <li><span aria-hidden="true" class="icon-star customColor"></span></li>
+                  <li><span aria-hidden="true" class="icon-star customColor"></span></li>
+                  <li><span aria-hidden="true" class="icon-star customColor"></span></li>
+                </ul>
+              </div>
+              <div class="product-options_body clearfix wow fadeIn" data-wow-delay="0.3s">
+              
+              
+   <h4 class="font-additional font-weight-bold text-uppercase">PRODUCT DESCRIPTION</h4>
+                <div class="product-options_desc font-main color-third">
+                
+                 {$goods.goods_brief}
+    
+                
+                
+                </div>
+              </div>
+              <div class="product-options_cart clearfix wow fadeIn post" data-wow-delay="0.3s">
+                <div class="post">
+                
+                  <!-- {foreach from=$specification item=spec key=spec_key} -->	
+<div class="catt011">
+ <DIV class="cattname">{$spec.name}:</DIV>
+ <DIV class="cattname2">
+
+ <DIV class=catt>
+  <!-- {foreach from=$spec.values item=value key=key} -->
+<a {if $key eq 0}class="cattsel"{/if} onclick="changeAtt(this);ycold()" href="javascript:;" name="{$value.id}" title="[{if $value.price gt 0}{$lang.plus}{elseif $value.price lt 0}{$lang.minus}{/if} {$value.format_price|abs}]">{$value.label}<input style="display:none" id="spec_value_{$value.id}" type="radio" name="spec_{$spec_key}" value="{$value.id}" {if $key eq 0}checked{/if} /></a>
+<!-- {/foreach} -->
+ <input type="hidden" name="spec_list" value="{$key}" /> </DIV>
+ 
+ </DIV>
+ 
+ </div>
+    <!-- {/foreach} -->     
+               
+
+                
+                
+                </div>
+                <div class="select pull-right">
+                 
+             
+                </div>
+                <div class="product-options_row">
+                  <a href="javascript:addToCart({$goods.goods_id})" class="btn button-additional button-big font-additional font-weight-normal text-uppercase hvr-bounce-to-right before-bg">
+                    <span class="icon-basket" aria-hidden="true"></span>
+                    add to cart
+                </a>
+                
+                 <div class="product-counter">
+<script language="javascript" type="text/javascript">  function goods_cut(){var num_val=document.getElementById('number');  var new_num=num_val.value;  var Num = parseInt(new_num);  if(Num>1)Num=Num-1;  num_val.value=Num;}  function goods_add(){var num_val=document.getElementById('number');  var new_num=num_val.value;  var Num = parseInt(new_num);  Num=Num+1;  num_val.value=Num;} </script>
+                    <input class="font-main font-weight-normal" type="text" name="number" id="number"  onblur="changePrice();ycold()" value="1"> <div onclick="goods_add();changePrice();ycold()" class="productCounter addQuantity font-main hover-focus-color" >+</div><div  onclick="goods_cut();changePrice();ycold()" class="productCounter minusQuantity font-main hover-focus-color">-</div>
+                    
+                    
+                  </div>
+                
+                
+                
+                </div>
+                
+                
+                
+                
+                <div class="product-options_row">
+                  <ul class="product-links">
+
+                    <li>
+                      <a data-target=".bs-example-modal-lg1" data-toggle="modal" class="font-weight-normal goodcss01">
+                        <span class="icon-envelope" aria-hidden="true"></span>
+                        Need Wholesale Prices? <font color="#FF0000">Click Here</font>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              	 <script>
+	  u=location.href;t=document.title;
+	 function fbs_click() {
+	window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
+              <div class="product-options_footer clearfix wow fadeIn" data-wow-delay="0.3s">
+                <div class="product-options_row">
+                  <h4 class="font-additional font-weight-bold text-uppercase">Share this product</h4>
+                  <ul class="social-list">
+                    <li><a href="http://www.facebook.com/share.php?u=<url>" onclick="return fbs_click()" class="hover-focus-border hover-focus-bg hvr-rectangle-out before-bg"><span class="social_facebook" aria-hidden="true"></span></a></li>
+                    <li><a href="http://twitter.com/home?status=Currentlyreading "+encodeURIComponent(u)+"" title="Click to share this post on Twitter" target="_blank" class="hover-focus-border hover-focus-bg hvr-rectangle-out before-bg"><span class="social_twitter" aria-hidden="true"></span></a></li>
+                    <li><a href="javascript: void(window.open('https://plus.google.com/share?url='.concat(encodeURIComponent(location.href)), '', 'menubar=no,toolbar= no,resizable=yes,scrollbars=yes,height=600,width=600'));" class="hover-focus-border hover-focus-bg hvr-rectangle-out before-bg"><span class="social_googleplus" aria-hidden="true"></span></a></li>
+                    <li><a href="http://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-shape="round" data-pin-height="28"  target="_blank" class="hover-focus-border hover-focus-bg hvr-rectangle-out before-bg"><span class="social_pinterest" aria-hidden="true"></span></a></li>
+                    <li><a href="http://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(u)+"&title="+encodeURIComponent(t)+"&source=ADD_YOUR_BLOG_URL_HERE" target="_blank" class="hover-focus-border hover-focus-bg hvr-rectangle-out before-bg"><span class="social_instagram" aria-hidden="true"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            
+            </form>
+            
+            <div id="tabsPanel" class="col-lg-9 col-md-9 col-sm-12 tabs-container background-container">
+              <div class="tabs-panel" role="tabpanel">
+                <ul class="nav-tabs wow fadeIn" data-wow-delay="0.3s" role="tablist">
+                  <li role="presentation" class="active">
+                    <a class="hover-focus-border font-additional font-weight-normal hvr-bounce-to-right before-bg" href="#description" role="tab" data-toggle="tab">description</a>
+                  </li>
+                  <li role="presentation">
+                    <a class="hover-focus-border font-additional font-weight-normal hvr-bounce-to-right before-bg" href="#reviews" role="tab" data-toggle="tab">Advantage</a>
+                  </li>
+                  <li role="presentation">
+                    <a class="hover-focus-border font-additional font-weight-normal hvr-bounce-to-right before-bg" href="#delivery-returns" role="tab" data-toggle="tab">Reviews ({insert name=comments_count type=$type id=$id})</a>
+                  </li>
+                </ul>
+                <div class="tab-content wow fadeIn" data-wow-delay="0.3s">
+                  <div id="description" class="tab-pane fade in active" role="tabpanel">
+                   
+           
+<img src="images/products/des05.jpg">
+<img src="images/products/des06.jpg">
+<img src="images/products/des07.jpg">
+<img src="images/products/des08.jpg">
+<img src="images/products/tech08.jpg" width="100%">
+<img src="images/products/tech071.jpg" width="100%">
+<br><br>
+            <div class="desimg clearfix">
+            {$goods.goods_desc}
+            </div>       
+                   <img src="./images/pay01.jpg" />
+<p>
+
+
+The hair excluding shipping fee and paypal fee. The price we provided is <FONT color="#FF0000">our direct factory price</FONT>,the lowest.If pay thru western union or money gram,need to pay extra $5 for transaction fee.Any question,pls feel free to contact our seller and Welcome to order!
+ </p> 
+ 
+ 
+<img src="./images/good01.jpg" width="100%" /><img src="./images/good02.jpg" width="100%" /><img src="./images/good03.jpg" width="100%" /><img src="./images/good05.jpg" width="100%" /><img src="./images/good06.jpg" width="100%" /><img src="./images/good07.jpg" width="100%" />
+ 
+ 
+   
+                  </div>
+                  <div id="reviews" class="tab-pane fade clearfix" role="tabpanel">
+                    <p>
+                    
+                    <FONT style="font-size:16px; font-weight:bold">Why choose us ?</FONT><br />
+ 
+Business Experience : More than 10 years of experience in hair industry.<br />
+Delivery Quantity : 150 bags or 150boxes shipped by DHL every day.<br />
+Supply Ability : At least 20000 Kilograms per Month.<br />
+Supply Area : All over the world, about 100 countries (Most of them are from Asian, Europe and Africa etc.)<br />
+Certificate :  Supplier Assessment Reports  Audited by TÜV Rheinland.<br />
+OEM/ODM :  1.Label design for free ; 2.Banner for Webpage for free ; 3.Drop shipping with your LOGO.<br /><br />
+           <img src="./images/good01.jpg" width="800" /><img src="./images/good02.jpg" width="800" /><img src="./images/good03.jpg" width="800" /><img src="./images/good05.jpg" width="800" /><img src="./images/good06.jpg" width="800" /><img src="./images/good07.jpg" width="800" />
+
+                    
+                    </p>
+                  </div>
+                  <div id="delivery-returns" class="tab-pane fade" role="tabpanel">
+                   
+                   
+<div id="ECS_COMMENT"> {insert name='comments' type=$type id=$id}</div>
+                   
+                   
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+
+						
+            
+            
+					</div>
+				</div>
+			</section>	
+      		
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+		</div>
+
+{insert_scripts files='good_transport.js,good_utils.js'}
+{insert_scripts files='jquery.json-1.3.js'}
+
+	</body>
+    <script type="text/javascript">
+var goods_id = {$goods_id};
+var goodsattr_style = {$cfg.goodsattr_style|default:1};
+var gmt_end_time = {$promote_end_time|default:0};
+{foreach from=$lang.goods_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var goodsId = {$goods_id};
+var now_time = {$now_time};
+
+<!-- {literal} -->
+onload = function(){
+  changePrice();
+  fixpng();
+  try { onload_leftTime(); }
+  catch (e) {}
+}
+
+/**
+ * 
+ */
+function changePrice()
+{
+  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+
+  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+}
+
+/**
+ * 
+ */
+function changePriceResponse(res)
+{
+  if (res.err_msg.length > 0)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+    document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+
+    if (document.getElementById('ECS_GOODS_AMOUNT'))
+      document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+  }
+}
+function ycold()
+{
+document.getElementById('old-price').style.display  = "none";
+}
+
+<!-- {/literal} -->
+</script>
+</html>

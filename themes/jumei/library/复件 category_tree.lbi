@@ -1,0 +1,36 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+#ap_category .mc .item  .i-mc .subitem .fore dt{font-weight:normal; font-size:16px; margin-left:10px; padding-left:8px;}
+#ap_category .mc .item  .i-mc .subitem .fore dt:hover{font-weight:normal; font-size:16px; margin-left:10px;font-weight:bold; padding-left:8px; background-color:#097dc6;}
+</style>
+<div class="left_cp">Hair categories</div>
+
+<DIV class="allsort fl allsorthover">
+  <DIV class="category fl color_white_none" id=allCategoryHeader>
+    <DIV class=ap_category id=ap_category >
+      <DIV class=mc  style="padding-bottom:8px;">
+     
+	      <!--{foreach from=$categories item=cat  name=tosssoods}-->
+                <DIV class="item fore " onMouseOver="this.className='item fore hover '" 
+onmouseout="this.className='item fore '"><SPAN class="icon{$smarty.foreach.tosssoods.iteration}">
+          <H3 ><a href="{$cat.url}">{$cat.name|escape:html}</a></H3>
+          <S></S></SPAN>
+          <DIV class=i-mc style="width:208px;">
+            <DIV class=subitem>
+			    <!--{foreach from=$cat.cat_id item=child}-->
+				<DL class=fore>
+      <DT ><a href="{$child.url}">{$child.name|escape:html}</a></DT>
+      </DL>
+     <!--{/foreach}-->
+ </DIV>    
+          </DIV>
+        </DIV>
+              <!--{/foreach}-->      
+              
+              
+               
+              </DIV>
+    </DIV>
+  </DIV>
+</div>
+<div class="blank5"></div>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<meta name="Description" content="{$description}" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="googlebot" content="NOODP" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="/animated_favicon.gif" type="image/gif" />
+<link href="/css/master-product.css" rel="stylesheet">
+<!-- SWITCHER -->
+<link rel="canonical" href="{$get_url_cat}" />
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+<style>
+.pricecount
+{
+height:25px; text-align:center; margin-top:15px;color:#999999;
+}
+</style>
+</head>
+<body class="animated-css" data-scrolling-animations="false">
+<div class="sp-body">
+<!-- Loader Landing Page -->
+<div id="loader">
+<div class="loader"></div>
+</div>
+<!-- Loader end -->
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<section id="pageTitleBox" class="paralax breadcrumb-container ycmobile"  style="background-image: url('images/detail-heading-bg.jpg');">
+  <div class="container relative">
+   <div class="title color-main wow zoomIn" data-wow-delay="0.3s" style="color:#333333"><!-- #BeginLibraryItem "/library/ban2.lbi" --><!-- #EndLibraryItem --></div>
+  </div>
+</section>
+<section id="pageContent" class="page-content">
+<div class="container"> <div style="line-height:22px"><!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem --></div>
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 clearfix2 categorylist">
+<div class="content-box">
+<div class="isotope-frame">
+<div class="sidebar-title text-capitalize customColor fadeIn" data-wow-delay="0.3s">
+<!-- #BeginLibraryItem "/library/category_tree8.lbi" --><!-- #EndLibraryItem -->
+<div class="catselect" style="width:60px;float:left; margin-left:5px; margin-right:5px">
+<select id="pid3" onchange="gradeChange2()">
+<!--{foreach from=$filter_attr_list item=filter_attr}-->
+<!--{foreach from=$filter_attr.attr_list item=attr}-->
+<option grade="{$attr.url}" value="{$attr.url}" {if $attr.selected}selected{/if}>{$attr.attr_value}</option>
+<!--{/foreach}-->
+<!--{/foreach}-->
+</select>
+</div>
+<script type="text/JavaScript">
+       function gradeChange(){
+        var objS = document.getElementById("pid2");
+        var grade = objS.options[objS.selectedIndex].value;
+		window.location.href=grade;
+       }
+       function gradeChange2(){
+        var objS = document.getElementById("pid3");
+        var grade2 = objS.options[objS.selectedIndex].value;
+		window.location.href=grade2;
+       }
+</script>
+<div style="float:left; margin-right:5px"> <a href="{$script_name}.php?id={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list"><img src="images/shop_price_<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.shop_price}"  class="bianjikddyi"></a> <a href="{$script_name}.php?id={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=<!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/last_update_<!-- {if $pager.sort == 'last_update'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.last_update}"  class="bianjikddyi"></a></div>
+</div>
+<div class="isotope-filter" style="margin-top:20px">
+<!--{foreach from=$goods_list item=goods name=goods_list}-->
+<!-- {if $goods.goods_id} -->
+<div class="isotope-item newproducts col-md-4 col-sm-6" >
+<div class="product-item-cat hvr-underline-from-center">
+<div class="product-item_body"> <img class="product-item_image" src="/{$goods.goods_img}" alt="{$goods.keywords}"><!-- {if $goods.goods_number <=0} --><font class="kclink02">Out of stock</font><!--{/if}--> <a class="product-item_link" href="/{$goods.url}" title="{$goods.goods_name}"> <span class="product-item_sale color-main font-additional customBgColor circle"><i class="fa fa-shopping-cart"></i></span></a></div>
+<a href="{$goods.url}" class="product-item_footer" title="{$goods.goods_name}">
+<div class="product-item_title lineh text-center text-capitalize catname08">{$goods.goods_name}</div>
+<div class="product-item_price font-weight-normal customColor"><!-- {if $goods.goods_ts >1} --><font class="kclink05">Wholesale:</font> <!--{/if}--><font class="catretail">{$goods.shop_price}</font><font class="kclink05">/ {$goods.goods_ts}<!-- {if $goods.goods_ts ==1} -->piece<!--{else}-->pcs<!--{/if}--></font></div>
+</a></div>
+</div>
+<!--{/if}-->
+<!--{/foreach}-->
+</div>
+</div>
+<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+<div class="category-pagination col-sm-12">
+<nav>
+<ul class="pagination pagination-small pull-right">
+<li> </li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 clearfix categorytitle">
+<ul class="categories-tree wow fadeIn ycmobilecat" data-wow-delay="0.6s">
+<!--{foreach from=$categories item=cat  name=tosssoods}-->
+<li class="dropdown"><a href="/{$cat.url}"><font style="font-size:18px; font-weight:bold">{$cat.name|escape:html}</font></a> </li>
+<!--{foreach from=$cat.cat_id item=child name=no }-->
+<li style="padding-left:6px;"><a href="/{$child.url}" {if $child.id eq $category}style="color:red"{/if}><i class="fa fa-angle-right" style="padding-right:6px"></i>{$child.name|escape:html}</a></li>
+<!--{/foreach}-->
+<!--{/foreach}-->
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
+</body>
+</html>

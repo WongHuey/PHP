@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{$page_title}</title>
+<meta name="Description" content="{$description}" />
+<meta name="googlebot" content="NOODP" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/css/master-art.css" rel="stylesheet">
+<link rel="canonical" href="/{$get_url}" />
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+{insert_scripts files='common.js'}
+</head>
+<body class="animated-css" data-scrolling-animations="false">
+<div class="sp-body">
+ <!-- Loader Landing Page -->
+ <div id="loader">
+  <div class="loader"></div>
+ </div>
+ <!-- Loader end -->
+ <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+ <section id="pageTitleBox" class="paralax breadcrumb-container"  style="background-image: url('images/contact-heading-bg.jpg');">
+  <!-- <div class="overlay"></div> -->
+  <div class="container relative">
+   <h2 class="title color-main text-capitalize wow zoomIn" data-wow-delay="0.3s" style="color:#333333">KBL Hair</h2>
+  </div>
+ </section>
+ <!-- Map -->
+ <!-- Map -->
+ <section id="contact-us">
+  <div class="container">
+   <div class="row" style="line-height:22px">
+   
+    <div class="col-xs-12">
+    <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+    <span class="h1css" style="display:none"><h1>{$article.title}</h1></span>
+    {$article.content}</div>
+   </div>
+  </div>
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/"
+  },
+  "headline": "{$article.title}",
+  "image": "{$article.article_img}",
+  "datePublished": "{$article.add_time}",
+  "dateModified": "{$article.add_time}",
+  "author": {
+    "@type": "Person",
+    "name": "{$article.author}"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Kabeilu",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/themes/web3/images/logo.png"
+    }
+  },
+  "description": "{$article.content02|truncate:150}"
+}
+</script>
+ </section>
+ <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
+</body>
+</html>

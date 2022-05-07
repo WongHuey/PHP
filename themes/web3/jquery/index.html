@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery左侧固定悬浮二级导航菜单 - 16素材网</title>
+<link href="css/zzsc.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery.min.js"></script>
+<script>
+$(function (){
+  $(".left_nav dd").hover(function(){
+  $(".nav_right",this).show();
+  });
+  $(".left_nav dd").mouseleave(function(){
+  $(".nav_right",this).hide();
+  });
+});
+</script>
+</head>
+<body style="height:2000px;">
+<!-- 代码begin -->
+  <div class="left_nav">
+    <dl>
+    <dt>分类</dt>
+    <dd><a href="javascript:" class="nav_left">玉石</a><div class="nav_right"><a href="javascript:">木雕</a><a href="javascript:">木雕</a><a href="javascript:">木雕</a></div></dd>
+    <dd><a href="javascript:" class="nav_left">刺绣</a><div class="nav_right"><a href="javascript:">22222</a></div></dd>
+    <dd><a href="javascript:" class="nav_left">玻璃工艺</a><div class="nav_right"><a href="javascript:">3333</a></div></dd>
+    <dd><a href="javascript:" class="nav_left">青铜器</a></dd>
+    <dd><a href="javascript:" class="nav_left">雕刻</a></dd>
+    <dd><a href="javascript:" class="nav_left">金属工艺</a></dd>
+    <dd><a href="javascript:" class="nav_left">陶瓷</a></dd>
+    <dd><a href="javascript:" class="nav_left">手工绘画</a></dd>
+    <dd><a href="javascript:" class="nav_left">特种工艺</a></dd>
+    </dl>
+  </div>
+<!-- 代码end -->
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://www.16sucai.com/" target="_blank">16素材网</a></p>
+</div>
+</body>
+</html>

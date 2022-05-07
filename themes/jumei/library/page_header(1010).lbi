@@ -1,0 +1,224 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="themes/jumei/images/css.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<!-- dd menu -->
+<script type="text/javascript" src="themes/jumei/images/js/menu.js"></script>
+<script type="text/javascript" src="themes/jumei/images/js/indexjs.js"></script>
+
+
+
+
+
+
+<script language="javascript"> 
+<!--
+/*屏蔽所有的js错误*/
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+
+
+
+
+
+    <div id="header_container">
+        <div id="user_header">
+        <div id="user_control">
+              <ul class="menu_header">
+			  <li class="menu_intro"><a href="javascript:"><span class="arrow"></span>Invite friends</a><em>|</em></li>
+			  
+        <li class="menu_stow"><a href="javascript: void 0;" id="bookmark_us"><span class="arrow"></span>Add to Favorites</a><em>|</em></li>
+         <li id="my_jumei_attention_link" style="position:relative; overflow:inherit; z-index:999;">
+          
+      <div class="headeraccount" style="position:relative;" onmouseover="showtopMenu('show')" onmouseout="showtopMenu('hide')" >
+         <a href="javascript:" title="" id="myxiu_a" style="position:relative; left:5px; width:130px; color:#d4062d; z-index:999; top:1px;background:url(themes/jumei/images/top_corn.gif) no-repeat right 12px; *background:url(themes/jumei/images/top_corn.gif) no-repeat right 10px;_background:url(themes/jumei/images/top_corn.gif) no-repeat right 12px;" class="">Pay attention to our</a>
+		 
+      
+		  <div  id="topnavboxss" style=" display:none; ">
+                        <ul>
+                            <li class="sina"><a href="http://www.kabeilu.com" rel="nofollow" target="_blank"><span class="arrow"></span>Blog</a></li>
+                            <li class="qqblog"><a href="http://www.kabeilu.com" rel="nofollow" target="_blank"><span class="arrow"></span>Kong</a></li>
+                            <li class="qq"><a href="http://www.kabeilu.com" rel="nofollow" target="_blank"><span class="arrow"></span>BBS</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+		  
+          <SCRIPT language=Javascript>
+function showtopMenu(dos){
+	if(dos=='show'){
+		document.getElementById('topnavboxss').style.display="block";
+			document.getElementById('myxiu_a').className="hover";
+	}else{
+		document.getElementById('topnavboxss').style.display="none";
+		document.getElementById('myxiu_a').className="";
+	}
+}
+</SCRIPT>
+
+
+
+
+        </div>
+                  </li>
+              
+              </ul>
+              <ul class="login_header">
+               <li>　<a href="flow.php" style="background:none; margin-left:0px; "><img src="themes/jumei/images/gouwudd.jpg" ></a></li>
+              <li>
+
+   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font></li>
+ 
+                 
+                              </ul>
+        </div>
+    </div>
+    
+    
+    <div id="top2">
+    
+        <div id="logo2">
+		<a href="index.php"><img src="images/logo.png" ></a>
+
+
+        	
+</div>
+    
+                     <div id="res">
+                     <div id="tel"><img src="themes/jumei/images/tel.jpg" ></div>
+                     
+                     <div id="gw">
+                     
+                     
+                     <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()"  >
+                   <div class="top_search_bg">
+                        <input name="keywords" type="text" class="top_search_input" id="keyword" value="Hair"/>
+                    </div>
+                    <div id="search_btn" class="div_after top_search_buttom">
+                     <input name="imageField" type="submit" value="" style="cursor:pointer; background:url(images/images/search_top_buttom.jpg); border:none; width:32px; height:26px;" /> 
+                      
+                    </div>
+                    
+                    
+                    
+                      </form>
+                     </div>
+                     
+                  
+                      
+                      
+                              
+</div>  
+    
+    
+    
+    
+    </div>
+    
+
+
+
+
+
+
+    <div class="clear"></div>
+    
+
+<!--xxxx-->
+
+
+<!--xxxx-->
+<div id="top_menu" >
+
+<div id="top_nav">
+
+<ul id="sddm">
+	<li><a href="index.php" onmouseover="mopen('m1')" onmouseout="mclosetime()">Home</a>
+  		
+	</li>
+	<li><a href="category.php?id=2" onmouseover="mopen('m2')" onmouseout="mclosetime()">Brazilian Hair</a>
+		<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="category.php?id=5">Body Wave</a>
+		<a href="category.php?id=21">Deep Wave</a>
+        <a href="category.php?id=22">Loose Wave</a>
+        <a href="category.php?id=23">Straight</a>
+        <a href="category.php?id=20">Curly</a>
+		</div>
+	</li>
+	<li><a href="category.php?id=6" onmouseover="mopen('m3')" onmouseout="mclosetime()">Indian Hair</a>
+		<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="category.php?id=7">Body Wave</a>
+		<a href="category.php?id=15">Deep Wave</a>
+        <a href="category.php?id=16">Loose Wave</a>
+        <a href="category.php?id=17">Straight</a>
+		</div>
+	</li>
+	<li><a href="category.php?id=1" onmouseover="mopen('m4')" onmouseout="mclosetime()">Peruvian Hair</a>
+		<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="category.php?id=3">Body Wave</a>
+		<a href="category.php?id=12">Deep Wave</a>
+        <a href="category.php?id=13">Loose Wave</a>
+        <a href="category.php?id=14">Straight</a>
+		</div>
+	</li>
+	<li><a href="category.php?id=8" onmouseover="mopen('m5')" onmouseout="mclosetime()">Malaysian Hair</a>
+		<div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="category.php?id=9">Body Wave</a>
+        <a href="category.php?id=18">Loose Wave</a>
+        <a href="category.php?id=19">Straight</a>
+		</div>
+	</li>
+    
+    	<li><a href="#" onmouseover="mopen('m6')" onmouseout="mclosetime()">Lace Closure</a>
+
+	</li>
+    
+        	<li><a href="article.php?id=8" onmouseover="mopen('m7')" onmouseout="mclosetime()">About KBL</a>
+		<div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="article.php?id=9">Culture</a>
+        <a href="article.php?id=10">Honor</a>
+        
+        
+		</div>
+	</li>
+    
+       <li><a href="article.php?id=11" onmouseover="mopen('m8')" onmouseout="mclosetime()">Site Map</a>
+	</li>
+    
+    
+</ul>
+
+
+
+
+</div>
+
+
+
+
+
+
+        
+    </div>
+    </div>
+
+
+
+
+
+
+<div id="kbaidddddd"></div>

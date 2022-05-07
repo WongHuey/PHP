@@ -1,0 +1,66 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php
+if($_REQUEST['id'])
+{
+	$id = $_REQUEST['id'];
+}
+else
+{
+	$id = $_REQUEST['category'];
+}
+
+
+$this->assign('cat_name'     ,       get_cat_name_add(get_parent($id)))
+
+
+?>
+
+
+<?php
+
+
+$cname=get_cat_name_add($id);
+//echo $cname;
+if(get_cat_name_add(get_parent($id))=="Malaysian Hair")
+{
+echo "<div id='top30'><div id='top301'><img src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Malaysian Hair' /></div><div id='top302'>  <div id='top3021'>$cname</div>  <div id='top3022'>Virgin Malaysian Hair Is Obtained From Malaysian Women Who Sell Their To Make Some Extra Money. Malaysian Hair Weave Is Heavier, Thicker And More Dense Than Indian Hair, And Also Not As Shiny And Has A Fuller Body. It Has Very Soft And Smooth Texture, It Waves Slightly When Wet. As Usual, We Only Offer 100% Virgin Malaysian Hair, Therefore Our Malaysian Hair Is Obtained From A Single Donor And Has Not Been Chemically Altered Or Processed. It Is Shed-Free And Tangle-Free</div></div></div>";
+}
+else if(get_cat_name_add(get_parent($id))=="Brazilian Hair")
+{
+echo "<div id='top30'><div id='top301'><img src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Brazilian Hair' /></div><div id='top302'>  <div id='top3021'>$cname</div>  <div id='top3022'>Brazilian Hair is the most sought after texture on the market right now. This hair is used diversely because of its softness, durability and density (thickness). This texture is easiest to blend with most ethnicities from some Caucasian textures to African American relaxed textures. Brazilian hair is extremely luxurious and very soft with a lot of body and natural shine. Its lustre is low to medium. Also because of its density, it is less likely to frizz. Brazilian hair will also hold curls for very long time . This hair is extremely versatile. It’s amazing!KaBeiLu.com promise that we only sell 100% real Brazilian hair.</div></div></div>";
+}
+else if(get_cat_name_add(get_parent($id))=="Indian Hair")
+{
+echo "<div id='top30'><div id='top301'><img src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Indian Hair' /></div><div id='top302'>  <div id='top3021'>$cname</div>  <div id='top3022'>Virgin Indian Hair Is Obtained From Indian Women Who Sell Their To Make Some Extra Money. Indian Hair Is Thinner And Silkier Compared To Brazilian Hair. As Usual We Only Offer 100% Virgin Indian Hair, Therefore Our Indian Hair Is Obtained From A Single Donor And Has Not Been Chemically Altered Or Processed. It Is Shed-Free And Tangle-Free, So You Can Rest Assured That You Are Purchasing Top Notch Hair. We Guarantee That You Will Love Our Long Lasting And Beautiful Hair.</div></div></div>";
+}
+else if(get_cat_name_add(get_parent($id))=="Peruvian Hair")
+{
+echo "<div id='top30'><div id='top301'><img src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Peruvian Hair' /></div><div id='top302'>  <div id='top3021'>$cname</div>  <div id='top3022'>Virgin Peruvian Hair Has Many Purpose, It Is Lightweight But Still Carries Lots Of Volume. Peruvian Hair Has Soft And Silky Texture, Available In Natural Black And Natural Brown Shades. As Usual, We Only Offer 100% Virgin Peruvian Hair, Therefore Our Peruvian Hair Is Obtained From A Single Donor And Has Not Been Chemically Altered Or Processed. It Is Shed-Free And Tangle-Free, So You Can Rest Assured That You Are Purchasing Top Notch Hair. We Guarantee That You Will Love Our Long Lasting And Beautiful Hair.</div></div></div>";
+}
+
+else if(get_cat_name_add(get_parent($id))=="Closure Hair")
+{
+echo "<div id='top30'><div id='top301'><img src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Lace Closure' /></div><div id='top302'>  <div id='top3021'>$cname</div>  <div id='top3022'>Human Hair Lace Closures Pieces Are Used To Close Your Weave,Lace Closure Is Used To Close Wefts, Tracks, Or Extensions. Our Closures Are Perfect For Balding And Thinning Hair At The Crown, Or Just Worn As A Protective Style To Avoid Leaving Any Hair Out With A Full Head Weave. Instant Volume, Length And Style To Thinning Hair In Just Minutes With Any Of These Top Hairpieces That Come In Human Hair,Beautiful And Natural Looking. </div></div></div>";
+}
+
+
+else if(get_cat_name_add(get_parent($id))=="7A Hair")
+{
+echo "<div id='top30'><div id='top301'><img src='themes/jumei/images/catimg/$cname.jpg' width='130' height='130' alt='Lace Closure' /></div><div id='top302'>  <div id='top3021'>$cname</div>  <div id='top3022'>T1 hair is devoted to be the best quality, the most natural and the real human hair originating from Brazilian girls.<br>We collect our human hair in the most excellent birthplace of human hair - Brazil.<br>Perhaps, it is exactly because of poverty that this Brazilian hair, without too much chemical pollutions is the quality that T1 hair</div></div></div>";
+}
+
+
+
+else
+{
+echo "<img src=themes/jumei/images/ban3.jpg height=130 width=820 />";
+}
+
+
+
+
+?>
+	
+
+
+

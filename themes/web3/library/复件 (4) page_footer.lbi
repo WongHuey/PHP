@@ -1,0 +1,276 @@
+﻿<footer id="footer">
+				<a class="goToTop color-main text-capitalize" href="#" id="scrollTop">
+					<i class="fa fa-angle-up"></i>
+					<span>Top</span>
+				</a>
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 clearfix wow fadeIn" data-wow-delay="0.3s" data-wow-duration="2s">
+								<a href="/" class="footer-top_logo"></a>
+								<div class="about-company clearfix">
+									<span class="font-main color-additional">Located in Guangzhou, Guangzhou Kabeilu Trading Co., Ltd. is a professional manufacturer of Human Hair. We have more than 10 years of experience in Hairdressing Industry and have a good reputation in this field.</span>
+							  <ul class="footer-social-list">
+										<li><a rel="nofollow" href="https://www.facebook.com/kabeilu" target="_blank"><span class="social_facebook" aria-hidden="true"></span></a></li>
+										<li><a rel="nofollow" href="https://plus.google.com/108461569573656940389" target="_blank"><span class="social_googleplus" aria-hidden="true"></span></a></li>
+								<li><a rel="nofollow" href="https://www.youtube.com/watch?v=OL1cXzoEpuo&t=28s" target="_blank"><span class="social_youtube" aria-hidden="true"></span></a></li></ul>
+								</div>
+						  </div>
+							<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 clearfix wow fadeIn" data-wow-delay="0.6s" data-wow-duration="2s">
+								<div><span class="footer-top_title color-main text-capitalize">About Us</span></div>
+								<div class="footer-top_container clearfix">
+									<ul class="footer-nav">
+                                    <li><a href="article-8-About+KBL.html" class="font-main font-weight-normal color-additional"><i class="fa fa-caret-right"></i> About KBL</a></li>
+                                    <li><a href="user.php" class="font-main font-weight-normal color-additional"><i class="fa fa-caret-right"></i> My Account</a></li>
+                                        <li><a href="user.php?act=register" class="font-main font-weight-normal color-additional"><i class="fa fa-caret-right"></i> Create An Account</a></li>
+                    <li><a href="article-14-Our+Quality.html" class="font-main font-weight-normal color-additional"><i class="fa fa-caret-right"></i> Our Quality</a></li>
+                    <li><a href="article-15-Our+Promises.html" class="font-main font-weight-normal color-additional"><i class="fa fa-caret-right"></i> Our Promises</a></li>
+										<li><a href="article-44-How+to+pay+at+website.html" class="font-main font-weight-normal color-additional"><i class="fa fa-caret-right"></i> How to pay at website</a></li>					
+										
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 clearfix wow fadeIn" data-wow-delay="0.9s" data-wow-duration="2s">
+								<div><span class="footer-top_title color-main text-capitalize">Customer Service</span></div>
+								<div class="footer-top_container clearfix">
+									<ul class="footer-nav">	
+                    <li><a href="article-13-Contact+Us.html" class="font-main font-weight-normal color-additional"><i class="fa fa-phone widcss"></i> Contact us</a></li>		
+                    <li><a href="article-12-Brazilian+Hair+FAQs.html" class="font-main font-weight-normal color-additional"><i class="fa fa-question widcss"></i> FAQ's</a></li>	
+                    					
+										<li><a href="article-16-Return+Policy.html" class="font-main font-weight-normal color-additional"><i class="fa fa-retweet widcss"></i> Returns & Refunds</a></li>
+										<li><a href="article-17-Shippment++Package.html" class="font-main font-weight-normal color-additional"><i class="fa fa-plane widcss"></i> Shipping Information</a></li>
+										<li><a href="article-18-Payment+Methods.html" class="font-main font-weight-normal color-additional"><i class="fa fa-dollar widcss"></i> Payment</a></li>
+                                        <li><a href="sitemap.xml" class="font-main font-weight-normal color-additional" target="_blank"><i class="fa fa-sitemap widcss"></i> Site Map</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 clearfix wow fadeIn" data-wow-delay="1.2s" data-wow-duration="2s">
+								<div><span class="footer-top_title color-main text-capitalize">Get In Touch</span></div>
+								<div class="footer-top_container clearfix">
+									<ul class="footer-contact">
+										<li class="font-main font-weight-normal color-additional">
+											<span class="icon_pin" aria-hidden="true"></span>
+											Guangzhou, Guangdong<br>China (Mainland)
+										</li>
+										<li class="font-main font-weight-normal color-additional oneLine">
+											<span class="icon_phone" aria-hidden="true"></span>
+											 (+86) 13544332082
+										</li>
+										<li class="font-main font-weight-normal color-additional oneLine">
+											<span class="icon_mail" aria-hidden="true"></span>
+											<a href="mailto:webmaster@kabeilu.com" class="bottom01">webmaster@kabeilu.com</a>
+										</li>
+										<li class="font-main font-weight-normal color-additional">
+											<span class="icon_clock" aria-hidden="true"></span>
+											Mon to Sat : 09:00 AM - 06:00 PM <br>Sun : 06:00 PM - 10:00 PM
+										</li>										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix">
+								<span class="footer_copyright font-main" style="color:#fff;">Created by <span class="font-main font-weight-semibold">KaBeiLu.com</span> &copy; 2008-2017 All rights reserved.</span>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix">
+								<ul class="footer-payments pull-right">
+									<li><img src="images/C-1.jpg" alt="Payments"></li>
+									<li><img src="images/C-2.jpg" alt="Payments"></li>
+									<li><img src="images/C-3.jpg" alt="Payments"></li>
+									<li><img src="images/C-4.jpg" alt="Payments"></li>									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+ <div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-hidden="true">
+             <div class="modal-dialog modal-lg">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                   <div id="gridSystemModalLabel" class="modal-title">Online Support</div>
+                 </div>
+                 <div class="modal-body">
+             <!-- feedback -->
+     <form action="message-all.php" method="post" name="formMsg" onSubmit="return submitMsgBoard(this)">
+    <section class="col-main col-sm-123">
+   <div id="contact1" class="page-content page-contact" style="margin-top:0; padding-top:0;">
+     <div class="row">
+     
+     <div class="col-xs-12 col-sm-6 ycmobile2" id="contact_form_map">
+                <div class="page-subheading">Let's get in touch</div>
+       
+                <br/>
+                <ul>
+                  <li><a href="article-18-Payment+Methods.html" target="_blank">About Payment Methods</a></li>
+                  <li><a href="article-16-Return+Policy.html" target="_blank">Return Policy</a></li>
+                  <li><a href="article-12-Brazilian+Hair+FAQs.html" target="_blank">Brazilian hair Faq's</a></li>
+                </ul>
+                <br/>
+                <ul class="store_info">
+                  <li><i class="fa fa-home"></i>Bai Yun Dis.Guangzhou,Guangdong,China</li>
+                  <li><i class="fa fa-phone"></i><span>+ 86 13544332082</span></li>
+                  <li><i class="fa fa-fax"></i><span>+ 86 020 26298437</span></li>
+                  <li><i class="fa fa-whatsapp"></i><span>+ 86 13544332082</span></li>
+                  <li><i class="fa fa-skype"></i><span>css20160820@hotmail.com</span></li>
+                  <li><i class="fa fa-envelope"></i>Email: <span><a href="mailto:webmaster@kabeilu.com">webmaster@kabeilu.com </a></span></li>
+                </ul>
+              </div>
+     
+   <div class="col-sm-6">
+                <div class="page-subheading">Welcome to contact us</div>
+                <div class="contact-form-box">
+                  <div class="form-selector">
+                    <label>Username</label>              
+               <!--{if $smarty.session.user_name}-->
+            <input type="text" class="form-control input-sm" id="msg_title" name="msg_title" value="{$username}" required>
+                <!--{else}-->
+                <input type="text" class="form-control input-sm" id="msg_title" name="msg_title"  required >
+                <!--{/if}-->     
+                    
+                  </div>
+                  <div class="form-selector">
+                    <label>Email</label>
+                    <input type="email" value="{$smarty.session.email|escape}" class="form-control input-sm" id="user_email" name="user_email" required >
+                  </div>         
+                 
+                  <div class="form-selector">
+                    <label>Message</label>
+            <textarea class="form-control input-sm" name="msg_content" rows="3"  id="msg_content" required></textarea>        
+                  <input type="hidden" name="act" value="act_add_message" />
+                  </div>  
+              <div class="form-selector">
+              <input type="text" size="8" style="width:100px; float:left" class="form-control input-sm" id="captcha" name="captcha"  placeholder="" > 　<img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" /></div>
+                  
+                  <div class="form-selector">
+                    <input name="msg_type" type="hidden" class="inputBg" size="30" value="2" />      
+<button type="submit"  name="login"  class="btn send-button btn-block hvr-bounce-to-right hover-focus-border before-bg meback">{$lang.post_message}</button>
+                   
+                   
+                    </div>        
+                </div>
+                <div class="page-subheading">Click as follows</div>
+                 <a href="mailto:webmaster@kabeilu.com" target="_blank" title="Email"><img src="images/email-on.png"></a>
+                 <a href="skype:css20160820@hotmail.com" class="chatbtn" onclick="return skypeCheck();" target="_blank" title="Skype"><img src="images/skype-on.png"></a>
+                <a href="tel:+8613544332082"><img src="images/whatapp-on.png"></a>
+                <a href="tel:+8613544332082"><img src="images/tel-on.png"></a>    
+            </div>
+            </div>
+          </div>
+        </section>
+    </form>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Kabeilu",
+  "url" : "/",
+  "sameAs" : [
+    "https://www.facebook.com/kabeilu",
+    "https://plus.google.com/108461569573656940389"
+  ]
+}
+</script>
+     <script type="text/javascript">
+        {foreach from=$lang.message_board_js item=item key=key}
+        var {$key} = "{$item}";
+        {/foreach}
+        {literal}
+        /**
+         * 提交留言信息
+        */
+        function submitMsgBoard(frm)
+        {
+            var msg = new Object;
+
+             msg.user_email  = frm.elements['user_email'].value;
+             msg.msg_title   = frm.elements['msg_title'].value;
+             msg.msg_content = frm.elements['msg_content'].value;
+             msg.captcha     = frm.elements['captcha'] ? frm.elements['captcha'].value : '';
+
+            var msg_err = '';
+
+            if (msg.user_email.length > 0)
+            {
+               if (!(Utils.isEmail(msg.user_email)))
+               {
+                  msg_err += msg_error_email + '\n';
+                }
+             }
+             else
+             {
+                  msg_err += msg_empty_email + '\n';
+             }
+            if (msg.msg_title.length == 0)
+            {
+                msg_err += msg_title_empty + '\n';
+            }
+            if (frm.elements['captcha'] && msg.captcha.length==0)
+            {
+                msg_err += msg_captcha_empty + '\n'
+            }
+            if (msg.msg_content.length == 0)
+            {
+                msg_err += msg_content_empty + '\n'
+            }
+            if (msg.msg_title.length > 200)
+            {
+                msg_err += msg_title_limit + '\n';
+            }
+
+            if (msg_err.length > 0)
+            {
+                alert(msg_err);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        {/literal}
+        </script>
+  <!-- feedback-->
+                 </div>
+               </div>
+             </div>
+</div>  
+     <div class="onlineservice ycmobile">
+     <a data-target=".bs-example-modal-lg1" data-toggle="modal" class="search-focus dropdown-toggle links"> <img src="images/online.png"> </a>
+     </div>  
+<div class="onlineservice2">
+     <a class="search-focus dropdown-toggle links chat01" href="/"><i class="fa fa-home"></i> Home</a>
+     <a data-target=".bs-example-modal-lg1" data-toggle="modal" class="search-focus dropdown-toggle links chat01"><i class="fa fa-comment"></i> Chat Now</a>
+     <a class="search-focus dropdown-toggle links chat01" href="tel:+8613544332082"><i class="fa fa-phone"></i> Call Me</a>
+     <a class="menubottom"><button class="menu-trigger menu-trigger-css"><i class="fa fa-bars"></i></button></a>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.placeholder.min.js"></script>
+		<script src="js/smoothscroll.min.js"></script>
+		<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="plugins/bxslider/jquery.bxslider.min.js"></script>
+		<script src="plugins/switcher/js/bootstrap-select.js"></script> 
+		<script src="plugins/switcher/js/evol.colorpicker.min.js" type="text/javascript"></script> 
+		<script src="plugins/switcher/js/dmss.js"></script>
+	  <script type="text/javascript" src="plugins/isotope/jquery.isotope.min.js"></script> 
+		<script src="js/wow.min.js"></script>
+		<script src="js/cssua.min.js"></script>
+    <script src="js/theme.js"></script> 
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55942188-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

@@ -1,0 +1,43 @@
+﻿<?php 
+    $this->assign( 'img_art1', get_article_new(array(2),'cat',6) ); 
+?>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+.img_art{ width:273px; height:130px; border:#FFF solid 1px; float:left; padding-bottom:10px; overflow:hidden; }
+.title { background-color:#D3C08D; height:22px; color:#765935; padding:5px 5px 0px 5px; font-weight:bold;}
+.content { padding:5px;}
+.Limg {width:100px; height:100px; border:#E0E0E0 solid 1px; padding:1px; text-align:center; margin-right:2px; float:left;}
+.Limg img {width:100px; height:100px; border:0px; }
+.rcont { width:155px; float:left;}
+.rcont li {padding-left: 2em;line-height: 180%;background-image: url(images/news_arrow.gif);background-repeat: no-repeat;background-position: 12px 5px;white-space:nowrap;width:150px;text-overflow:ellipsis;overflow:hidden;}
+.rcont a:visited, .rcont a:link {color: #9A6F4A;text-decoration: underline;}
+.rcont a:hover {color: #9A6F4A;text-decoration: underline;}
+}
+-->
+</style>
+<div class="img_art">
+<div class="title">公司新闻</div>
+    <div class="content">
+    <!-- {if $img_art1} -->
+    <!--{foreach from=$img_art1 item=aimg1 name="artimg1"}-->
+        {if $smarty.foreach.artimg1.index eq 1 }
+        <div class="Limg">
+            <a href="{$aimg1.url}" target="_blank"><img src="{$aimg1.img}" alt="{$aimg1.title|escape:html}" /></a>
+        </div>
+        {/if}
+    <!--{/foreach}-->
+    <div class="rcont">
+    <ul>
+    <!--{foreach from=$img_art1 item=ali1 name="artli1"}-->
+    {if $smarty.foreach.artli1.index neq 1 }
+     <li><a href="{$ali1.url}" title="{$ali1.title|escape:html}" target="_blank">{$ali1.title|truncate:16:"..."}</a></li>
+    {/if}    
+    <!--{/foreach}-->
+    </ul>
+    </div>
+    <!-- {else} -->
+     暂无文章
+    <!-- {/if} -->  
+    </div>
+</div>
